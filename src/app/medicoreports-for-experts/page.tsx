@@ -39,10 +39,6 @@ const MedicoreportsForExperts = () => {
         <ProcessOperation />
         <Feature />
         <Eligibility />
-        <FeatureV2 />
-        <HowItsWork />
-        <CloudSolution />
-        <Blog badgeClass="badge-yellow" />
         <NewsLetter />
       </main>
       <FooterFour className="border-t border-t-[#303032] dark:border-t-0 max-sm:z-[11]" />
