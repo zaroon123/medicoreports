@@ -3,6 +3,7 @@ import Hero from '@/components/our-services-03/HeroForExperts';
 import Clients from '@/components/homepage-38/Clients';
 import SpotlightStories from '@/components/success-stories/SpotlightStories';
 import ProcessOperation from '@/components/process-02/ProcessOperation';
+import WhyChooseNextSaas from '@/components/homepage-14/WhyChooseNextSaas';
 import Feature from '@/components/homepage-14/Feature';
 import Eligibility from '@/components/homepage-14/Eligibility';
 import Features from '@/components/medicoreports/Features';
@@ -34,10 +35,10 @@ const MedicoreportsForExperts = () => {
       />
       <main className="bg-background-2 dark:bg-background-5">
         <Hero />
-        <Clients /> 
-        <SpotlightStories />
+        <Feature /> 
+        <WhyChooseNextSaas />
         <ProcessOperation />
-        <Feature />
+        <SpotlightStories />
         <Eligibility />
         <NewsLetter />
       </main>

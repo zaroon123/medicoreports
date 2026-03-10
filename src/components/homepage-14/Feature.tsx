@@ -16,7 +16,7 @@ const features = [
     alt: 'Flexible loan terms illustration',
   },
   {
-    id: 2,
+    id: 2, 
     title: 'Streamlined application process',
     description: 'Apply quickly and easily with minimal paperwork required.',
     img: featureImg02,
@@ -40,7 +40,7 @@ const Feature = () => {
       <div className="main-container">
         <div className="space-y-10 md:space-y-[70px]">
           {/* heading  */}
-          <div className="max-w-[774px] mx-auto text-center space-y-3">
+          {/* <div className="max-w-[774px] mx-auto text-center space-y-3">
             <RevealAnimation delay={0.2}>
               <h2 id="features-heading">Designed for every homebuyer.</h2>
             </RevealAnimation>
@@ -50,7 +50,7 @@ const Feature = () => {
                 services tailored to help your brand grow with clarity and confidence.
               </p>
             </RevealAnimation>
-          </div>
+          </div> */}
 
           {/* features container  */}
           <div className="grid grid-cols-12 items-center justify-center gap-y-8 md:gap-x-8">
