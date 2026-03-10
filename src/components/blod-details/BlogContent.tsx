@@ -19,7 +19,7 @@ const BlogContent = ({ blog }: BlogContentProps) => {
   const [optimizedContent, setOptimizedContent] = useState<string>('');
   const [isContentLoaded, setIsContentLoaded] = useState(false);
 
-  useEffect(() => {
+  useEffect(() => { 
     const optimizeContent = () => {
       try {
         // Use fullContent if available, otherwise use regular content
@@ -256,39 +256,6 @@ const BlogContent = ({ blog }: BlogContentProps) => {
         <RevealAnimation delay={0.6}>
           <div className="max-w-[800px] mx-auto mt-12 pt-8 border-t border-stroke-2 dark:border-stroke-6">
             {/* Author Bio */}
-            {blog.author && (
-              <div className="bg-background-1 dark:bg-background-6 rounded-[20px] p-6 mb-8">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="size-16 rounded-full overflow-hidden">
-                    {blog.authorImage && blog.authorImage !== '/images/default-avatar.png' ? (
-                      <Image
-                        src={blog.authorImage}
-                        alt={blog.author}
-                        width={64}
-                        height={64}
-                        className="w-full h-full object-cover"
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          target.src = '/images/default-avatar.png';
-                        }}
-                      />
-                    ) : (
-                      <div className="w-full h-full bg-primary-500 flex items-center justify-center text-white text-2xl font-bold">
-                        {getAuthorInitials()}
-                      </div>
-                    )}
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold">About {blog.author}</h3>
-                    <p className="text-sm text-secondary/60">Contributor at Medico Reports</p>
-                  </div>
-                </div>
-                <p className="text-sm text-secondary/70">
-                  Expert in medical reporting and healthcare insights, providing valuable
-                  content to help medical professionals stay informed and updated.
-                </p>
-              </div>
-            )}
 
             {/* Tags Section */}
             {blog.tags && blog.tags.length > 0 && (

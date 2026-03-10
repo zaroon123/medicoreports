@@ -5,7 +5,7 @@ import { useModal } from '@/hooks/useModal';
 
 interface ModalContextType {
   videoModal: {
-    isOpen: boolean;
+    isOpen: boolean; 
     openModal: () => void;
     closeModal: () => void;
     modalRef: React.RefObject<HTMLDialogElement | null>;

@@ -54,7 +54,7 @@ const experienceList = [
 
 const Hero = () => { 
   const sceneRef = useParallaxEffect();
-  return (
+  return ( 
     <section
       ref={sceneRef}
       className="pt-[320px] md:pt-[200px] lg:pt-[200px] xl:pt-[260px] pb-16 md:pb-20 lg:pb-[120px] xl:pb-[150px] bg-[url('/images/medicoreports/hero-bg.png')] bg-no-repeat bg-top relative z-0"
@@ -149,7 +149,7 @@ const Hero = () => {
       {/*Hero Bottom item*/}
       <div className="main-container">
         <div className="relative z-0">
-          <div className="w-full h-full bg-white dark:bg-background-8 absolute -z-10 overflow-hidden rounded-[20px]">
+          <div className="w-full h-full absolute -z-10 overflow-hidden rounded-[20px]">
             <RevealAnimation delay={0.7} useSpring offset={140} direction="right">
               <div className="-z-10 absolute lg:-top-[155%] md:-top-[65%] -top-[75%] -right-[75%] lg:-right-[40%] md:-right-[70%] md:rotate-[60deg] rotate-[10deg] size-[1060px] select-none pointer-events-none">
                 <Image src={gradient12} alt="gradient" />

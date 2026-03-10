@@ -448,128 +448,194 @@ class WordPressService {
     }
   }
 
-  private processPost(post: WordPressPost, isList: boolean = true): ProcessedBlogPost {
-    // Process title
-    const rawTitle = post.title?.rendered || '';
-    const title = this.decodeHtmlEntities(this.stripHtmlTags(rawTitle));
+  // WordPress service - processPost function
+private processPost(post: WordPressPost, isList: boolean = true): ProcessedBlogPost {
+      // ===========================================
+      // 1. PROCESS TITLE - Clean HTML entities
+      // ===========================================
+      const rawTitle = post.title?.rendered || '';
+      const title = this.decodeHtmlEntities(this.stripHtmlTags(rawTitle));
 
-    // Process excerpt
-    const rawExcerpt = post.excerpt?.rendered || '';
-    const excerpt = this.decodeHtmlEntities(this.stripHtmlTags(rawExcerpt));
+      // ===========================================
+      // 2. PROCESS EXCERPT - Clean for preview
+      // ===========================================
+      const rawExcerpt = post.excerpt?.rendered || '';
+      const excerpt = this.decodeHtmlEntities(this.stripHtmlTags(rawExcerpt));
 
-    // Process content
-    const rawContent = post.content?.rendered || '';
-    let content = rawContent;
+      // ===========================================
+      // 3. PROCESS CONTENT - For full article
+      // ===========================================
+      const rawContent = post.content?.rendered || '';
+      let content = rawContent;
 
-    // Clean Elementor HTML for list view
-    if (isList) {
-      content = this.decodeHtmlEntities(this.stripHtmlTags(rawContent.substring(0, 200))) + '...';
-    }
-
-    // Process image
-    let image = {
-      url: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      width: 800,
-      height: 500,
-      alt: title || 'Blog post image',
-    };
-
-    if (post._embedded?.['wp:featuredmedia']?.[0]) {
-      const media = post._embedded['wp:featuredmedia'][0];
-      const sizes = media.media_details?.sizes;
-
-      if (sizes) {
-        const bestSize = sizes.large || sizes.medium || sizes.full || sizes.thumbnail || {
-          source_url: media.source_url,
-          width: media.media_details?.width || 800,
-          height: media.media_details?.height || 500,
-        };
-
-        image = {
-          url: bestSize.source_url,
-          width: bestSize.width,
-          height: bestSize.height,
-          alt: media.alt_text || title,
-        };
-      } else if (media.source_url) {
-        image = {
-          url: media.source_url,
-          width: 800,
-          height: 500,
-          alt: media.alt_text || title,
-        };
-      }
-    }
-
-    // Process categories and tags
-    let category = '';
-    const categories: string[] = [];
-    const tags: string[] = [];
-
-    if (post._embedded?.['wp:term']) {
-      const allTerms = post._embedded['wp:term'].flat();
-
-      const categoryTerms = allTerms.filter(term =>
-        term.taxonomy === 'category' && post.categories.includes(term.id)
-      );
-
-      const tagTerms = allTerms.filter(term =>
-        term.taxonomy === 'post_tag' && post.tags.includes(term.id)
-      );
-
-      if (categoryTerms.length > 0) {
-        category = this.decodeHtmlEntities(categoryTerms[0].name);
-        categories.push(...categoryTerms.map(cat => this.decodeHtmlEntities(cat.name)));
+      // Clean Elementor HTML for list view
+      if (isList) {
+          content = this.decodeHtmlEntities(this.stripHtmlTags(rawContent.substring(0, 200))) + '...';
       }
 
-      tags.push(...tagTerms.map(tag => this.decodeHtmlEntities(tag.name)));
-    }
+      // ===========================================
+      // 4. PROCESS FEATURED IMAGE - CRITICAL FIX!
+      // ===========================================
+      let image = {
+          url: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          width: 1200,  // Increased default width
+          height: 800,  // Increased default height
+          alt: title || 'Blog post image',
+      };
 
-    // Process author
-    const author = post._embedded?.author?.[0]?.name || 'Medico Reports';
-    let authorImage = '/images/default-avatar.png';
+      // Check if post has featured image
+      if (post._embedded?.['wp:featuredmedia']?.[0]) {
+          const media = post._embedded['wp:featuredmedia'][0];
+          const sizes = media.media_details?.sizes;
 
-    if (post._embedded?.author?.[0]?.avatar_urls?.['96']) {
-      authorImage = post._embedded.author[0].avatar_urls['96'];
-    }
+          if (sizes) {
+              // IMPORTANT: WordPress generates multiple sizes
+              // We want the LARGEST possible for best quality
+              // Order of preference: full > large > medium_large > medium > thumbnail
+              
+              const preferredSizes = ['full', 'large', 'medium_large', 'medium', 'thumbnail'];
+              let selectedSize = null;
+              
+              // Find the largest available size in our preferred order
+              for (const sizeName of preferredSizes) {
+                  if (sizes[sizeName]) {
+                      selectedSize = sizes[sizeName];
+                      console.log(`📸 Using ${sizeName} image: ${selectedSize.width}x${selectedSize.height}`);
+                      break; // Stop once we find the largest preferred size
+                  }
+              }
+              
+              // If none of preferred sizes found, get the largest available
+              if (!selectedSize) {
+                  // Get all size keys and find the one with maximum width
+                  const sizeKeys = Object.keys(sizes);
+                  if (sizeKeys.length > 0) {
+                      // Find size with maximum width
+                      selectedSize = sizeKeys.reduce((max, key) => {
+                          return (sizes[key].width > (sizes[max]?.width || 0)) ? key : max;
+                      }, sizeKeys[0]);
+                      selectedSize = sizes[selectedSize];
+                      console.log(`📸 Using largest available: ${selectedSize.width}x${selectedSize.height}`);
+                  }
+              }
 
-    // Process dates
-    const date = new Date(post.date);
-    const formattedDate = date.toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    });
+              if (selectedSize) {
+                  image = {
+                      url: selectedSize.source_url,
+                      width: selectedSize.width,
+                      height: selectedSize.height,
+                      alt: media.alt_text || title,
+                  };
+              } else {
+                  // Fallback to original source URL
+                  image = {
+                      url: media.source_url,
+                      width: media.media_details?.width || 1200,
+                      height: media.media_details?.height || 800,
+                      alt: media.alt_text || title,
+                  };
+              }
+          } else if (media.source_url) {
+              // No sizes data, use source URL with good defaults
+              image = {
+                  url: media.source_url,
+                  width: 1200,
+                  height: 800,
+                  alt: media.alt_text || title,
+              };
+          }
+          
+          // Log the final image info for debugging
+          console.log(`✅ Final image for "${title.substring(0, 30)}...": ${image.width}x${image.height}`);
+      }
 
-    // Process metadata
-    const yoastMeta = post.yoast_head_json;
+      // ===========================================
+      // 5. PROCESS CATEGORIES AND TAGS
+      // ===========================================
+      let category = '';
+      const categories: string[] = [];
+      const tags: string[] = [];
 
-    return {
-      id: post.id,
-      slug: post.slug,
-      title,
-      excerpt,
-      content,
-      date: post.date,
-      modified: post.modified,
-      formattedDate,
-      category,
-      categories,
-      tags,
-      author,
-      authorImage,
-      image,
-      metaTitle: yoastMeta?.title || title,
-      metaDescription: yoastMeta?.description || excerpt,
-      ogImage: yoastMeta?.og_image,
-      publishedTime: yoastMeta?.article_published_time,
-      modifiedTime: yoastMeta?.article_modified_time || post.modified,
-      fullContent: rawContent, // Keep original for single post view
-      readTime: this.calculateReadTime(rawContent),
-      _original: post,
-    };
+      if (post._embedded?.['wp:term']) {
+          const allTerms = post._embedded['wp:term'].flat();
+
+          // Get categories
+          const categoryTerms = allTerms.filter(term =>
+              term.taxonomy === 'category' && post.categories.includes(term.id)
+          );
+
+          // Get tags
+          const tagTerms = allTerms.filter(term =>
+              term.taxonomy === 'post_tag' && post.tags.includes(term.id)
+          );
+
+          if (categoryTerms.length > 0) {
+              category = this.decodeHtmlEntities(categoryTerms[0].name);
+              categories.push(...categoryTerms.map(cat => this.decodeHtmlEntities(cat.name)));
+          }
+
+          tags.push(...tagTerms.map(tag => this.decodeHtmlEntities(tag.name)));
+      }
+
+      // ===========================================
+      // 6. PROCESS AUTHOR INFORMATION
+      // ===========================================
+      const author = post._embedded?.author?.[0]?.name || 'Medico Reports';
+      let authorImage = '/images/default-avatar.png';
+
+      if (post._embedded?.author?.[0]?.avatar_urls?.['96']) {
+          authorImage = post._embedded.author[0].avatar_urls['96'];
+      }
+
+      // ===========================================
+      // 7. PROCESS DATES
+      // ===========================================
+      const date = new Date(post.date);
+      const formattedDate = date.toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+      });
+
+      // ===========================================
+      // 8. PROCESS READ TIME
+      // ===========================================
+      const readTime = this.calculateReadTime(rawContent);
+
+      // ===========================================
+      // 9. PROCESS SEO/YOAST META
+      // ===========================================
+      const yoastMeta = post.yoast_head_json;
+
+      // ===========================================
+      // 10. RETURN FINAL PROCESSED POST
+      // ===========================================
+      return {
+          id: post.id,
+          slug: post.slug,
+          title,
+          excerpt,
+          content,
+          date: post.date,
+          modified: post.modified,
+          formattedDate,
+          category,
+          categories,
+          tags,
+          author,
+          authorImage,
+          image,           // Now contains high-res image!
+          metaTitle: yoastMeta?.title || title,
+          metaDescription: yoastMeta?.description || excerpt,
+          ogImage: yoastMeta?.og_image,
+          publishedTime: yoastMeta?.article_published_time,
+          modifiedTime: yoastMeta?.article_modified_time || post.modified,
+          fullContent: rawContent,
+          readTime,
+          _original: post,
+      };
   }
-
+ 
   // Get latest posts for homepage (returns 3 most recent posts)
   async getLatestPosts(limit: number = 3): Promise<ProcessedBlogPost[]> {
     const cacheKey = `latest_${limit}`;
@@ -581,7 +647,7 @@ class WordPressService {
     } catch (error) {
       console.error('Error fetching latest posts:', error);
       return [];
-    }
+    } 
   }
 
   // Get recent posts

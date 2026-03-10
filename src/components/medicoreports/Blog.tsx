@@ -13,7 +13,6 @@ interface BlogProps {
   badgeClass?: string;
 }
 
-// Define a type that matches what your BlogCardV2 and BlogCardV3 expect
 interface HomeBlogPost {
   id: number;
   slug: string;
@@ -23,6 +22,12 @@ interface HomeBlogPost {
   tag: string;
   publishDate: string;
   readTime: string;
+  image?: {  // Added for better image handling
+    url: string;
+    width: number;
+    height: number;
+    alt: string;
+  };
 }
 
 const Blog = ({ badgeClass }: BlogProps) => {
@@ -57,23 +62,19 @@ const Blog = ({ badgeClass }: BlogProps) => {
       <section className="bg-background-2 dark:bg-background-5 py-[50px] md:py-[100px] lg:py-[150px] xl:py-[200px]">
         <div className="main-container">
           <div className="space-y-[70px]">
-            {/* Heading Skeleton */}
             <div className="text-center">
               <Skeleton className="h-8 w-48 mx-auto mb-5" />
               <Skeleton className="h-10 w-64 mx-auto mb-3" />
               <Skeleton className="h-4 w-96 mx-auto" />
             </div>
-            {/* Blog grid skeleton */}
             <div className="grid grid-cols-12 justify-center gap-y-8 lg:gap-x-8">
-              {/* Blog 01 skeleton */}
               <div className="col-span-12 lg:col-span-5 xl:col-span-6">
-                <Skeleton className="h-[400px] w-full rounded-[20px]" />
+                <Skeleton className="h-[600px] w-full rounded-[20px]" />
               </div>
-              {/* Blog 02 and 03 skeletons */}
               <div className="col-span-12 lg:col-span-7 xl:col-span-6">
                 <div className="flex flex-col gap-y-8">
-                  <Skeleton className="h-[200px] w-full rounded-[20px]" />
-                  <Skeleton className="h-[200px] w-full rounded-[20px]" />
+                  <Skeleton className="h-[286px] w-full rounded-[20px]" />
+                  <Skeleton className="h-[286px] w-full rounded-[20px]" />
                 </div>
               </div>
             </div>
@@ -99,7 +100,7 @@ const Blog = ({ badgeClass }: BlogProps) => {
     <section className="bg-background-2 dark:bg-background-5 py-[50px] md:py-[100px] lg:py-[150px] xl:py-[200px]">
       <div className="main-container">
         <div className="space-y-[70px]">
-          {/* heading  */}
+          {/* heading */}
           <div className="text-center">
             <RevealAnimation delay={0.1}>
               <span className={cn(badgeClass, 'badge badge-green mb-5')} aria-label="Section category">
@@ -112,17 +113,20 @@ const Blog = ({ badgeClass }: BlogProps) => {
               </h2>
             </RevealAnimation>
             <RevealAnimation delay={0.3}>
-              <p>Our recent news &amp; insights highlight the latest developments and trends shaping our industry.</p>
+              <p>Our recent news &amp; insights highlight the latest developments and trends shaping industry.</p>
             </RevealAnimation>
           </div>
-          {/* blog section  */}
+          
+          {/* blog section - FIXED: Height alignment with h-full */}
           <div className="grid grid-cols-12 justify-center gap-y-8 lg:gap-x-8">
-            {/* blog 01 - Featured post */}
-            {blogs[0] && (
-              <RevealAnimation delay={0.4}>
-                <BlogCardV2 blog={blogs[0]} />
-              </RevealAnimation>
-            )}
+            {/* blog 01 - Featured post - Added h-full */}
+            <div className="col-span-12 lg:col-span-5 xl:col-span-6 h-full">
+              {blogs[0] && (
+                <RevealAnimation delay={0.4} className="h-full">
+                  <BlogCardV2 blog={blogs[0]} />
+                </RevealAnimation>
+              )}
+            </div>
             
             {/* blog 02 and 03 - Secondary posts */}
             <div className="col-span-12 lg:col-span-7 xl:col-span-6">

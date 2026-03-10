@@ -7,12 +7,12 @@ import facebook from '@public/images/icons/facebook.svg';
 import instagram from '@public/images/icons/instagram.svg';
 import linkedin from '@public/images/icons/linkedin.svg';
 import youtube from '@public/images/icons/youtube.svg';
-import darkLogo from '@public/images/shared/MedicoReports-white.png';
+import darkLogo from '@public/images/shared/Medqon-Logo-white.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import ThemeToggle from '../ThemeToggle'; 
 import FooterDivider from './FooterDivider';
-
+ 
 const FooterFour = ({ className }: { className?: string }) => {
   return (
     <footer className={cn('bg-secondary dark:bg-background-8 relative z-0 overflow-hidden', className)}>
@@ -165,7 +165,7 @@ const FooterFour = ({ className }: { className?: string }) => {
           <FooterDivider className="bg-accent/10 dark:bg-stroke-6" />
           <RevealAnimation delay={0.7} offset={10} start="top 105%">
             <p className="text-tagline-1 text-primary-50 font-normal">
-              Copyright © Medicoreports
+              Copyright © Medqon
             </p>
           </RevealAnimation>
         </div>

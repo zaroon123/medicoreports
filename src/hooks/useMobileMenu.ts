@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react';
 
-interface UseMobileMenuReturn {
+interface UseMobileMenuReturn { 
   isOpen: boolean;
   openMenu: () => void;
   closeMenu: () => void;

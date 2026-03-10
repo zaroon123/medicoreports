@@ -5,7 +5,7 @@ import { createContext, ReactNode, useContext } from 'react';
 
 interface MobileMenuContextType {
   isOpen: boolean;
-  openMenu: () => void;
+  openMenu: () => void; 
   closeMenu: () => void;
   toggleMenu: () => void;
   activeSubmenu: string | null;

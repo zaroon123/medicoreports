@@ -5,7 +5,7 @@ import Link from 'next/link';
 export type NavItemVariant = 'default' | 'border' | 'white' | 'light';
 
 interface NavItemLinkProps {
-  item: NavigationItem;
+  item: NavigationItem; 
   variant?: NavItemVariant;
 }
 

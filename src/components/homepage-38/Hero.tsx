@@ -9,7 +9,7 @@ import Link from 'next/link';
 import RevealAnimation from '../animation/RevealAnimation';
 import HeroDivider from '../homepage-29/HeroDivider';
 import HeroBottomOverlay from './HeroBottomOverlay';
-import HeroRating from './HeroRating';
+import HeroRating from './HeroRating'; 
 
 const Hero = () => {
   const { videoModal } = useModalContext();

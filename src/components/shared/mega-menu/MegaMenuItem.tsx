@@ -8,8 +8,8 @@ interface MegaMenuItemProps {
 
 const MegaMenuItem = ({ item }: MegaMenuItemProps) => {
   return (
-    <li>
-      <Link
+    <li> 
+      <Link 
         href={item.href}
         className="text-secondary/60 dark:text-accent/60 dark:hover:text-accent group/item text-tagline-1 hover:text-secondary flex items-center gap-1 font-normal transition-all duration-200">
         <span>{item.label}</span>

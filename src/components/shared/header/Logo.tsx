@@ -1,6 +1,6 @@
-import logoDark from '@public/images/shared/MedicoReports.png';
+import logoDark from '@public/images/shared/Medqon-Logo.png';
 import logo from '@public/images/shared/logo.svg';
-import mainLogo from '@public/images/shared/MedicoReports.png';
+import mainLogo from '@public/images/shared/Medqon-Logo.png';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -20,7 +20,7 @@ const Logo = () => {
         </figure>
       </Link>
     </div>
-  );
+  ); 
 };
 
 export default Logo;

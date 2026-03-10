@@ -10,7 +10,7 @@ import Image from 'next/image';
 import NumberAnimation from '../animation/NumberAnimation';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from './Button';
-
+ 
 const SpotlightStories = () => {
   return (
     <section className="py-12 md:py-18 lg:pb-24 xl:py-28" aria-label="spotlight stories section">

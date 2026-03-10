@@ -4,7 +4,7 @@ import MegaMenuItem from './MegaMenuItem';
 
 interface AboutMenuProps {
   className?: string;
-}
+} 
 
 const AboutMenu = ({ className }: AboutMenuProps) => {
   return (

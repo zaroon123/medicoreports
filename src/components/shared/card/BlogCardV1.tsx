@@ -12,7 +12,7 @@ interface BlogCardV1Props {
 
 const BlogCardV1 = ({ blog, className }: BlogCardV1Props) => {
   return (
-    <article>
+    <article> 
       <div
         className={cn(
           'bg-background-1 dark:bg-background-6 relative scale-100 overflow-hidden rounded-[20px] transition-transform duration-500 hover:scale-[102%] hover:transition-transform hover:duration-500 md:min-h-[552px]',
@@ -57,7 +57,7 @@ const BlogCardV1 = ({ blog, className }: BlogCardV1Props) => {
           </div>
           <div>
             <h3 className="sm:text-heading-5 text-heading-6 mb-2 font-normal">
-              <Link href={`/blog/${blog.slug}`} aria-label={`Read more about ${blog.title}`}>
+              <Link href={`/${blog.slug}`} aria-label={`Read more about ${blog.title}`}>
                 {blog.title}
               </Link>
             </h3>
@@ -67,7 +67,7 @@ const BlogCardV1 = ({ blog, className }: BlogCardV1Props) => {
           </div>
           <div className="flex justify-start md:block">
             <LinkButton
-              href={`/blog/${blog.slug}`}
+              href={`/${blog.slug}`}
               className="btn btn-md btn-white hover:btn-secondary dark:btn-transparent dark:hover:btn-accent dark:hover:text-secondary w-full sm:w-auto"
               aria-label={`Read full article about ${blog.title}`}>
               Read more

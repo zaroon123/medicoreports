@@ -12,23 +12,25 @@ import BlogMenu from '../mega-menu/BlogMenu';
 import HomeMegaMenu from '../mega-menu/HomeMegaMenu';
 import PageMegaMenu from '../mega-menu/PageMegaMenu';
 import ServicesMenu from '../mega-menu/ServicesMenu';
+import ResourceMenu from '../mega-menu/ResourceMenu';
+import SolutionsMenu from '../mega-menu/SolutionsMenu';
 import Logo from './Logo';
 import MobileMenuButton from './MobileMenuButton';
 import NavCTAButton from './NavCTAButton';
-import NavItemLink from './NavItemLink';
+import NavItemLink from './NavItemLink'; 
 
 interface NavbarOneProps {
-  className?: string;
+  className?: string; 
   megaMenuColor?: string;
   btnClassName?: string;
   navItemClass?: string;
-}
+} 
 
 const NavbarOne: FC<NavbarOneProps> = ({ className, megaMenuColor, btnClassName }) => {
   const { isScrolled } = useNavbarScroll(100);
 
   return (
-    <MobileMenuProvider>
+    <MobileMenuProvider> 
       <header>
         <div
           className={cn(
@@ -46,10 +48,10 @@ const NavbarOne: FC<NavbarOneProps> = ({ className, megaMenuColor, btnClassName 
                   switch (item?.megaMenuComponent) {
                     case 'HomeMegaMenu':
                       return <HomeMegaMenu className={megaMenuColor} />;
-                    case 'PageMegaMenu':
-                      return <PageMegaMenu className={megaMenuColor} />;
-                    case 'AboutMenu':
-                      return <AboutMenu className={megaMenuColor} />;
+                    case 'ResourceMegaMenu':
+                      return <ResourceMenu className={megaMenuColor} />;
+                    case 'SolutionsMegaMenu':
+                      return <SolutionsMenu className={megaMenuColor} />;
                     case 'ServicesMenu':
                       return <ServicesMenu className={megaMenuColor} />;
                     case 'BlogMenu':

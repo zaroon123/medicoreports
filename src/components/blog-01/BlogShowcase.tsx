@@ -15,7 +15,7 @@ const BlogShowcase = ({
   initialBlogs, 
   totalPosts, 
   totalPages,
-  currentPage 
+  currentPage  
 }: BlogShowcaseProps) => {
   return (
     <section className="py-14 md:py-16 lg:py-[88px] xl:py-[100px]">

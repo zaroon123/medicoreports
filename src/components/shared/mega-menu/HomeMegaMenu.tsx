@@ -4,7 +4,7 @@ import { Fragment } from 'react';
 import MegaMenuItem from './MegaMenuItem';
 
 interface HomeMegaMenuProps {
-  className?: string;
+  className?: string; 
 }
 
 const HomeMegaMenu = ({ className }: HomeMegaMenuProps) => {

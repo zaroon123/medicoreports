@@ -15,7 +15,7 @@ function transformToHomeBlogPost(post: any) {
     publishDate: post.formattedDate || new Date(post.date).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
-      day: 'numeric',
+      day: 'numeric', 
     }),
     readTime: post.readTime || '5 min read',
   };
