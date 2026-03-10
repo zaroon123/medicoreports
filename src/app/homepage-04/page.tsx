@@ -31,7 +31,6 @@ const HomePage04 = () => {
         <Pricing />
         <ReviewsV2 badgeColor="badge-green" sectionSpacingClass="space-y-[70px] py-14 md:py-20 xl:py-[100px]" />
         <Process />
-        <Blogs />
       </main>
       <FooterThree
         className="rounded-t-[20px] relative overflow-hidden"
