@@ -1,5 +1,6 @@
 import ClientsMarquee from '@/components/medicoreports/ClientsMarquee';
 import Hero from '@/components/our-services-03/HeroForExperts';
+import HeroForExperts from '@/components/homepage-19/HeroForExperts';
 import Clients from '@/components/homepage-38/Clients';
 import SpotlightStories from '@/components/success-stories/SpotlightStories';
 import ProcessOperation from '@/components/process-02/ProcessOperation';
@@ -13,6 +14,7 @@ import FeatureV2 from '@/components/medicoreports/FeatureV2';
 import HowItsWork from '@/components/medicoreports/HowItsWork';
 import CloudSolution from '@/components/medicoreports/CloudSolution';
 import Blog from '@/components/medicoreports/Blog';
+import Integration from '@/components/homepage-07/Integration';
 import NewsLetter from '@/components/medicoreports/NewsLetter';
 import FooterFour from '@/components/shared/footer/FooterFour';
 import NavbarOne from '@/components/shared/header/NavbarOne';
@@ -34,11 +36,13 @@ const MedicoreportsForExperts = () => {
         btnClassName="btn-secondary hover:btn-primary dark:btn-accent"
       />
       <main className="bg-background-2 dark:bg-background-5">
+        <HeroForExperts />
         <Hero />
         <Feature /> 
         <WhyChooseNextSaas />
         <ProcessOperation />
         <SpotlightStories />
+        <Integration />
         <Eligibility />
         <NewsLetter />
       </main>

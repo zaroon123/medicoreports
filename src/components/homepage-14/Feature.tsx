@@ -31,12 +31,12 @@ const features = [
     darkImg: null,
     alt: 'Trusted financial guidance example',
     extraClass: 'md:col-start-4',
-  },
+  }, 
 ];
 
 const Feature = () => {
   return (
-    <section className="py-16 md:py-[90px] lg:py-[100px]" aria-label="Mortgage Features">
+    <section className="py-16 md:py-[90px] lg:py-[10px]" aria-label="Mortgage Features">
       <div className="main-container">
         <div className="space-y-10 md:space-y-[70px]">
           {/* heading  */}

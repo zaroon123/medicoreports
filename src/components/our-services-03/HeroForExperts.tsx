@@ -3,7 +3,7 @@ import RevealAnimation from '../animation/RevealAnimation';
 const Hero = () => { 
 
   return (
-    <section className="pb-1 pt-14 md:pb-1 md:pt-2 lg:pb-[10px] lg:pt-[10px] xl:pb-[10px] xl:pt-[200px]">
+    <section className="pb-1 pt-14 md:pb-1 md:pt-2 lg:pb-[10px] lg:pt-[10px] xl:pb-[10px] xl:pt-[50px]">
       <div className="main-container">
         <div className="text-center space-y-3 mb-[70px]">
           <RevealAnimation delay={0.3}>
@@ -19,7 +19,7 @@ const Hero = () => {
           </RevealAnimation>
         </div>
       </div>
-    </section>
+    </section> 
   );
 };
 

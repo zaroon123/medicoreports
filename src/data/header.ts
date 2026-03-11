@@ -14,7 +14,7 @@ export interface MegaMenuItem {
 } 
 
 export interface MegaMenuColumn {
-  id: string;
+  id: string; 
   items: MegaMenuItem[];
 }
 
@@ -85,7 +85,7 @@ export const resourceMenuItems: MegaMenuItem[] = [
 // Solutions Menu Data
 export const solutionsMenuItems: MegaMenuItem[] = [
   { id: 'report-writer-for-experts', label: 'Report Writer (For Experts)', href: '/medicoreports-for-experts' },
-  { id: 'medqon-vault', label: 'Medqon Vault (For Medical Agencies)', href: '#' },
+  { id: 'medqon-vault', label: 'Medqon Vault (For Medical Agencies)', href: '/medicoreports-vault' },
   { id: 'integrations', label: 'Integrations', href: '#' },
   { id: 'pricing', label: 'Pricing', href: '/medicoreports-pricing' },
 ]; 

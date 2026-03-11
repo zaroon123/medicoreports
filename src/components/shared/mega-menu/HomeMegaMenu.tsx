@@ -15,11 +15,11 @@ const HomeMegaMenu = ({ className }: HomeMegaMenuProps) => {
         className={cn(
           'dark:bg-background-6 shadow-1 dark:border-background-5 border-stroke-4 pointer-events-none fixed top-full left-1/2 z-50 mt-2 w-full max-w-[1290px] -translate-x-1/2 translate-y-10 overflow-hidden rounded-[20px] border bg-white opacity-0 transition-all duration-300 group-hover/nav:pointer-events-auto group-hover/nav:translate-y-0 group-hover/nav:opacity-100',
           className,
-        )}>
+        )}> 
         <div className="relative flex w-full">
-          <div className="flex flex-1 justify-between gap-10 px-[60px] py-[70px]">
+          <div className="flex flex-1 justify-between gap-10 px-[60px] py-[30px]">
             {homeMegaMenuColumns.map((column, index) => (
-              <Fragment key={column.id}>
+              <Fragment key={column.id}> 
                 <ul
                   key={column.id}
                   className={cn(

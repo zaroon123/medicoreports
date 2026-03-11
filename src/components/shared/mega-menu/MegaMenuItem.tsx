@@ -24,7 +24,7 @@ const MegaMenuItem = ({ item }: MegaMenuItemProps) => {
               className="stroke-secondary dark:stroke-accent"
               strokeWidth="1.5"
               strokeLinecap="round"
-              strokeLinejoin="round"
+              strokeLinejoin="round" 
             />
           </svg>
         </span>
