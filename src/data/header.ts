@@ -9,7 +9,7 @@ export interface NavigationItem {
 export interface MegaMenuItem {
   id: string;
   label: string;
-  href: string; 
+  href: string;  
   newPage?: boolean;
 } 
 
@@ -87,6 +87,7 @@ export const solutionsMenuItems: MegaMenuItem[] = [
   { id: 'report-writer-for-experts', label: 'Report Writer (For Experts)', href: '/medicoreports-for-experts' },
   { id: 'medqon-vault', label: 'Medqon Vault (For Medical Agencies)', href: '#' },
   { id: 'integrations', label: 'Integrations', href: '#' },
+  { id: 'pricing', label: 'Pricing', href: '/medicoreports-pricing' },
 ]; 
 
 // Blog Menu Data
