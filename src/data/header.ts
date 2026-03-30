@@ -1,9 +1,18 @@
 export interface NavigationItem {
   id: string;
   label: string;
-  href?: string;
+  href?: string; 
   hasDropdown: boolean;
   megaMenuComponent?: string;
+}
+
+// Define types for menu items with submenu support
+export interface MegaSubMenuItem {
+  id: string;
+  label: string;
+  href: string;
+  description?: string; // Optional description for submenu items
+  icon?: React.ReactNode; // Optional icon
 }
 
 export interface MegaMenuItem {
@@ -11,6 +20,7 @@ export interface MegaMenuItem {
   label: string;
   href: string;  
   newPage?: boolean;
+  submenu?: MegaSubMenuItem[]; // Add submenu property
 } 
 
 export interface MegaMenuColumn {
@@ -72,15 +82,63 @@ export const navigationItems: NavigationItem[] = [
 export const aboutMenuItems: MegaMenuItem[] = [
   { id: 'about-1', label: 'About 01', href: '/about-01' },
   { id: 'about-2', label: 'About 02', href: '/about-02' },
-  { id: 'about-3', label: 'About 03', href: '/about-03' },
+  { id: 'about-3', label: 'About 03', href: '/about-03' }, 
 ];
 
-// resource Menu Data
 export const resourceMenuItems: MegaMenuItem[] = [
-  { id: 'about-us', label: 'About Medqon', href: '/medicoreports-about-us' },
-  { id: 'support', label: 'Support Corner', href: '/medicoreports-support' },
-  { id: 'trust-centre', label: 'Trust Centre', href: '#' },
-]; 
+  { 
+    id: 'about-us', 
+    label: 'About Medqon', 
+    href: '/medicoreports-about-us' 
+  },
+  { 
+    id: 'support', 
+    label: 'Support Corner', 
+    href: '/medicoreports-support',
+    submenu: [
+      {
+        id: 'faq',
+        label: 'FAQ',
+        href: '/support/faq',
+        description: 'Frequently asked questions',
+        icon: '❓'
+      },
+      {
+        id: 'contact',
+        label: 'Contact Support',
+        href: '/support/contact',
+        description: 'Get help from our team',
+        icon: '📧'
+      },
+      {
+        id: 'tickets',
+        label: 'My Tickets',
+        href: '/support/tickets',
+        description: 'View your support tickets',
+        icon: '🎫'
+      },
+      {
+        id: 'live-chat',
+        label: 'Live Chat',
+        href: '/support/chat',
+        description: 'Chat with an agent',
+        icon: '💬'
+      },
+      {
+        id: 'knowledge-base',
+        label: 'Knowledge Base',
+        href: '/support/knowledge-base',
+        description: 'Browse articles',
+        icon: '📚'
+      }
+    ]
+  },
+  { 
+    id: 'trust-centre', 
+    label: 'Trust Centre', 
+    href: '#' 
+  },
+];
 
 // Solutions Menu Data
 export const solutionsMenuItems: MegaMenuItem[] = [
