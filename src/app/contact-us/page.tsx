@@ -1,7 +1,7 @@
 import ContactInfo from '@/components/contact-page/ContactInfo';
 import ContactMap from '@/components/contact-page/ContactMap';
 import CTAV1 from '@/components/shared/cta/CTAV1';
-import FooterThree from '@/components/shared/footer/FooterThree';
+import FooterFour from '@/components/shared/footer/FooterFour';
 import NavbarOne from '@/components/shared/header/NavbarOne';
 import PageHero from '@/components/shared/PageHero';
 import { defaultMetadata } from '@/utils/generateMetaData';
@@ -37,7 +37,7 @@ const ContactUs = () => {
           description="We're here to help you with your inquiries and needs. Feel free to reach out to us using the contact form below, and we'll get back to you as soon as possible."
         />
       </main>
-      <FooterThree />
+      <FooterFour className="border-t border-t-[#303032] dark:border-t-0 max-sm:z-[11]" />
     </>
   );
 };

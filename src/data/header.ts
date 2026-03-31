@@ -1,7 +1,7 @@
 export interface NavigationItem {
   id: string;
   label: string;
-  href?: string; 
+  href?: string;
   hasDropdown: boolean;
   megaMenuComponent?: string;
 }
@@ -18,13 +18,14 @@ export interface MegaSubMenuItem {
 export interface MegaMenuItem {
   id: string;
   label: string;
-  href: string;  
+  href: string;
   newPage?: boolean;
+  description?: string; // Optional description for main menu items
   submenu?: MegaSubMenuItem[]; // Add submenu property
-} 
+}
 
 export interface MegaMenuColumn {
-  id: string; 
+  id: string;
   items: MegaMenuItem[];
 }
 
@@ -49,27 +50,6 @@ export const navigationItems: NavigationItem[] = [
     hasDropdown: true,
     megaMenuComponent: 'SolutionsMegaMenu',
   },
-  // {
-  //   id: 'about',
-  //   label: 'About',
-  //   href: '#',
-  //   hasDropdown: true,
-  //   megaMenuComponent: 'AboutMenu',
-  // },
-  // {
-  //   id: 'services',
-  //   label: 'Services',
-  //   href: '#',
-  //   hasDropdown: true,
-  //   megaMenuComponent: 'ServicesMenu',
-  // },
-  // {
-  //   id: 'blog',
-  //   label: 'Blog',
-  //   href: '#',
-  //   hasDropdown: true,
-  //   megaMenuComponent: 'BlogMenu',
-  // },
   {
     id: 'contact',
     label: 'Contact Us',
@@ -82,71 +62,101 @@ export const navigationItems: NavigationItem[] = [
 export const aboutMenuItems: MegaMenuItem[] = [
   { id: 'about-1', label: 'About 01', href: '/about-01' },
   { id: 'about-2', label: 'About 02', href: '/about-02' },
-  { id: 'about-3', label: 'About 03', href: '/about-03' }, 
+  { id: 'about-3', label: 'About 03', href: '/about-03' },
 ];
 
 export const resourceMenuItems: MegaMenuItem[] = [
-  { 
-    id: 'about-us', 
-    label: 'About Medqon', 
-    href: '/medicoreports-about-us' 
-  },
-  { 
-    id: 'support', 
-    label: 'Support Corner', 
+  {
+    id: 'support',  // ← Now FIRST item (moved above About Medqon)
+    label: 'Support Corner',
     href: '/medicoreports-support',
     submenu: [
       {
         id: 'faq',
         label: 'FAQ',
-        href: '/support/faq',
+        href: '/faq',
         description: 'Frequently asked questions',
         icon: '❓'
       },
       {
         id: 'contact',
         label: 'Contact Support',
-        href: '/support/contact',
+        href: '/contact-us',
         description: 'Get help from our team',
         icon: '📧'
       },
       {
         id: 'tickets',
         label: 'My Tickets',
-        href: '/support/tickets',
+        href: '/contact-us',
         description: 'View your support tickets',
         icon: '🎫'
       },
       {
         id: 'live-chat',
         label: 'Live Chat',
-        href: '/support/chat',
+        href: '/contact-us',
         description: 'Chat with an agent',
         icon: '💬'
       },
       {
         id: 'knowledge-base',
         label: 'Knowledge Base',
-        href: '/support/knowledge-base',
+        href: '/blog-01',
         description: 'Browse articles',
         icon: '📚'
       }
     ]
   },
-  { 
-    id: 'trust-centre', 
-    label: 'Trust Centre', 
-    href: '#' 
+  {
+    id: 'about-us',
+    label: 'About Medqon',
+    href: '/medicoreports-about-us'
   },
-];
+  {
+    id: 'trust-centre',  // ← Trust Centre with its own submenu
+    label: 'Trust Centre',
+    href: '#',
+    submenu: [
+      {
+        id: 'terms',
+        label: 'Terms & Conditions',
+        href: '/terms-conditions',
+        description: 'Read our terms of service',
+        icon: '📜'
+      },
+      {
+        id: 'privacy',
+        label: 'Privacy Policy',
+        href: '/privacy',
+        description: 'How we protect your data',
+        icon: '🔒'
+      },
+      {
+        id: 'refund',
+        label: 'Refund Policy',
+        href: '/refund-policy',
+        description: 'Our refund and cancellation policy',
+        icon: '💰'
+      },
+      {
+        id: 'gdpr',
+        label: 'GDPR Compliance',
+        href: '/gdpr',
+        description: 'Data protection regulations',
+        icon: '🌍'
+      }
+    ]
+  },
+]; 
 
 // Solutions Menu Data
 export const solutionsMenuItems: MegaMenuItem[] = [
-  { id: 'report-writer-for-experts', label: 'Report Writer (For Experts)', href: '/medicoreports-for-experts' },
-  { id: 'medqon-vault', label: 'Medqon Vault (For Medical Agencies)', href: '/medicoreports-vault' },
-  { id: 'integrations', label: 'Integrations', href: '#' },
-  { id: 'pricing', label: 'Pricing', href: '/medicoreports-pricing' },
-]; 
+  { id: 'report-writer-for-experts', label: 'Report Writer', href: '/medicoreports-for-experts', description: 'Tailored report writing for medical experts' },
+  { id: 'medqon-vault', label: 'Medqon Vault', href: '/medicoreports-vault', description: 'Secure storage for medical documents' },
+  { id: 'integrations', label: 'Integrations', href: '#', description: 'Seamless integration with your favorite tools' },
+  { id: 'pricing', label: 'Pricing', href: '/medicoreports-pricing', description: 'Affordable plans for every need' },
+];
 
 // Blog Menu Data
 export const blogMenuItems: MegaMenuItem[] = [

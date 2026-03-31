@@ -3,7 +3,7 @@ import Contact from '@/components/pricing-01/Contact';
 import Features from '@/components/pricing-01/Features';
 import Pricing from '@/components/pricing-01/Pricing';
 import CTAV1 from '@/components/shared/cta/CTAV1';
-import FooterOne from '@/components/shared/footer/FooterOne';
+import FooterFour from '@/components/shared/footer/FooterFour';
 import NavbarOne from '@/components/shared/header/NavbarOne';
 import PageHero from '@/components/shared/PageHero';
 import { defaultMetadata } from '@/utils/generateMetaData';
@@ -39,7 +39,7 @@ const Pricing01 = () => {
           btnClass="hover:btn-secondary dark:hover:btn-accent"
         />
       </main>
-      <FooterOne />
+      <FooterFour className="border-t border-t-[#303032] dark:border-t-0 max-sm:z-[11]" />
     </Fragment>
   );
 };

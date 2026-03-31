@@ -1,6 +1,6 @@
 import RefundPolicyContent from '@/components/refund-policy/RefundPolicyContent';
 import CTAV1 from '@/components/shared/cta/CTAV1';
-import FooterThree from '@/components/shared/footer/FooterThree';
+import FooterFour from '@/components/shared/footer/FooterFour';
 import NavbarOne from '@/components/shared/header/NavbarOne';
 import PageHero from '@/components/shared/PageHero';
 import { defaultMetadata } from '@/utils/generateMetaData';
@@ -32,7 +32,7 @@ const RefundPolicy = () => {
           ctaBtnText="Get started"
         />
       </main>
-      <FooterThree />
+      <FooterFour className="border-t border-t-[#303032] dark:border-t-0 max-sm:z-[11]" />
     </Fragment>
   );
 };
