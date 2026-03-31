@@ -1,6 +1,7 @@
 // src/app/blog-01/page.tsx
 import BlogShowcase from '@/components/blog-01/BlogShowcase';
 import CTAV1 from '@/components/shared/cta/CTAV1';
+import FooterFour from '@/components/shared/footer/FooterFour';
 import FooterThree from '@/components/shared/footer/FooterThree';
 import NavbarOne from '@/components/shared/header/NavbarOne';
 import PageHero from '@/components/shared/PageHero';
@@ -85,7 +86,7 @@ export default async function BlogPage01({ searchParams }: BlogPageProps) {
             </div>
           </div>
         </main>
-        <FooterThree />
+        <FooterFour className="border-t border-t-[#303032] dark:border-t-0 max-sm:z-[11]" />
       </>
     );
   }
@@ -113,7 +114,7 @@ export default async function BlogPage01({ searchParams }: BlogPageProps) {
           ctaBtnText="Get started"
         />
       </main>
-      <FooterThree />
+      <FooterFour className="border-t border-t-[#303032] dark:border-t-0 max-sm:z-[11]" />
     </>
   );
 }
