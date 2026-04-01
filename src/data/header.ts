@@ -152,10 +152,10 @@ export const resourceMenuItems: MegaMenuItem[] = [
 
 // Solutions Menu Data
 export const solutionsMenuItems: MegaMenuItem[] = [
-  { id: 'report-writer-for-experts', label: 'Report Writer', href: '/medicoreports-for-experts', description: 'Tailored report writing for medical experts' },
-  { id: 'medqon-vault', label: 'Medqon Vault', href: '/medicoreports-vault', description: 'Secure storage for medical documents' },
-  { id: 'integrations', label: 'Integrations', href: '#', description: 'Seamless integration with your favorite tools' },
-  { id: 'pricing', label: 'Pricing', href: '/medicoreports-pricing', description: 'Affordable plans for every need' },
+  { id: 'report-writer-for-experts', label: 'For Experts (Report Writer)', href: '/medicoreports-for-experts', description: 'AI-powered medico-legal report generation' },
+  { id: 'medqon-vault', label: 'For Agencies (Medqon Vault)', href: '/medicoreports-vault', description: 'Case management & workflow automation' },
+  { id: 'integrations', label: 'Integrations', href: '#', description: 'Seamless connectivity with your tools' },
+  { id: 'pricing', label: 'Pricing', href: '/medicoreports-pricing', description: 'Plans for every stage' },
 ];
 
 // Blog Menu Data

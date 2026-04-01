@@ -25,15 +25,15 @@ import heroBanner from '@public/images/medicoreports/CRMimage.png';
 const benefits = [
   {
     id: 1,
-    text: 'Boost your business with AI.',
+    text: 'Real-time AI documentation',
   },
   {
     id: 2,
-    text: 'Trusted by leading industries worldwide.',
+    text: 'Compliance-ready reporting',
   },
   {
     id: 3,
-    text: 'Start your AI journey today.',
+    text: 'Seamless workflow integration',
   },
 ];
 
@@ -51,7 +51,7 @@ const experienceList = [
     text: 'Enthusiastic about typography, interaction, and minimalism',
   }, 
 ];
-
+ 
 const Hero = () => { 
   const sceneRef = useParallaxEffect();
   return ( 
@@ -113,13 +113,14 @@ const Hero = () => {
         <div className="text-left md:text-center max-md:pt-[150px] max-lg:pt-[200px]">
           <RevealAnimation delay={0.2}>
             <h1 className="mb-4">
-              Automate smarter. <br className="hidden md:block" />
-              Grow faster.
+              Convert Professional<br className="hidden md:block" />
+               Conversations into <span className='hero-span-color'>Structures</span>, <br className="hidden md:block" />
+               <span className='hero-span-color'>compliant</span> reports.
             </h1>
           </RevealAnimation>
           <RevealAnimation delay={0.3}>
             <p className="max-w-[650px] mx-auto mb-6">
-              &nbsp;Save time and elevate your business with intelligent workflow automation from NextSaaS.
+              &nbsp;DictAIte™ — Speak. Review. Report.
             </p>
           </RevealAnimation>
           <ul className="list-none mb-14 flex flex-col md:flex-row md:items-center md:justify-center md:flex-wrap lg:flex-nowrap gap-4 md:gap-9 w-fit md:mx-auto">
@@ -137,7 +138,7 @@ const Hero = () => {
           <RevealAnimation delay={0.7}>
             <div className="block md:inline-block">
               <LinkButton
-                href="/pricing-01"
+                href="/medicoreports-pricing"
                 className="btn btn-primary hover:btn-white dark:btn-accent btn-xl dark:hover:btn-primary w-[90%] md:w-auto mx-auto"
                 aria-label="Start building free">
                 Get started

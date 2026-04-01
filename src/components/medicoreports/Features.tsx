@@ -16,25 +16,25 @@ const features = [
     id: 1,
     light: featureCardImg01Image,
     dark: featureCardImg01DarkImage,
-    alt: 'Fast and secure cloud upload feature',
-    title: 'Fast & secure cloud upload',
-    desc: 'Store, access, and manage data from anywhere.',
+    alt: 'Instant report generation',
+    title: 'Instant report generation',
+    desc: 'Speak once. Report done. Structured, formatted, and completed automatically ',
   },
   {
     id: 2,
     light: featureCardImg02Image,
     dark: featureCardImg02DarkImage,
-    alt: 'Automated workflows feature',
-    title: 'Automated workflows',
-    desc: 'Store, access, and manage data from anywhere.',
+    alt: 'Built-in compliance',
+    title: 'Built-in compliance',
+    desc: 'No rework. Always compliant. AI enforces medico-legal standards by default',
   },
   {
     id: 3,
     light: featureCardImg03Image,
     dark: featureCardImg03DarkImage,
-    alt: 'Smart search and AI insights feature',
-    title: 'Smart search & AI insights',
-    desc: 'Store, access, and manage data from anywhere.', 
+    alt: 'Automated workflows',
+    title: 'Automated workflows',
+    desc: 'Cases move without you. Progress, formatting, and finalisation handled automatically', 
   },
   // {
   //   id: 4,
@@ -53,7 +53,7 @@ const features = [
   //   desc: 'Store, access, and manage data from anywhere.',
   // },
 ];
-
+ 
 const Features = () => {
   return ( 
     <section
@@ -69,7 +69,7 @@ const Features = () => {
 
             <RevealAnimation delay={0.2}>
               <h2 className="max-w-[578px] text-heading-4 md:text-heading-2 text-center">
-                Powerful features to elevate your business
+                Save hours, not minutes
               </h2>
             </RevealAnimation>
           </div>

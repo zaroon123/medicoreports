@@ -29,7 +29,7 @@ const Medicoreports = () => {
       />
       <main className="bg-background-2 dark:bg-background-5">
         <Hero />
-        <ClientsMarquee />
+        {/* <ClientsMarquee /> */}
         <Features />
         <About />
         <NewFeatures />

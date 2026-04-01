@@ -13,5 +13,12 @@
 @import '../styles/number-animation.css';
 @import '../styles/lenis.css';
 
+.hero-span-color{
+    color: #18026f;
+    font-style: italic;
+    font-family: 'next-sass';
+}
+
+
 @custom-variant dark (&:where(.dark, .dark *));
 
