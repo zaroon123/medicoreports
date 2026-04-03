@@ -114,7 +114,7 @@ const Hero = () => {
           <RevealAnimation delay={0.2}>
             <h1 className="mb-4">
               Convert Professional<br className="hidden md:block" />
-               Conversations into <span className='hero-span-color'>Structures</span>, <br className="hidden md:block" />
+               Conversations into <span className='hero-span-color'>Structured</span>, <br className="hidden md:block" />
                <span className='hero-span-color'>compliant</span> reports.
             </h1>
           </RevealAnimation>
