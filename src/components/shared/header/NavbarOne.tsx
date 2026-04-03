@@ -52,7 +52,7 @@ const NavbarOne: FC<NavbarOneProps> = ({ className, megaMenuColor, btnClassName 
             isScrolled && 'lg:top-2 top-2 transition-all duration-500 ease-in-out',
           )}>
           {/* logo */}
-          <Logo />
+          <Logo /> 
           
           {/* navigation */}
           <nav className="hidden items-center xl:flex">

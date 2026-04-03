@@ -10,9 +10,9 @@ import MegaMenuItem from './MegaMenuItem';
 
 interface ResourceMenuProps {
   className?: string;
-  isParentHovered?: boolean;  // ← NEW: Prop to detect when Resources is hovered
-  onMouseEnter?: () => void;   // ← NEW: Pass mouse enter to parent
-  onMouseLeave?: () => void;   // ← NEW: Pass mouse leave to parent
+  isParentHovered?: boolean;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
 }
 
 const ResourceMenu = ({ 
@@ -26,33 +26,31 @@ const ResourceMenu = ({
   const [isHoveringDropdown, setIsHoveringDropdown] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  // ✅ NEW: Effect to set default submenu when Resources is hovered
+  // Effect to set default submenu when Resources is hovered
   useEffect(() => {
     if (isParentHovered) {
-      // When Resources is hovered, show Support Corner submenu by default
-      setActiveSubmenu('support');
+      // Only set default if no active submenu is set
+      if (!activeSubmenu) {
+        setActiveSubmenu('support');
+      }
     } else {
-      // When Resources is not hovered, clear submenu after delay
       if (!isHoveringDropdown) {
         timeoutRef.current = setTimeout(() => {
           setActiveSubmenu(null);
         }, 100);
       }
     }
-  }, [isParentHovered]);
+  }, [isParentHovered, activeSubmenu]);
 
   // Handle hover on menu items with submenu
   const handleMenuItemHover = (id: string | null) => {
-    // Clear any existing timeout
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
     
     if (id) {
-      // Open the hovered submenu immediately
       setActiveSubmenu(id);
     } else {
-      // Delay closing to allow moving to submenu
       timeoutRef.current = setTimeout(() => {
         if (!isHoveringDropdown) {
           setActiveSubmenu(null);
@@ -65,12 +63,10 @@ const ResourceMenu = ({
   const handleDropdownMouseEnter = () => {
     setIsHoveringDropdown(true);
     
-    // Clear any pending timeout
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
     
-    // Call parent's onMouseEnter if provided
     if (onMouseEnter) {
       onMouseEnter();
     }
@@ -80,12 +76,10 @@ const ResourceMenu = ({
   const handleDropdownMouseLeave = () => {
     setIsHoveringDropdown(false);
     
-    // Clear submenu after leaving
     timeoutRef.current = setTimeout(() => {
       setActiveSubmenu(null);
     }, 100);
     
-    // Call parent's onMouseLeave if provided
     if (onMouseLeave) {
       onMouseLeave();
     }
@@ -103,6 +97,24 @@ const ResourceMenu = ({
   // Find the active submenu items
   const activeItem = resourceMenuItems.find(item => item.id === activeSubmenu);
   const showSubmenu = activeItem?.submenu && activeItem.submenu.length > 0;
+  
+  // Check if submenu has many items (more than 4) to use two columns
+  const hasManyItems = activeItem?.submenu && activeItem.submenu.length > 4;
+  
+  // Split submenu items into two columns for Trust Centre
+  const getSubmenuColumns = () => {
+    if (!activeItem?.submenu) return { leftColumn: [], rightColumn: [] };
+    
+    const items = activeItem.submenu;
+    const midPoint = Math.ceil(items.length / 2);
+    
+    return {
+      leftColumn: items.slice(0, midPoint),
+      rightColumn: items.slice(midPoint)
+    };
+  };
+  
+  const { leftColumn, rightColumn } = getSubmenuColumns();
 
   // Get the appropriate header text based on active submenu
   const getSubmenuHeader = () => {
@@ -124,6 +136,14 @@ const ResourceMenu = ({
   };
 
   const submenuHeader = getSubmenuHeader();
+  
+  // LEFT COLUMN: Fixed width (doesn't change)
+  // RIGHT COLUMN: Auto width (expands based on content)
+  const getDropdownWidth = () => {
+    if (!activeSubmenu) return 'w-auto min-w-[280px]';
+    if (activeSubmenu === 'trust-centre') return 'w-auto min-w-[780px]'; // Right column will expand
+    return 'w-auto min-w-[580px]'; // Right column will expand
+  };
 
   return (
     <div 
@@ -143,16 +163,17 @@ const ResourceMenu = ({
           isParentHovered 
             ? 'pointer-events-auto opacity-100 translate-y-0' 
             : 'pointer-events-none opacity-0 translate-y-5',
-          activeSubmenu ? 'w-auto min-w-[560px]' : 'w-full min-w-[280px]',
+          getDropdownWidth(),
           className
         )}>
         
+        {/* 
+          KEY FIX: Left column has FIXED width (w-[240px]), 
+          Right column takes remaining space (flex-1) and expands based on content
+        */}
         <div className="relative flex">
-          {/* Left Column: Main Menu Items */}
-          <div className={cn(
-            'transition-all duration-300',
-            activeSubmenu ? 'w-1/2 border-r border-stroke-1 dark:border-stroke-6' : 'w-full'
-          )}>
+          {/* LEFT COLUMN: Fixed width - NEVER changes, stays at 240px */}
+          <div className="w-[240px] flex-shrink-0 border-r border-stroke-1 dark:border-stroke-6">
             <ul className="w-full space-y-5 p-6">
               {resourceMenuItems.map((item) => (
                 <MegaMenuItem 
@@ -165,49 +186,114 @@ const ResourceMenu = ({
             </ul>
           </div>
           
-          {/* Right Column: Submenu Container */}
-          {showSubmenu && (
-            <div className="w-1/2 p-6 animate-in fade-in slide-in-from-right-5 duration-100">
-              <div className="space-y-4">
-                {/* Submenu Header - Changes based on active submenu */}
-                <div className="pb-3 border-b border-stroke-1 dark:border-stroke-6">
-                  <h3 className="text-sm font-medium text-secondary/60 dark:text-accent/60">
-                    {submenuHeader.title}
-                  </h3>
-                  <h4 className="text-base font-semibold text-secondary dark:text-accent mt-1">
-                    {submenuHeader.subtitle}
-                  </h4>
-                </div>
-                
-                {/* Submenu Items */}
-                <div className="space-y-2">
-                  {activeItem?.submenu?.map((subItem) => (
-                    <Link
-                      key={subItem.id}
-                      href={subItem.href}
-                      className="block group p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
-                    >
-                      <div className="flex items-start gap-3">
-                        {subItem.icon && (
-                          <span className="text-lg">{subItem.icon}</span>
-                        )}
-                        <div className="flex-1">
-                          <div className="font-medium text-secondary dark:text-accent group-hover:text-primary-600 transition-colors">
-                            {subItem.label}
-                          </div>
-                          {subItem.description && (
-                            <div className="text-sm text-secondary/60 dark:text-accent/60 mt-0.5">
-                              {subItem.description}
+          {/* RIGHT COLUMN: Flexible width - EXPANDS based on content */}
+          <div className={cn(
+            'flex-1 min-w-0 transition-all duration-200',
+            showSubmenu ? 'opacity-100 visible' : 'opacity-0 invisible'
+          )}>
+            {showSubmenu && (
+              <div className="p-6 h-full">
+                <div className="space-y-4 h-full flex flex-col">
+                  {/* Submenu Header */}
+                  <div className="pb-3 border-b border-stroke-1 dark:border-stroke-6">
+                    <h3 className="text-sm font-medium text-secondary/60 dark:text-accent/60">
+                      {submenuHeader.title}
+                    </h3>
+                    <h4 className="text-base font-semibold text-secondary dark:text-accent mt-1">
+                      {submenuHeader.subtitle}
+                    </h4>
+                  </div>
+                  
+                  {/* Submenu Items - Single or Two Columns based on item count */}
+                  {activeSubmenu === 'trust-centre' && hasManyItems ? (
+                    // Two columns layout for Trust Centre - RIGHT COLUMN EXPANDS
+                    <div className="grid grid-cols-2 gap-4 flex-1">
+                      {/* Left Column of Submenu */}
+                      <div className="space-y-2">
+                        {leftColumn.map((subItem) => (
+                          <Link
+                            key={subItem.id}
+                            href={subItem.href}
+                            className="block group p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
+                          >
+                            <div className="flex items-start gap-3">
+                              {subItem.icon && (
+                                <span className="text-lg flex-shrink-0">{subItem.icon}</span>
+                              )}
+                              <div className="flex-1 min-w-0">
+                                <div className="font-medium text-secondary dark:text-accent group-hover:text-primary-600 transition-colors">
+                                  {subItem.label}
+                                </div>
+                                {subItem.description && (
+                                  <div className="text-sm text-secondary/60 dark:text-accent/60 mt-0.5">
+                                    {subItem.description}
+                                  </div>
+                                )}
+                              </div>
                             </div>
-                          )}
-                        </div>
+                          </Link>
+                        ))}
                       </div>
-                    </Link>
-                  ))}
+                      
+                      {/* Right Column of Submenu */}
+                      <div className="space-y-2">
+                        {rightColumn.map((subItem) => (
+                          <Link
+                            key={subItem.id}
+                            href={subItem.href}
+                            className="block group p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
+                          >
+                            <div className="flex items-start gap-3">
+                              {subItem.icon && (
+                                <span className="text-lg flex-shrink-0">{subItem.icon}</span>
+                              )}
+                              <div className="flex-1 min-w-0">
+                                <div className="font-medium text-secondary dark:text-accent group-hover:text-primary-600 transition-colors">
+                                  {subItem.label}
+                                </div>
+                                {subItem.description && (
+                                  <div className="text-sm text-secondary/60 dark:text-accent/60 mt-0.5">
+                                    {subItem.description}
+                                  </div>
+                                )}
+                              </div>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    // Single column layout for Support Corner - RIGHT COLUMN EXPANDS
+                    <div className="space-y-2 flex-1">
+                      {activeItem?.submenu?.map((subItem) => (
+                        <Link
+                          key={subItem.id}
+                          href={subItem.href}
+                          className="block group p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
+                        >
+                          <div className="flex items-start gap-3">
+                            {subItem.icon && (
+                              <span className="text-lg flex-shrink-0">{subItem.icon}</span>
+                            )}
+                            <div className="flex-1 min-w-0">
+                              <div className="font-medium text-secondary dark:text-accent group-hover:text-primary-600 transition-colors">
+                                {subItem.label}
+                              </div>
+                              {subItem.description && (
+                                <div className="text-sm text-secondary/60 dark:text-accent/60 mt-0.5">
+                                  {subItem.description}
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
     </div>
