@@ -1,5 +1,4 @@
-import GdprContent from '@/components/gdpr/GdprContent';
-import CTAV1 from '@/components/shared/cta/CTAV1';
+import PrivacyPolicyContentForMRO from '@/components/privacy-policy-for-mro-app/PrivacyPolicyContentForMRO';
 import FooterFour from '@/components/shared/footer/FooterFour';
 import NavbarOne from '@/components/shared/header/NavbarOne';
 import PageHero from '@/components/shared/PageHero';
@@ -12,7 +11,7 @@ export const metadata: Metadata = {
   title: 'GDPR - NextSaaS',
 };
 
-const GDPR = () => {
+const Disclaimer = () => {
   return (
     <Fragment>
       <NavbarOne
@@ -21,21 +20,12 @@ const GDPR = () => {
         megaMenuColor="dark:!bg-background-9"
       />
       <main className="bg-background-3 dark:bg-background-6">
-        <PageHero title="GDPR" heading="GDPR" link="/gdpr" />
-        <GdprContent />
-        <CTAV1
-          className="dark:bg-background-5 bg-white"
-          badgeClass="badge-yellow-v2"
-          badgeText="Get Started"
-          ctaHeading="Ready to start earning with NextSaaS?"
-          description="If you have any questions, feel free to reach out to our team."
-          btnClass="hover:btn-secondary dark:hover:btn-accent"
-          ctaBtnText="Get started"
-        />
+        <PageHero title="Privacy Policy for MRO App" heading="Privacy Policy for MRO App" link="/privacy-policy-for-mro-app" />
+        <PrivacyPolicyContentForMRO />
       </main>
       <FooterFour className="border-t border-t-[#303032] dark:border-t-0 max-sm:z-[11]" />
     </Fragment>
   );
 };
 
-export default GDPR;
+export default Disclaimer;

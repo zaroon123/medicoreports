@@ -24,7 +24,7 @@ interface NavbarOneProps {
   megaMenuColor?: string;
   btnClassName?: string;
   navItemClass?: string;
-}
+} 
 
 const NavbarOne: FC<NavbarOneProps> = ({ className, megaMenuColor, btnClassName }) => {
   const { isScrolled } = useNavbarScroll(100);

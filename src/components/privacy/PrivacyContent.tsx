@@ -157,7 +157,7 @@ const simpleSections: PrivacySection[] = [
   },
 ];
 
-const PrivacyContent = () => {
+const PrivacyContent = () => { 
   return (
     <section className="pb-[100px] pt-[100px]">
       <div className="main-container">

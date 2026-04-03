@@ -54,7 +54,7 @@ export const navigationItems: NavigationItem[] = [
     id: 'contact',
     label: 'Contact Us',
     href: '/contact-us',
-    hasDropdown: false,
+    hasDropdown: false, 
   },
 ];
 
@@ -67,7 +67,7 @@ export const aboutMenuItems: MegaMenuItem[] = [
 
 export const resourceMenuItems: MegaMenuItem[] = [
   {
-    id: 'support',  // ← Now FIRST item (moved above About Medqon)
+    id: 'support',  // First item - Support Corner
     label: 'Support Corner',
     href: '/medicoreports-support',
     submenu: [
@@ -114,7 +114,7 @@ export const resourceMenuItems: MegaMenuItem[] = [
     href: '/medicoreports-about-us'
   },
   {
-    id: 'trust-centre',  // ← Trust Centre with its own submenu
+    id: 'trust-centre',  // Trust Centre with expanded submenu
     label: 'Trust Centre',
     href: '#',
     submenu: [
@@ -128,27 +128,48 @@ export const resourceMenuItems: MegaMenuItem[] = [
       {
         id: 'privacy',
         label: 'Privacy Policy',
-        href: '/privacy',
+        href: '/privacy-policy',
         description: 'How we protect your data',
         icon: '🔒'
       },
       {
-        id: 'refund',
-        label: 'Refund Policy',
-        href: '/refund-policy',
-        description: 'Our refund and cancellation policy',
-        icon: '💰'
-      },
-      {
         id: 'gdpr',
         label: 'GDPR Compliance',
-        href: '/gdpr',
+        href: '/gdpr-data-protection-policy',
         description: 'Data protection regulations',
         icon: '🌍'
+      },
+      {
+        id: 'disclaimer',
+        label: 'Disclaimer',
+        href: '/disclaimer',
+        description: 'Legal disclaimer and limitations',
+        icon: '⚠️'
+      },
+      {
+        id: 'cookie-policy',
+        label: 'Cookie Policy',
+        href: '/cookie-policy',
+        description: 'How we use cookies on our website',
+        icon: '🍪'
+      },
+      {
+        id: 'acceptable-use',
+        label: 'Acceptable Use Policy',
+        href: '/acceptable-use-policy',
+        description: 'Guidelines for proper use of our services',
+        icon: '📋'
+      },
+      {
+        id: 'privacy-mro',
+        label: 'Privacy Policy for MRO App',
+        href: '/privacy-policy-for-mro-app',
+        description: 'Mobile app privacy practices',
+        icon: '📱'
       }
     ]
   },
-]; 
+];
 
 // Solutions Menu Data
 export const solutionsMenuItems: MegaMenuItem[] = [

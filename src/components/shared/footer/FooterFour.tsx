@@ -12,7 +12,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ThemeToggle from '../ThemeToggle'; 
 import FooterDivider from './FooterDivider';
- 
+  
 const FooterFour = ({ className }: { className?: string }) => {
   return (
     <footer className={cn('bg-secondary dark:bg-background-8 relative z-0 overflow-hidden', className)}>
@@ -27,10 +27,10 @@ const FooterFour = ({ className }: { className?: string }) => {
             <div className="col-span-12 xl:col-span-4">
               <div className="max-w-[306px]">
                 <figure>
-                  <Image src={darkLogo} alt="NextSass Logo" />
+                  <Image src={darkLogo} alt="Medqon Logo" />
                 </figure>
                 <p className="text-accent/60 text-tagline-1 mt-4 mb-7 font-normal">
-                  Turpis tortor nunc sed amet et faucibus vitae morbi congue sed id mauris.
+                  Medqon Limited provides medico-legal report writing and case management solutions for medical experts and healthcare professionals.
                 </p>
                 <div className="flex items-center gap-3">
                   <Link target="_blank" href="https://www.facebook.com">
@@ -66,25 +66,22 @@ const FooterFour = ({ className }: { className?: string }) => {
               </div>
             </div>
           </RevealAnimation>
+          
           <div className="col-span-12 grid grid-cols-12 gap-x-0 gap-y-8 xl:col-span-8">
+            {/* Column 1: Company */}
             <div className="col-span-12 md:col-span-4">
               <RevealAnimation delay={0.2}>
                 <div className="space-y-8">
                   <p className="sm:text-heading-6 text-tagline-1 text-primary-50 font-normal">Company</p>
                   <ul className="space-y-5">
                     <li>
-                      <Link href="/about-01" className="footer-link">
+                      <Link href="/medicoreports-about-us" className="footer-link">
                         About Us
                       </Link>
                     </li>
                     <li>
-                      <Link href="/career" className="footer-link">
-                        Career
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/case-study" className="footer-link">
-                        Case Studies
+                      <Link href="/medicoreports-support" className="footer-link">
+                        Support Corner
                       </Link>
                     </li>
                     <li>
@@ -92,39 +89,48 @@ const FooterFour = ({ className }: { className?: string }) => {
                         Contact Us
                       </Link>
                     </li>
-                  </ul>
-                </div>
-              </RevealAnimation>
-            </div>
-            <div className="col-span-12 md:col-span-4">
-              <RevealAnimation delay={0.3}>
-                <div className="space-y-8">
-                  <p className="sm:text-heading-6 text-tagline-1 text-primary-50 font-normal">Support</p>
-                  <ul className="space-y-5">
                     <li>
                       <Link href="/faq" className="footer-link">
                         FAQ
                       </Link>
                     </li>
+                  </ul>
+                </div>
+              </RevealAnimation>
+            </div>
+            
+            {/* Column 2: Products & Services */}
+            <div className="col-span-12 md:col-span-4">
+              <RevealAnimation delay={0.3}>
+                <div className="space-y-8">
+                  <p className="sm:text-heading-6 text-tagline-1 text-primary-50 font-normal">Products</p>
+                  <ul className="space-y-5">
                     <li>
-                      <Link href="/documentation" className="footer-link">
-                        Documentation
+                      <Link href="/medicoreports-for-experts" className="footer-link">
+                        Report Writer
                       </Link>
                     </li>
                     <li>
-                      <Link href="/tutorial" className="footer-link">
-                        Tutorial
+                      <Link href="/medicoreports-vault" className="footer-link">
+                        Medqon Vault
                       </Link>
                     </li>
                     <li>
-                      <Link href="/support" className="footer-link">
-                        Support
+                      <Link href="/medicoreports-pricing" className="footer-link">
+                        Pricing
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/blog-01" className="footer-link">
+                        Knowledge Base
                       </Link>
                     </li>
                   </ul>
                 </div>
               </RevealAnimation>
             </div>
+            
+            {/* Column 3: Legal Policies (Updated) */}
             <div className="col-span-12 md:col-span-4">
               <RevealAnimation delay={0.4}>
                 <div className="space-y-8">
@@ -136,23 +142,33 @@ const FooterFour = ({ className }: { className?: string }) => {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/privacy" className="footer-link">
+                      <Link href="/privacy-policy" className="footer-link">
                         Privacy Policy
                       </Link>
                     </li>
                     <li>
-                      <Link href="/refund-policy" className="footer-link">
-                        Refund Policy
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/gdpr" className="footer-link">
+                      <Link href="/gdpr-data-protection-policy" className="footer-link">
                         GDPR Compliance
                       </Link>
                     </li>
                     <li>
-                      <Link href="/affiliate-policy" className="footer-link">
-                        Affiliate Policy
+                      <Link href="/disclaimer" className="footer-link">
+                        Disclaimer
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/cookie-policy" className="footer-link">
+                        Cookie Policy
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/acceptable-use-policy" className="footer-link">
+                        Acceptable Use Policy
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/privacy-policy-for-mro-app" className="footer-link">
+                        Privacy Policy for MRO App
                       </Link>
                     </li>
                   </ul>
@@ -161,11 +177,12 @@ const FooterFour = ({ className }: { className?: string }) => {
             </div>
           </div>
         </div>
+        
         <div className="relative pt-[26px] pb-[42px] text-center">
           <FooterDivider className="bg-accent/10 dark:bg-stroke-6" />
           <RevealAnimation delay={0.7} offset={10} start="top 105%">
             <p className="text-tagline-1 text-primary-50 font-normal">
-              Copyright © Medqon
+              Copyright © {new Date().getFullYear()} Medqon Limited. All rights reserved.
             </p>
           </RevealAnimation>
         </div>

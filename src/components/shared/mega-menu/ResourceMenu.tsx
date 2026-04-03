@@ -19,7 +19,7 @@ const ResourceMenu = ({
   className, 
   isParentHovered = false,
   onMouseEnter,
-  onMouseLeave 
+  onMouseLeave  
 }: ResourceMenuProps) => {
   // State: Which submenu is active? Default to 'support' when Resources is hovered
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
