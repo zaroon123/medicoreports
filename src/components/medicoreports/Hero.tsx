@@ -21,6 +21,7 @@ import Progress from '../homepage-04/Progress';
 import LinkButton from '../ui/button/LinkButton';
 
 import heroBanner from '@public/images/medicoreports/CRMimage.png';
+import herogif from '@public/images/medicoreports/hero.gif';
 
 const benefits = [
   {
@@ -59,7 +60,7 @@ const Hero = () => {
       ref={sceneRef}
       className="pt-[320px] md:pt-[200px] lg:pt-[200px] xl:pt-[260px] pb-16 md:pb-20 lg:pb-[120px] xl:pb-[150px] bg-[url('/images/medicoreports/hero-bg.png')] bg-no-repeat bg-top relative z-0"
       id="scene">
-      {/*Hero Title Content*/}
+      {/*Hero Title Content*/} 
       <div className="main-container flex flex-col items-center space-y-[124px] relative z-10 mb-[100px] lg:mb-[150px] xl:mb-[220px]">
         {/*Hero shape left item*/}
         <div className="absolute -top-[160px] md:-top-[80px] w-[323px] lg:top-[50px] left-5 lg:left-[50px] 2xl:-left-[120px] md:rotate-8 -z-10">
@@ -160,7 +161,7 @@ const Hero = () => {
           {/* banner */}
           <RevealAnimation delay={0.4} direction="up" instant>
             <figure className="max-w-[620px] -mb-3 lg:max-w-[840px] xl:max-w-[1000px] 2xl:max-w-[1016px] min-[1800px]:!max-w-[1166px] mx-auto">
-              <Image src={heroBanner} alt="Hero banner" className="w-full h-full object-cover" />
+              <Image src={herogif} alt="Hero banner" className="w-full h-full object-cover" />
             </figure>
           </RevealAnimation>
         </div>
