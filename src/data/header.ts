@@ -45,7 +45,7 @@ export const navigationItems: NavigationItem[] = [
   },
   {
     id: 'solutions',
-    label: 'Solutions',
+    label: 'Platform',
     href: '#',
     hasDropdown: true,
     megaMenuComponent: 'SolutionsMegaMenu',
@@ -54,7 +54,7 @@ export const navigationItems: NavigationItem[] = [
     id: 'contact',
     label: 'Contact Us',
     href: '/contact-us',
-    hasDropdown: false, 
+    hasDropdown: false,
   },
 ];
 
@@ -173,10 +173,124 @@ export const resourceMenuItems: MegaMenuItem[] = [
 
 // Solutions Menu Data
 export const solutionsMenuItems: MegaMenuItem[] = [
-  { id: 'report-writer-for-experts', label: 'For Experts (Report Writer)', href: '/medicoreports-for-experts', description: 'AI-powered medico-legal report generation' },
-  { id: 'medqon-vault', label: 'For Agencies (Medqon Vault)', href: '/medicoreports-vault', description: 'Case management & workflow automation' },
-  { id: 'integrations', label: 'Integrations', href: '#', description: 'Seamless connectivity with your tools' },
-  { id: 'pricing', label: 'Pricing', href: '/medicoreports-pricing', description: 'Plans for every stage' },
+  {
+    id: 'medico-legal',
+    label: 'Medico Legal',
+    href: '#',
+    description: 'AI-powered medico-legal solutions',
+    submenu: [
+      {
+        id: 'report-writer-for-experts',
+        label: 'For Experts (Report Writer)',
+        href: '/medicoreports-for-experts',
+        description: 'AI-powered medico-legal report generation'
+      },
+      {
+        id: 'medqon-vault',
+        label: 'For Agencies (Medqon Vault)',
+        href: '/medicoreports-vault',
+        description: 'Case management & workflow automation'
+      }
+    ]
+  },
+  {
+    id: 'other-sectors',
+    label: 'Other Sectors',
+    href: '#',
+    description: 'Solutions for other industries',
+    submenu: [
+      {
+        id: 'legal',
+        label: 'Legal',
+        href: '/solutions/legal',
+        description: 'Legal document automation & case management'
+      },
+      {
+        id: 'insurance',
+        label: 'Insurance',
+        href: '/solutions/insurance',
+        description: 'Claims processing & risk assessment'
+      },
+      {
+        id: 'fintech',
+        label: 'Fintech',
+        href: '/solutions/fintech',
+        description: 'Financial technology solutions & compliance'
+      },
+      {
+        id: 'real-estate',
+        label: 'Real Estate',
+        href: '/solutions/real-estate',
+        description: 'Property management & documentation'
+      },
+      {
+        id: 'construction',
+        label: 'Construction',
+        href: '/solutions/construction',
+        description: 'Project management & compliance tracking'
+      },
+      {
+        id: 'public-sector',
+        label: 'Public Sector',
+        href: '/solutions/public-sector',
+        description: 'Government & public service solutions'
+      },
+      {
+        id: 'governance',
+        label: 'Governance',
+        href: '/solutions/governance',
+        description: 'Risk & compliance management'
+      },
+      {
+        id: 'hr',
+        label: 'HR',
+        href: '/solutions/hr',
+        description: 'Human resources management & automation'
+      },
+      {
+        id: 'pharma',
+        label: 'Pharma',
+        href: '/solutions/pharma',
+        description: 'Pharmaceutical compliance & documentation'
+      },
+      {
+        id: 'ems',
+        label: 'EMS',
+        href: '/solutions/ems',
+        description: 'Emergency medical services solutions'
+      },
+      {
+        id: 'sales-intelligence',
+        label: 'Sales Intelligence',
+        href: '/solutions/sales-intelligence',
+        description: 'Sales data & analytics platform'
+      },
+      {
+        id: 'marketing-intelligence',
+        label: 'Marketing Intelligence',
+        href: '/solutions/marketing-intelligence',
+        description: 'Marketing insights & campaign management'
+      },
+      {
+        id: 'research',
+        label: 'Research',
+        href: '/solutions/research',
+        description: 'Research data management & analysis'
+      }
+    ]
+  },
+  {
+    id: 'integrations',
+    label: 'API Integration',
+    href: '#',
+    description: 'Seamless connectivity with your tools'
+  },
+  {
+    id: 'pricing',
+    label: 'Pricing',
+    href: '/medicoreports-pricing',
+    description: 'Plans for every stage'
+  },
 ];
 
 // Blog Menu Data

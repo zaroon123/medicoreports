@@ -72,7 +72,12 @@ const NavbarOne: FC<NavbarOneProps> = ({ className, megaMenuColor, btnClassName 
                         />
                       );
                     case 'SolutionsMegaMenu':
-                      return <SolutionsMenu className={megaMenuColor} />;
+                      return <SolutionsMenu 
+                          className={megaMenuColor}
+                          isParentHovered={hoveredMenu === item.id}
+                          onMouseEnter={() => handleMenuMouseEnter(item.id)}
+                          onMouseLeave={handleMenuMouseLeave}
+                      />;
                     case 'ServicesMenu':
                       return <ServicesMenu className={megaMenuColor} />;
                     case 'BlogMenu':
