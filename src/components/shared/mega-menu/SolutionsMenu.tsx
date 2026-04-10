@@ -147,7 +147,7 @@ const SolutionsMenu = ({
   const getDropdownWidth = () => {
     if (!activeSubmenu) return 'w-auto min-w-[280px]';
     if (activeSubmenu === 'other-sectors') return 'w-auto min-w-[780px]';
-    if (activeSubmenu === 'medico-legal') return 'w-auto min-w-[580px]';
+    if (activeSubmenu === 'medico-legal') return 'w-auto min-w-[780px]';
     return 'w-auto min-w-[480px]';
   };
 
