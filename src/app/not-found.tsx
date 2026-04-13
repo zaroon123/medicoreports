@@ -10,7 +10,7 @@ import gradient6 from '../../public/images/gradient/gradient-6.png';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: '404 - NextSaaS',
+  title: '404 - Medicoreports',
 };
 
 const NotFound = () => {
