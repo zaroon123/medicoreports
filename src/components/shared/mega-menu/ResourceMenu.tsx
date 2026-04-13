@@ -3,6 +3,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useRef, useEffect } from 'react';
 import { resourceMenuItems } from '@/data/header';
 import { cn } from '@/utils/cn';
@@ -14,6 +15,37 @@ interface ResourceMenuProps {
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
 }
+
+// Icon component to handle both emoji and PNG icons
+const MenuIcon = ({ icon, label }: { icon?: string; label: string }) => {
+  if (!icon) return null;
+  
+  // Check if icon is an image path (PNG, JPG, JPEG, SVG, WebP)
+  const isImagePath = icon.startsWith('/') || 
+                      icon.startsWith('http') || 
+                      icon.includes('.png') || 
+                      icon.includes('.jpg') || 
+                      icon.includes('.jpeg') || 
+                      icon.includes('.svg') || 
+                      icon.includes('.webp');
+  
+  if (isImagePath) {
+    return (
+      <div className="w-5 h-5 flex-shrink-0 relative mt-0.5">
+        <Image
+          src={icon}
+          alt={label}
+          width={20}
+          height={20}
+          className="object-contain"
+        />
+      </div>
+    );
+  }
+  
+  // Default to emoji/text icon
+  return <span className="text-lg flex-shrink-0">{icon}</span>;
+};
 
 const ResourceMenu = ({ 
   className, 
@@ -145,6 +177,12 @@ const ResourceMenu = ({
     return 'w-auto min-w-[580px]'; // Right column will expand
   };
 
+  // Helper function to safely get icon as string
+  const getIconAsString = (icon: unknown): string | undefined => {
+    if (typeof icon === 'string') return icon;
+    return undefined;
+  };
+
   return (
     <div 
       className="relative"
@@ -192,7 +230,7 @@ const ResourceMenu = ({
             showSubmenu ? 'opacity-100 visible' : 'opacity-0 invisible'
           )}>
             {showSubmenu && (
-              <div className="p-6 h-full">
+              <div className="p-6 h-full animate-in fade-in duration-150">
                 <div className="space-y-4 h-full flex flex-col">
                   {/* Submenu Header */}
                   <div className="pb-3 border-b border-stroke-1 dark:border-stroke-6">
@@ -210,16 +248,15 @@ const ResourceMenu = ({
                     <div className="grid grid-cols-2 gap-4 flex-1">
                       {/* Left Column of Submenu */}
                       <div className="space-y-2">
-                        {leftColumn.map((subItem) => (
+                        {leftColumn.map((subItem, idx) => (
                           <Link
                             key={subItem.id}
                             href={subItem.href}
                             className="block group p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
+                            style={{ animationDelay: `${idx * 50}ms` }}
                           >
                             <div className="flex items-start gap-3">
-                              {subItem.icon && (
-                                <span className="text-lg flex-shrink-0">{subItem.icon}</span>
-                              )}
+                              <MenuIcon icon={getIconAsString(subItem.icon)} label={subItem.label} />
                               <div className="flex-1 min-w-0">
                                 <div className="font-medium text-secondary dark:text-accent group-hover:text-primary-600 transition-colors">
                                   {subItem.label}
@@ -237,16 +274,15 @@ const ResourceMenu = ({
                       
                       {/* Right Column of Submenu */}
                       <div className="space-y-2">
-                        {rightColumn.map((subItem) => (
+                        {rightColumn.map((subItem, idx) => (
                           <Link
                             key={subItem.id}
                             href={subItem.href}
                             className="block group p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
+                            style={{ animationDelay: `${(leftColumn.length + idx) * 50}ms` }}
                           >
                             <div className="flex items-start gap-3">
-                              {subItem.icon && (
-                                <span className="text-lg flex-shrink-0">{subItem.icon}</span>
-                              )}
+                              <MenuIcon icon={getIconAsString(subItem.icon)} label={subItem.label} />
                               <div className="flex-1 min-w-0">
                                 <div className="font-medium text-secondary dark:text-accent group-hover:text-primary-600 transition-colors">
                                   {subItem.label}
@@ -265,16 +301,15 @@ const ResourceMenu = ({
                   ) : (
                     // Single column layout for Support Corner - RIGHT COLUMN EXPANDS
                     <div className="space-y-2 flex-1">
-                      {activeItem?.submenu?.map((subItem) => (
+                      {activeItem?.submenu?.map((subItem, idx) => (
                         <Link
                           key={subItem.id}
-                          href={subItem.href}
-                          className="block group p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
+                          href={subItem.href} 
+                          className="block group p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 animate-in fade-in slide-in-from-left-2"
+                          style={{ animationDelay: `${idx * 50}ms` }}
                         >
                           <div className="flex items-start gap-3">
-                            {subItem.icon && (
-                              <span className="text-lg flex-shrink-0">{subItem.icon}</span>
-                            )}
+                            <MenuIcon icon={getIconAsString(subItem.icon)} label={subItem.label} />
                             <div className="flex-1 min-w-0">
                               <div className="font-medium text-secondary dark:text-accent group-hover:text-primary-600 transition-colors">
                                 {subItem.label}

@@ -20,6 +20,7 @@ export interface MegaMenuItem {
   label: string;
   href: string;
   newPage?: boolean;
+  icon?: string;
   description?: string; // Optional description for main menu items
   submenu?: MegaSubMenuItem[]; // Add submenu property
 }
@@ -76,35 +77,35 @@ export const resourceMenuItems: MegaMenuItem[] = [
         label: 'FAQ',
         href: '/faq',
         description: 'Frequently asked questions',
-        icon: '❓'
+        icon: '/support-corner/faq.png'  // Replace with your PNG icon path
       },
       {
         id: 'contact',
         label: 'Contact Support',
         href: '/contact-us',
         description: 'Get help from our team',
-        icon: '📧'
+        icon: '/support-corner/support.png'  // Replace with your PNG icon path
       },
       {
         id: 'tickets',
         label: 'My Tickets',
         href: '/contact-us',
         description: 'View your support tickets',
-        icon: '🎫'
+        icon: '/support-corner/ticket.png'  // Replace with your PNG icon path
       },
       {
         id: 'live-chat',
         label: 'Live Chat',
         href: '/contact-us',
         description: 'Chat with an agent',
-        icon: '💬'
+        icon: '/support-corner/live-chat.png'  // Replace with your PNG icon path
       },
       {
         id: 'knowledge-base',
         label: 'Knowledge Base',
         href: '/blog-01',
         description: 'Browse articles',
-        icon: '📚'
+        icon: '/support-corner/knowledge-base.png'  // Replace with your PNG icon path
       }
     ]
   },
@@ -123,49 +124,49 @@ export const resourceMenuItems: MegaMenuItem[] = [
         label: 'Terms & Conditions',
         href: '/terms-conditions',
         description: 'Read our terms of service',
-        icon: '📜'
+        icon: '/trust-centre/trust-center.png'  // Replace with your PNG icon path
       },
       {
         id: 'privacy',
         label: 'Privacy Policy',
         href: '/privacy-policy',
-        description: 'How we protect your data',
-        icon: '🔒'
+        description: 'How we protect your data', 
+        icon: '/trust-centre/trust-center.png'  // Replace with your PNG icon path
       },
       {
         id: 'gdpr',
         label: 'GDPR Compliance',
         href: '/gdpr-data-protection-policy',
         description: 'Data protection regulations',
-        icon: '🌍'
+        icon: '/trust-centre/trust-center.png'  // Replace with your PNG icon path
       },
       {
         id: 'disclaimer',
         label: 'Disclaimer',
         href: '/disclaimer',
         description: 'Legal disclaimer and limitations',
-        icon: '⚠️'
+        icon: '/trust-centre/trust-center.png'  // Replace with your PNG icon path
       },
       {
-        id: 'cookie-policy',
+        id: 'cookie-policy', 
         label: 'Cookie Policy',
         href: '/cookie-policy',
         description: 'How we use cookies on our website',
-        icon: '🍪'
+        icon: '/trust-centre/trust-center.png'  // Replace with your PNG icon path
       },
       {
         id: 'acceptable-use',
         label: 'Acceptable Use Policy',
         href: '/acceptable-use-policy',
         description: 'Guidelines for proper use of our services',
-        icon: '📋'
+        icon: '/trust-centre/trust-center.png'  // Replace with your PNG icon path
       },
       {
         id: 'privacy-mro',
         label: 'Privacy Policy for MRO App',
         href: '/privacy-policy-for-mro-app',
         description: 'Mobile app privacy practices',
-        icon: '📱'
+        icon: '/trust-centre/trust-center.png'  // Replace with your PNG icon path
       }
     ]
   },
