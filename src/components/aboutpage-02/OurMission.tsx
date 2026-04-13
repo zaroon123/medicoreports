@@ -18,7 +18,7 @@ const OurMission = () => {
                 <h2>To help teams work and grow with smart, secure software.</h2>
               </RevealAnimation>
               <RevealAnimation delay={0.4}>
-                <p>
+                <p> 
                   We help companies turn messy workflows into manageable systems—one dashboard, one automation, one
                   insight at a time.
                 </p>

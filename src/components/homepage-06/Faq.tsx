@@ -13,7 +13,7 @@ const Faq = () => {
           </RevealAnimation>
           <RevealAnimation delay={0.2}>
             <h2>Commonly asked questions</h2>
-          </RevealAnimation>
+          </RevealAnimation> 
           <RevealAnimation delay={0.3}>
             <p className="mx-auto lg:max-w-[620px]">
               By offering concise and informative responses, this section helps users find solutions without the need to

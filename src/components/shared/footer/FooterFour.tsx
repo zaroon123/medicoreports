@@ -11,7 +11,7 @@ import darkLogo from '@public/images/shared/Medqon-Logo-white.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import ThemeToggle from '../ThemeToggle'; 
-import FooterDivider from './FooterDivider';
+import FooterDivider from './FooterDivider'; 
   
 const FooterFour = ({ className }: { className?: string }) => {
   return (
@@ -187,7 +187,6 @@ const FooterFour = ({ className }: { className?: string }) => {
           </RevealAnimation>
         </div>
       </div>
-      <ThemeToggle />
     </footer>
   );
 };

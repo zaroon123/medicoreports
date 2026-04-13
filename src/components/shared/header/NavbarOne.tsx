@@ -21,7 +21,7 @@ import NavItemLink from './NavItemLink';
 
 interface NavbarOneProps {
   className?: string;
-  megaMenuColor?: string;
+  megaMenuColor?: string; 
   btnClassName?: string;
   navItemClass?: string;
 } 

@@ -5,7 +5,7 @@ import avatar1Img from '@public/images/avatar/avatar-1.png';
 import avatar2Img from '@public/images/avatar/avatar-2.png';
 import avatar3Img from '@public/images/avatar/avatar-3.png';
 import gradient4Img from '@public/images/gradient/gradient-4.png';
-import Image from 'next/image';
+import Image from 'next/image'; 
 import RevealAnimation from '../animation/RevealAnimation';
 
 const OurMission = () => {

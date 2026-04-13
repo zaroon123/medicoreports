@@ -202,7 +202,7 @@ export const solutionsMenuItems: MegaMenuItem[] = [
       {
         id: 'legal',
         label: 'Legal',
-        href: '/solutions/legal',
+        href: '/sectors/legal',
         description: 'Legal document automation & case management'
       },
       {

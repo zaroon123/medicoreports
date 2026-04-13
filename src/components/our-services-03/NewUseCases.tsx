@@ -17,7 +17,7 @@ const NewUseCases = () => {
               <RevealAnimation delay={0.2}>
                 <h2 className="max-w-[518px]">How We Connect with Customers</h2>
               </RevealAnimation>
-            </div>
+            </div> 
           </div>
           <div className="flex-1 lg:text-left text-center">
             <div>

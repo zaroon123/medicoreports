@@ -7,7 +7,7 @@ import aboutDataIntegration3Image from '@public/images/home-page-6/about-data-in
 import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
-
+ 
 const Integration = () => {
   return (
     <section className="bg-background-2 dark:bg-background-5 pt-[100px] lg:pt-[200px] pb-[100px] overflow-hidden">

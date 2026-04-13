@@ -1,4 +1,4 @@
-import { DownArrowIcon, UpArrowIcon } from '@/icons';
+import { DownArrowIcon, UpArrowIcon } from '@/icons'; 
 import featureImg from '@public/images/about-page-03/feature.png';
 import salesAssetDarkImg from '@public/images/about-page-03/sales-asset-dark.svg';
 import salesAssetImg from '@public/images/about-page-03/sales-asset.svg';
