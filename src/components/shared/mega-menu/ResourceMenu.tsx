@@ -31,7 +31,7 @@ const MenuIcon = ({ icon, label }: { icon?: string; label: string }) => {
   
   if (isImagePath) {
     return (
-      <div className="w-5 h-5 flex-shrink-0 relative mt-0.5">
+      <div className="w-5 h-5 flex-shrink-0 relative mt-0.5 pt-[15px]">
         <Image
           src={icon}
           alt={label}
