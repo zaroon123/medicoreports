@@ -1,5 +1,5 @@
 import RevealAnimation from '@/components/animation/RevealAnimation';
-import FooterThree from '@/components/shared/footer/FooterThree';
+import FooterFour from '@/components/shared/footer/FooterFour';
 import NavbarOne from '@/components/shared/header/NavbarOne';
 import LinkButton from '@/components/ui/button/LinkButton';
 import { defaultMetadata } from '@/utils/generateMetaData';
@@ -56,7 +56,7 @@ const NotFound = () => {
           </div>
         </section>
       </main>
-      <FooterThree />
+      <FooterFour className="border-t border-t-[#303032] dark:border-t-0 max-sm:z-[11]" />
     </Fragment>
   );
 };

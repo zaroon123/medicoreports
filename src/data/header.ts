@@ -208,73 +208,73 @@ export const solutionsMenuItems: MegaMenuItem[] = [
       {
         id: 'insurance',
         label: 'Insurance',
-        href: '/solutions/insurance',
+        href: '/sectors/insurance',
         description: 'Claims processing & risk assessment'
       },
       {
         id: 'fintech',
         label: 'Fintech',
-        href: '/solutions/fintech',
+        href: '/sectors/fintech',
         description: 'Financial technology solutions & compliance'
       },
       {
         id: 'real-estate',
         label: 'Real Estate',
-        href: '/solutions/real-estate',
+        href: '/sectors/real-estate',
         description: 'Property management & documentation'
       },
       {
         id: 'construction',
         label: 'Construction',
-        href: '/solutions/construction',
+        href: '/sectors/construction',
         description: 'Project management & compliance tracking'
       },
       {
         id: 'public-sector',
         label: 'Public Sector',
-        href: '/solutions/public-sector',
+        href: '/sectors/public-sector',
         description: 'Government & public service solutions'
       },
       {
         id: 'governance',
         label: 'Governance',
-        href: '/solutions/governance',
+        href: '/sectors/governance',
         description: 'Risk & compliance management'
       },
       {
         id: 'hr',
         label: 'HR',
-        href: '/solutions/hr',
+        href: '/sectors/hr',
         description: 'Human resources management & automation'
       },
       {
         id: 'pharma',
         label: 'Pharma',
-        href: '/solutions/pharma',
+        href: '/sectors/pharma',
         description: 'Pharmaceutical compliance & documentation'
       },
       {
         id: 'ems',
         label: 'EMS',
-        href: '/solutions/ems',
+        href: '/sectors/ems',
         description: 'Emergency medical services solutions'
       },
       {
         id: 'sales-intelligence',
         label: 'Sales Intelligence',
-        href: '/solutions/sales-intelligence',
+        href: '/sectors/sales-intelligence',
         description: 'Sales data & analytics platform'
       },
       {
         id: 'marketing-intelligence',
         label: 'Marketing Intelligence',
-        href: '/solutions/marketing-intelligence',
+        href: '/sectors/marketing-intelligence',
         description: 'Marketing insights & campaign management'
       },
       {
         id: 'research',
         label: 'Research',
-        href: '/solutions/research',
+        href: '/sectors/research',
         description: 'Research data management & analysis'
       }
     ]
