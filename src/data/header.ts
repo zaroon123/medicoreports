@@ -185,14 +185,14 @@ export const solutionsMenuItems: MegaMenuItem[] = [
         label: 'For Experts (Report Writer)',
         href: '/medicoreports-for-experts',
         description: 'AI-powered medico-legal report generation',
-        icon: '/trust-centre/trust-center.png'
+        icon: '/medico-legal/report-writer.png'
       },
       {
         id: 'medqon-vault',
         label: 'For Agencies (Medqon Vault)',
         href: '/medicoreports-vault',
         description: 'Case management & workflow automation',
-        icon: '/trust-centre/trust-center.png'
+        icon: '/medico-legal/vault.png'
       }
     ]
   },
