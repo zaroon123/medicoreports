@@ -3,6 +3,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useRef, useEffect } from 'react';
 import { solutionsMenuItems } from '@/data/header';
 import { cn } from '@/utils/cn';
@@ -11,9 +12,44 @@ import MegaMenuItem from './MegaMenuItem';
 interface SolutionsMenuProps {
   className?: string;
   isParentHovered?: boolean;
-  onMouseEnter?: () => void;
+  onMouseEnter?: () => void; 
   onMouseLeave?: () => void;
 }
+
+// Icon component to handle both emoji and PNG icons with professional styling
+const MenuIcon = ({ icon, label }: { icon?: string; label: string }) => {
+  if (!icon) return null;
+  
+  // Check if icon is an image path (PNG, JPG, JPEG, SVG, WebP)
+  const isImagePath = icon.startsWith('/') || 
+                      icon.startsWith('http') || 
+                      icon.includes('.png') || 
+                      icon.includes('.jpg') || 
+                      icon.includes('.jpeg') || 
+                      icon.includes('.svg') || 
+                      icon.includes('.webp');
+  
+  if (isImagePath) {
+    return (
+      <div className="w-[28px] h-[28px] flex-shrink-0 relative rounded-md border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 flex items-center justify-center p-[5px]">
+        <Image
+          src={icon}
+          alt={label}
+          width={18}
+          height={18}
+          className="object-contain w-full h-full"
+        />
+      </div>
+    );
+  }
+  
+  // Default to emoji/text icon with professional styling
+  return (
+    <div className="w-[18px] h-[18px] flex-shrink-0 rounded-md border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 flex items-center justify-center text-xs">
+      <span className="text-[11px] leading-none">{icon}</span>
+    </div>
+  );
+};
 
 const SolutionsMenu = ({ 
   className, 
@@ -151,6 +187,12 @@ const SolutionsMenu = ({
     return 'w-auto min-w-[480px]';
   };
 
+  // Helper function to safely get icon as string
+  const getIconAsString = (icon: unknown): string | undefined => {
+    if (typeof icon === 'string') return icon;
+    return undefined;
+  };
+
   return (
     <div 
       className="relative"
@@ -208,19 +250,19 @@ const SolutionsMenu = ({
                   
                   {/* Submenu Items - Single or Two Columns based on item count */}
                   {activeSubmenu === 'other-sectors' && hasManyItems ? (
+                    // Two columns layout for Other Sectors
                     <div className="grid grid-cols-2 gap-4 flex-1">
+                      {/* Left Column of Submenu */}
                       <div className="space-y-2">
                         {leftColumn.map((subItem, idx) => (
                           <Link
                             key={subItem.id}
                             href={subItem.href || '#'}
-                            className="block group p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 animate-in fade-in slide-in-from-left-2"
+                            className="block group p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
                             style={{ animationDelay: `${idx * 50}ms` }}
                           >
-                            <div className="flex items-start gap-3">
-                              {subItem.icon && (
-                                <span className="text-lg flex-shrink-0">{subItem.icon}</span>
-                              )}
+                            <div className="flex items-center gap-3">
+                              <MenuIcon icon={getIconAsString(subItem.icon)} label={subItem.label} />
                               <div className="flex-1 min-w-0">
                                 <div className="font-medium text-secondary dark:text-accent group-hover:text-primary-600 transition-colors">
                                   {subItem.label}
@@ -235,18 +277,18 @@ const SolutionsMenu = ({
                           </Link>
                         ))}
                       </div>
+                      
+                      {/* Right Column of Submenu */}
                       <div className="space-y-2">
                         {rightColumn.map((subItem, idx) => (
                           <Link
                             key={subItem.id}
                             href={subItem.href || '#'}
-                            className="block group p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 animate-in fade-in slide-in-from-right-2"
+                            className="block group p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
                             style={{ animationDelay: `${(leftColumn.length + idx) * 50}ms` }}
                           >
-                            <div className="flex items-start gap-3">
-                              {subItem.icon && (
-                                <span className="text-lg flex-shrink-0">{subItem.icon}</span>
-                              )}
+                            <div className="flex items-center gap-3">
+                              <MenuIcon icon={getIconAsString(subItem.icon)} label={subItem.label} />
                               <div className="flex-1 min-w-0">
                                 <div className="font-medium text-secondary dark:text-accent group-hover:text-primary-600 transition-colors">
                                   {subItem.label}
@@ -263,18 +305,17 @@ const SolutionsMenu = ({
                       </div>
                     </div>
                   ) : activeSubmenu === 'medico-legal' ? (
+                    // Two column layout for Medico Legal (2 items)
                     <div className="grid grid-cols-2 gap-4 flex-1">
                       {activeItem?.submenu?.map((subItem, idx) => (
                         <Link
                           key={subItem.id}
                           href={subItem.href || '#'}
-                          className="block group p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 animate-in fade-in slide-in-from-bottom-2"
+                          className="block group p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
                           style={{ animationDelay: `${idx * 100}ms` }}
                         >
-                          <div className="flex items-start gap-3">
-                            {subItem.icon && (
-                              <span className="text-lg flex-shrink-0">{subItem.icon}</span>
-                            )}
+                          <div className="flex items-center gap-3">
+                            <MenuIcon icon={getIconAsString(subItem.icon)} label={subItem.label} />
                             <div className="flex-1 min-w-0">
                               <div className="font-medium text-secondary dark:text-accent group-hover:text-primary-600 transition-colors">
                                 {subItem.label}
@@ -290,18 +331,17 @@ const SolutionsMenu = ({
                       ))}
                     </div>
                   ) : (
+                    // Single column layout for Integrations and other items
                     <div className="space-y-2 flex-1">
                       {activeItem?.submenu?.map((subItem, idx) => (
                         <Link
                           key={subItem.id}
                           href={subItem.href || '#'}
-                          className="block group p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 animate-in fade-in slide-in-from-left-2"
+                          className="block group p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
                           style={{ animationDelay: `${idx * 50}ms` }}
                         >
-                          <div className="flex items-start gap-3">
-                            {subItem.icon && (
-                              <span className="text-lg flex-shrink-0">{subItem.icon}</span>
-                            )}
+                          <div className="flex items-center gap-3">
+                            <MenuIcon icon={getIconAsString(subItem.icon)} label={subItem.label} />
                             <div className="flex-1 min-w-0">
                               <div className="font-medium text-secondary dark:text-accent group-hover:text-primary-600 transition-colors">
                                 {subItem.label}

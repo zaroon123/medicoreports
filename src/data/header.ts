@@ -184,13 +184,15 @@ export const solutionsMenuItems: MegaMenuItem[] = [
         id: 'report-writer-for-experts',
         label: 'For Experts (Report Writer)',
         href: '/medicoreports-for-experts',
-        description: 'AI-powered medico-legal report generation'
+        description: 'AI-powered medico-legal report generation',
+        icon: '/trust-centre/trust-center.png'
       },
       {
         id: 'medqon-vault',
         label: 'For Agencies (Medqon Vault)',
         href: '/medicoreports-vault',
-        description: 'Case management & workflow automation'
+        description: 'Case management & workflow automation',
+        icon: '/trust-centre/trust-center.png'
       }
     ]
   },
@@ -204,79 +206,92 @@ export const solutionsMenuItems: MegaMenuItem[] = [
         id: 'legal',
         label: 'Legal',
         href: '/sectors/legal',
-        description: 'Legal document automation & case management'
+        description: 'Legal document automation & case management',
+        icon: '/other-sectors/legal.png'
       },
       {
         id: 'insurance',
         label: 'Insurance',
         href: '/sectors/insurance',
-        description: 'Claims processing & risk assessment'
+        description: 'Claims processing & risk assessment',
+        icon: '/other-sectors/insurance.png'
       },
       {
         id: 'fintech',
         label: 'Fintech',
         href: '/sectors/fintech',
-        description: 'Financial technology solutions & compliance'
+        description: 'Financial technology solutions & compliance',
+        icon: '/other-sectors/fintech.png'
       },
       {
         id: 'real-estate',
         label: 'Real Estate',
         href: '/sectors/real-estate',
-        description: 'Property management & documentation'
+        description: 'Property management & documentation',
+        icon: '/other-sectors/real-estate.png'
       },
       {
         id: 'construction',
         label: 'Construction',
         href: '/sectors/construction',
-        description: 'Project management & compliance tracking'
+        description: 'Project management & compliance tracking',
+        icon: '/other-sectors/construction.png'
       },
       {
         id: 'public-sector',
         label: 'Public Sector',
         href: '/sectors/public-sector',
-        description: 'Government & public service solutions'
+        description: 'Government & public service solutions',
+        icon: '/other-sectors/public-service.png'
       },
       {
         id: 'governance',
         label: 'Governance',
         href: '/sectors/governance',
-        description: 'Risk & compliance management'
+        description: 'Risk & compliance management',
+        icon: '/other-sectors/governance.png'
       },
       {
         id: 'hr',
         label: 'HR',
         href: '/sectors/hr',
-        description: 'Human resources management & automation'
+        description: 'Human resources management & automation',
+        icon: '/other-sectors/hr.png'
       },
       {
         id: 'pharma',
         label: 'Pharma',
         href: '/sectors/pharma',
-        description: 'Pharmaceutical compliance & documentation'
+        description: 'Pharmaceutical compliance & documentation',
+        icon: '/other-sectors/pharma.png'
       },
       {
         id: 'ems',
         label: 'EMS',
         href: '/sectors/ems',
-        description: 'Emergency medical services solutions'
+        description: 'Emergency medical services solutions',
+        icon: '/other-sectors/EMS.png'
       },
       {
         id: 'sales-intelligence',
         label: 'Sales Intelligence',
         href: '/sectors/sales-intelligence',
-        description: 'Sales data & analytics platform'
+        description: 'Sales data & analytics platform',
+        icon: '/other-sectors/Sales-Intel.png'
       },
       {
         id: 'marketing-intelligence',
         label: 'Marketing Intelligence',
         href: '/sectors/marketing-intelligence',
-        description: 'Marketing insights & campaign management'
+        description: 'Marketing insights & campaign management',
+        icon: '/other-sectors/marketing-Intel.png'
       },
       {
         id: 'research',
         label: 'Research',
         href: '/sectors/research',
-        description: 'Research data management & analysis'
+        description: 'Research data management & analysis',
+        icon: '/other-sectors/research.png'
       }
     ]
   },

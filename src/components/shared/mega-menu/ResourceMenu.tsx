@@ -16,7 +16,7 @@ interface ResourceMenuProps {
   onMouseLeave?: () => void;
 }
 
-// Icon component to handle both emoji and PNG icons
+// Icon component to handle both emoji and PNG icons with professional styling
 const MenuIcon = ({ icon, label }: { icon?: string; label: string }) => {
   if (!icon) return null;
   
@@ -31,20 +31,24 @@ const MenuIcon = ({ icon, label }: { icon?: string; label: string }) => {
   
   if (isImagePath) {
     return (
-      <div className="w-5 h-5 flex-shrink-0 relative mt-0.5 pt-[15px]">
+      <div className="w-[28px] h-[28px] flex-shrink-0 relative rounded-md border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 flex items-center justify-center p-[5px]">
         <Image
           src={icon}
           alt={label}
-          width={20}
-          height={20}
-          className="object-contain"
+          width={18}
+          height={18}
+          className="object-contain w-full h-full"
         />
       </div>
     );
   }
   
-  // Default to emoji/text icon
-  return <span className="text-lg flex-shrink-0">{icon}</span>;
+  // Default to emoji/text icon with professional styling
+  return (
+    <div className="w-[18px] h-[18px] flex-shrink-0 rounded-md border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 flex items-center justify-center text-xs">
+      <span className="text-[11px] leading-none">{icon}</span>
+    </div>
+  );
 };
 
 const ResourceMenu = ({ 
@@ -255,7 +259,7 @@ const ResourceMenu = ({
                             className="block group p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
                             style={{ animationDelay: `${idx * 50}ms` }}
                           >
-                            <div className="flex items-start gap-3">
+                            <div className="flex items-center gap-3">
                               <MenuIcon icon={getIconAsString(subItem.icon)} label={subItem.label} />
                               <div className="flex-1 min-w-0">
                                 <div className="font-medium text-secondary dark:text-accent group-hover:text-primary-600 transition-colors">
@@ -281,7 +285,7 @@ const ResourceMenu = ({
                             className="block group p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
                             style={{ animationDelay: `${(leftColumn.length + idx) * 50}ms` }}
                           >
-                            <div className="flex items-start gap-3">
+                            <div className="flex items-center gap-3">
                               <MenuIcon icon={getIconAsString(subItem.icon)} label={subItem.label} />
                               <div className="flex-1 min-w-0">
                                 <div className="font-medium text-secondary dark:text-accent group-hover:text-primary-600 transition-colors">
@@ -308,7 +312,7 @@ const ResourceMenu = ({
                           className="block group p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 animate-in fade-in slide-in-from-left-2"
                           style={{ animationDelay: `${idx * 50}ms` }}
                         >
-                          <div className="flex items-start gap-3">
+                          <div className="flex items-center gap-3">
                             <MenuIcon icon={getIconAsString(subItem.icon)} label={subItem.label} />
                             <div className="flex-1 min-w-0">
                               <div className="font-medium text-secondary dark:text-accent group-hover:text-primary-600 transition-colors">
