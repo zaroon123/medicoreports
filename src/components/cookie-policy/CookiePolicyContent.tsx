@@ -12,7 +12,7 @@ const CookiePolicyContent = () => {
             <div className="space-y-7">
               <p className="text-secondary/70 dark:text-accent/70">
                 <strong>Medqon Limited – Cookie Policy</strong>
-                <br />
+                <br /> 
                 Effective Date: 23-09-2024
               </p>
             </div>
@@ -111,20 +111,20 @@ const CookiePolicyContent = () => {
               <p>
                 We use third-party service providers, such as HubSpot and Google Analytics, to help us with marketing, 
                 analytics, and understanding user interactions on our Websites. These third-party cookies are placed by 
-                external services and are subject to the respective provider's privacy and cookie policies.
+                external services and are subject to the respective providers privacy and cookie policies.
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>
                   <strong>HubSpot:</strong> Used for managing marketing campaigns and tracking user interactions 
-                  (e.g., form submissions). For more details, refer to HubSpot's Privacy Policy.
+                  (e.g., form submissions). For more details, refer to HubSpots Privacy Policy.
                 </li>
                 <li>
                   <strong>Google Analytics:</strong> Used to track website traffic and analyze visitor behavior. 
-                  Google Analytics anonymizes your IP address to protect your privacy. See Google's Privacy Policy.
+                  Google Analytics anonymizes your IP address to protect your privacy. See Googles Privacy Policy.
                 </li>
               </ul>
               <p>
-                We do not control these third-party cookies, and you should refer to the providers' privacy policies 
+                We do not control these third-party cookies, and you should refer to the providers privacy policies 
                 for details.
               </p>
             </div>
@@ -233,24 +233,6 @@ const CookiePolicyContent = () => {
                 <br />
                 Telephone: (+44) 3300010805
               </p>
-            </div>
-          </RevealAnimation>
-
-          {/* Related Policy Links */}
-          <RevealAnimation delay={0.4}>
-            <div className="flex flex-wrap gap-4 pt-6">
-              <Link
-                href="/privacy-policy"
-                className="section-button btn dark:btn-accent hover:btn-primary btn-xl btn-secondary"
-              >
-                Read our Privacy Policy
-              </Link>
-              <Link
-                href="/terms-and-conditions"
-                className="section-button btn dark:btn-accent hover:btn-primary btn-xl btn-outline"
-              >
-                Terms of Use
-              </Link>
             </div>
           </RevealAnimation>
         </article>

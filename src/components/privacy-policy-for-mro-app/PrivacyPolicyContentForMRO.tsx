@@ -123,30 +123,6 @@ const PrivacyPolicyContentForMRO = () => {
               </p>
             </div>
           </RevealAnimation>
-
-          {/* Related Policy Links */}
-          <RevealAnimation delay={0.4}>
-            <div className="flex flex-wrap gap-4 pt-6">
-              <Link
-                href="/terms-and-conditions"
-                className="section-button btn dark:btn-accent hover:btn-primary btn-xl btn-secondary"
-              >
-                Terms of Use
-              </Link>
-              <Link
-                href="/acceptable-use-policy"
-                className="section-button btn dark:btn-accent hover:btn-primary btn-xl btn-outline"
-              >
-                Acceptable Use Policy
-              </Link>
-              <Link
-                href="/gdpr-compliance"
-                className="section-button btn dark:btn-accent hover:btn-primary btn-xl btn-outline"
-              >
-                GDPR Compliance
-              </Link>
-            </div>
-          </RevealAnimation>
         </article>
       </div>
     </section>
