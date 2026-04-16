@@ -94,10 +94,9 @@ const FeaturesFileCard = () => {
         </div>
         <RevealAnimation delay={0.1} start="top 97%">
           <div className="max-md:space-y-0.5 relative z-20">
-            <h3 className="text-heading-6 md:text-heading-5">Get your completed files.</h3>
+            <h3 className="text-heading-6 md:text-heading-5">Secure & Effortless Data Management  </h3>
             <p className="max-w-[450px]">
-              The inputs are multiplied by their respective weights, summed, and then passed through the activation
-              function.
+              Access, organise, and protect your medico-legal reports with ease. dictAIte ensures seamless case tracking, AI-powered report generation, and compliance with medico-legal data security standards.
             </p>
           </div>
         </RevealAnimation>
@@ -105,5 +104,5 @@ const FeaturesFileCard = () => {
     </RevealAnimation>
   );
 };
-
+ 
 export default FeaturesFileCard;

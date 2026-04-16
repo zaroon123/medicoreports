@@ -34,8 +34,8 @@ const Medicoreports = () => {
         <About />
         <NewFeatures />
         <FeatureV2 />
-        <HowItsWork />
-        <CloudSolution />
+        {/* <HowItsWork />
+        <CloudSolution /> */}
         <Blog badgeClass="badge-yellow" />
         <NewsLetter />
       </main>

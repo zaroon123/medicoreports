@@ -26,15 +26,15 @@ import herogif from '@public/images/medicoreports/hero.gif';
 const benefits = [
   {
     id: 1,
-    text: 'Real-time AI documentation',
+    text: 'Real-time structured documentation',
   },
   {
     id: 2,
-    text: 'Compliance-ready reporting',
+    text: 'Court-ready, compliance-aligned reports',
   },
   {
     id: 3,
-    text: 'Seamless workflow integration',
+    text: 'Verifiable, tamper-evident PDFs',
   },
 ];
 
@@ -54,7 +54,7 @@ const experienceList = [
 ];
  
 const Hero = () => { 
-  const sceneRef = useParallaxEffect();
+  const sceneRef = useParallaxEffect(); 
   return ( 
     <section
       ref={sceneRef}
@@ -113,10 +113,10 @@ const Hero = () => {
         </div>
         <div className="text-left md:text-center max-md:pt-[150px] max-lg:pt-[200px]">
           <RevealAnimation delay={0.2}>
-            <h1 className="mb-4">
-              Convert Professional<br className="hidden md:block" />
-               Conversations into <span className='hero-span-color'>Structured</span>, <br className="hidden md:block" />
-               <span className='hero-span-color'>compliant</span> reports.
+            <h1 className="mb-4">Turn consultations
+              to <span className='hero-span-color'>structured</span>, <br className="hidden md:block" />
+               <span className='hero-span-color'>compliant medico-legal reports</span>, <br className="hidden md:block" />
+               in minutes.
             </h1>
           </RevealAnimation>
           <RevealAnimation delay={0.3}>

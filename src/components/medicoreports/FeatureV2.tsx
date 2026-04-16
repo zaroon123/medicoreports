@@ -8,43 +8,43 @@ import LinkButton from '../ui/button/LinkButton';
 const data = [
   {
     id: 1,
-    title: 'Cross-functional visibility',
-    description: 'Connect risks across silos',
+    title: 'Real-time report generation',
+    description: 'Capture and structure information as the consultation happens',
     icon: 'ns-shape-34',
   },
   {
     id: 2,
-    title: 'Automation & workflows',
-    description: 'Reduce manual work and errors',
+    title: 'Consistent report quality',
+    description: 'Standardised output across all reports and experts',
     icon: 'ns-shape-36',
   },
   {
     id: 3,
-    title: 'Customizable modules',
-    description: 'Tailor solutions to your industry',
+    title: 'Operational efficiency',
+    description: 'Streamline reporting workflows without manual intervention',
     icon: 'ns-shape-8',
   },
   {
     id: 4,
-    title: 'Real-time data',
-    description: 'See your app in action as you create it',
+    title: 'Compliance built in',
+    description: 'Reports aligned with medico-legal standards by default',
     icon: 'ns-shape-8',
   },
   {
     id: 5,
-    title: 'Enterprise-grade security',
-    description: 'Your data, protected and compliant',
+    title: 'Verifiable report integrity',
+    description: 'Confirm whether documents are original or altered',
     icon: 'ns-shape-41',
   },
   {
     id: 6,
-    title: 'Smart insights',
-    description: 'Actionable reports at a glance',
+    title: 'Secure data handling',
+    description: 'All data stored and processed within controlled environments',
     icon: 'ns-shape-3',
   },
 ];
 
-const FeatureV2 = () => {
+const FeatureV2 = () => { 
   return (
     <section className="relative xl:py-[200px] md:py-[100px] py-16 bg-background-3 dark:bg-background-7">
       <div className="main-container">
@@ -57,7 +57,7 @@ const FeatureV2 = () => {
           <div className="sm:space-y-7 space-y-4 sm:text-left text-center">
             <RevealAnimation delay={0.1}>
               <h2 className="lg:max-w-[731px] sm:max-w-[500px] max-w-[350px] sm:mx-0 mx-auto w-full">
-                Strategic risk management that moves you forward
+                The standard for medico-legal reporting
               </h2>
             </RevealAnimation>
             <RevealAnimation delay={0.2}>
@@ -65,7 +65,7 @@ const FeatureV2 = () => {
                 <LinkButton
                   href="/analytics"
                   className="btn btn-secondary btn-md hover:btn-primary dark:btn-transparent w-[90%] md:w-auto mx-auto">
-                  Learn our approach
+                  Get Started
                 </LinkButton>
               </div>
             </RevealAnimation>

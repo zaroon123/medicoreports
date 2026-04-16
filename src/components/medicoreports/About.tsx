@@ -16,7 +16,7 @@ import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 import AboutFeaturesList from './AboutFeaturesList';
 
-const About = () => {
+const About = () => { 
   return (
     <section className="bg-background-3 dark:bg-background-5 overflow-hidden">
       <div className="main-container">
@@ -25,17 +25,16 @@ const About = () => {
           {/*Integration Data*/}
           <div className="pt-5 max-lg:order-1 text-center sm:text-left">
             <RevealAnimation delay={0.1}>
-              <span className="badge badge-yellow-v2 mb-5">Strong Solutions</span>
+              <span className="badge badge-yellow-v2 mb-5">Trust & Verification</span>
             </RevealAnimation>
 
             <RevealAnimation delay={0.2}>
-              <h2 className="mb-3">Ensure strong solutions are available at all times</h2>
+              <h2 className="mb-3">Verifiable medico-legal report integrity</h2>
             </RevealAnimation>
 
             <RevealAnimation delay={0.3}>
               <p className="mb-8">
-                Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. It&apos;s not Latin
-                though it looks like nothing.
+                Instantly confirm whether a report is original or has been altered after issuance.
               </p>
             </RevealAnimation>
 

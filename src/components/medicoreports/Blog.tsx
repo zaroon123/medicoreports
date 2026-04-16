@@ -28,7 +28,7 @@ interface HomeBlogPost {
     height: number;
     alt: string;
   };
-}
+} 
 
 const Blog = ({ badgeClass }: BlogProps) => {
   const [blogs, setBlogs] = useState<HomeBlogPost[]>([]);
@@ -104,16 +104,16 @@ const Blog = ({ badgeClass }: BlogProps) => {
           <div className="text-center">
             <RevealAnimation delay={0.1}>
               <span className={cn(badgeClass, 'badge badge-green mb-5')} aria-label="Section category">
-                Financial blog tips and tricks
+                Medico-Legal Insights
               </span>
             </RevealAnimation>
             <RevealAnimation delay={0.2}>
               <h2 id="blog-section-heading" className="mb-3">
-                Our recent news &amp; insights
+                Expert Insights & Industry Updates
               </h2>
             </RevealAnimation>
             <RevealAnimation delay={0.3}>
-              <p>Our recent news &amp; insights highlight the latest developments and trends shaping industry.</p>
+              <p>Insights for Medico-Legal Professionals</p>
             </RevealAnimation>
           </div>
           

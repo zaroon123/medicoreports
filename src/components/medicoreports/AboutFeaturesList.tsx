@@ -1,7 +1,7 @@
 import RevealAnimation from '../animation/RevealAnimation';
 
 export default function AboutFeaturesList() {
-  const features = [{ label: 'On demand support' }, { label: 'Information Sharing' }, { label: 'Cloud Technology' }];
+  const features = [{ label: 'Tamper-evident PDF verification ' }, { label: 'Cryptographic document fingerprinting ' }, { label: 'Independent validation via secure portal' }];
 
   const SimpleCheckIcon = () => (
     <svg width={18} height={18} viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -13,7 +13,7 @@ export default function AboutFeaturesList() {
         strokeLinejoin="round"
         className="stroke-secondary dark:stroke-accent"
       />
-    </svg>
+    </svg> 
   );
   return (
     <ul className="list-none max-sm:flex-col flex sm:items-center gap-6 mb-14">

@@ -11,20 +11,19 @@ const NewsLetter = () => {
               <span className="badge badge-blur dark:!text-accent/60 dark:!bg-accent/10 mb-5">Let&apos;s start</span>
             </RevealAnimation>
             <RevealAnimation delay={0.2}>
-              <h2 className="mb-3 text-white">Finance is evolving. are you ready?</h2>
+              <h2 className="mb-3 text-white">Start generating medico-legal reports in minutes</h2>
             </RevealAnimation>
             <RevealAnimation delay={0.3}>
               <p className="mb-6 text-white/60">
-                &nbsp;Sign up for free and experience secure, decentralized financial tools with no borders and no
-                limits
+                Capture consultations, structure reports automatically, and deliver compliant, verifiable documents — all in one platform.
               </p>
-            </RevealAnimation>
+            </RevealAnimation> 
             <RevealAnimation delay={0.4}>
               <div className="text-center">
                 <LinkButton
                   href="/medicoreports-pricing"
                   className="btn btn-primary border-0 hover:btn-accent btn-md w-[90%] md:w-auto mx-auto md:mx-0">
-                  Book your free strategy call
+                  Get Started
                 </LinkButton>
               </div>
             </RevealAnimation>

@@ -16,25 +16,25 @@ const features = [
     id: 1,
     light: featureCardImg01Image,
     dark: featureCardImg01DarkImage,
-    alt: 'Instant report generation',
-    title: 'Instant report generation',
-    desc: 'Speak once. Report done. Structured, formatted, and completed automatically ',
+    alt: 'Reports in minutes, not hours',
+    title: 'Reports in minutes, not hours',
+    desc: 'Capture once. Structured medico-legal reports generated instantly from your consultation.',
   },
   {
     id: 2,
     light: featureCardImg02Image,
     dark: featureCardImg02DarkImage,
-    alt: 'Built-in compliance',
-    title: 'Built-in compliance',
-    desc: 'No rework. Always compliant. AI enforces medico-legal standards by default',
+    alt: 'Built for medico-legal standards',
+    title: 'Built for medico-legal standards',
+    desc: 'Every report follows required structure, terminology, and compliance frameworks by default.',
   },
   {
     id: 3,
     light: featureCardImg03Image,
     dark: featureCardImg03DarkImage,
-    alt: 'Automated workflows',
-    title: 'Automated workflows',
-    desc: 'Cases move without you. Progress, formatting, and finalisation handled automatically', 
+    alt: 'Verifiable report integrity',
+    title: 'Verifiable report integrity',
+    desc: 'Confirm whether a report is original or altered with built-in verification and audit trace.', 
   },
   // {
   //   id: 4,
@@ -54,7 +54,7 @@ const features = [
   // },
 ];
  
-const Features = () => {
+const Features = () => { 
   return ( 
     <section
       className="py-16 md:py-20 lg:py-[90px] xl:py-[100px] bg-background-3 dark:bg-background-7"

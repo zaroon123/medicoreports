@@ -24,7 +24,7 @@ const voicesTop = [
 const voicesBottom = [
   { id: 1, name: 'Voice-01', avatar: avatar19 },
   { id: 2, name: 'Voice-02', avatar: avatar1 },
-  { id: 3, name: 'Voice-03', avatar: avatar2 },
+  { id: 3, name: 'Voice-03', avatar: avatar2 }, 
   { id: 4, name: 'Voice-04', avatar: avatar3 },
 ]; 
 
@@ -38,7 +38,7 @@ const NewFeatures = () => {
               <span className="badge badge-white-v2 text-secondary font-medium">Feature</span>
             </RevealAnimation>
             <RevealAnimation delay={0.2}>
-              <h2>Robust features that enhance your mobile experience.</h2>
+              <h2>Capture, structure, and complete reports anywhere</h2>
             </RevealAnimation>
           </div>
           {/* features grid */}
@@ -57,10 +57,9 @@ const NewFeatures = () => {
                   </RevealAnimation>
                   <RevealAnimation delay={0.2}>
                     <div className="max-md:space-y-0.5 md:space-y-1.5 absolute bottom-10.5 left-6 sm:left-10.5 md:left-6 xl:left-10.5 right-10.5 z-20">
-                      <h3 className="text-heading-6 md:text-heading-5">Duplicate the voice</h3>
+                      <h3 className="text-heading-6 md:text-heading-5">Record and structure in real time </h3>
                       <p className="max-w-[450px]">
-                        Each NextSaaS applies an activation function to the weighted sum of its inputs to generate an
-                        output.
+                        Record examinations, dictate your findings, or write directly. DictAIte structures everything into a complete medico-legal report automatically.
                       </p>
                     </div>
                   </RevealAnimation>
@@ -107,10 +106,9 @@ const NewFeatures = () => {
                   </div>
                   <RevealAnimation delay={0.4} start="top 97%">
                     <div className="max-md:space-y-0.5 md:space-y-1.5">
-                      <h3 className="text-heading-6 md:text-heading-5">Create a voiceover for your video.</h3>
+                      <h3 className="text-heading-6 md:text-heading-5">Stay in control of every case </h3>
                       <p className="max-w-[450px]">
-                        A NextSaaS network consists of nodes called NextSaaS that are interconnected. These NextSaaS are
-                        organized into layers.
+                        Manage appointments, track report progress, and monitor case activity in one place. Keep your medico-legal workflow organised from consultation through to final report.
                       </p>
                     </div>
                   </RevealAnimation>
