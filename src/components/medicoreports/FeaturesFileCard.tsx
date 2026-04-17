@@ -9,6 +9,10 @@ import Image from 'next/image';
 import { useRef } from 'react';
 import RevealAnimation from '../animation/RevealAnimation';
 
+import featureCases from '@public/images/homepage/features/cases.png';
+import featureSecure from '@public/images/homepage/features/secure.png';
+import featureEncrypted from '@public/images/homepage/features/encrypted.png';
+
 gsap.registerPlugin(ScrollTrigger);
  
 const FeaturesFileCard = () => {
@@ -16,7 +20,7 @@ const FeaturesFileCard = () => {
   const featureCard2Ref = useRef<HTMLElement>(null);
   const featureCard3Ref = useRef<HTMLElement>(null);
 
-  useGSAP(
+  useGSAP( 
     () => {
       const featureCard1 = featureCard1Ref.current;
       const featureCard2 = featureCard2Ref.current;
@@ -79,17 +83,17 @@ const FeaturesFileCard = () => {
           <figure
             ref={featureCard1Ref}
             className="max-w-[214px] w-full overflow-hidden rotate-[12deg] rounded-b-[15px] shadow-13 ">
-            <Image src={featureVideoCard1} alt="feature-1" className="w-full h-full object-cover" />
+            <Image src={featureCases} alt="feature-1" className="w-full h-full object-cover" />
           </figure>
           <figure
             ref={featureCard2Ref}
             className="max-w-[214px] w-full overflow-hidden relative z-10 rounded-b-[15px] ">
-            <Image src={featureVideoCard2} alt="feature-1" className="w-full h-full object-cover" />
+            <Image src={featureSecure} alt="feature-1" className="w-full h-full object-cover" />
           </figure>
           <figure
             ref={featureCard3Ref}
             className="max-w-[214px] w-full overflow-hidden rounded-b-[15px] relative z-10 -rotate-[12deg] shadow-13 ">
-            <Image src={featureVideoCard3} alt="feature-1" className="w-full h-full object-cover" />
+            <Image src={featureEncrypted} alt="feature-1" className="w-full h-full object-cover" />
           </figure>
         </div>
         <RevealAnimation delay={0.1} start="top 97%">

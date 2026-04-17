@@ -17,7 +17,7 @@ import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 import AboutFeaturesList from './AboutFeaturesList';
 
-const About = () => {  
+const About = () => {   
   return (
     <section className="bg-background-3 dark:bg-background-5 overflow-hidden">
       <div className="main-container">
@@ -56,7 +56,7 @@ const About = () => {
             {/*Integration Images*/}
             <div className="relative z-10 inline-block max-sm:pt-[200px] sm:pt-[130px] left-1/2 -translate-x-1/2">
               <RevealAnimation delay={0.3} offset={100} useSpring={true} duration={2}>
-                <figure className="max-sm:w-[300px] ml-0 sm:ml-16 lg:ml-0 xl:ml-16 rounded-2xl overflow-hidden">
+                <figure className="max-sm:w-[250px] ml-0 sm:ml-16 lg:ml-0 xl:ml-16 rounded-2xl overflow-hidden">
                   <Image
                     src={trustVerification}
                     alt="aboaut-data-integration"

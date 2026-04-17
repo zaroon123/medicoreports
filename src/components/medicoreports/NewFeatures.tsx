@@ -10,6 +10,9 @@ import avatar19 from '@public/images/avatar/avatar-19.png';
 import avatar2 from '@public/images/avatar/avatar-2.png';
 import avatar3 from '@public/images/avatar/avatar-3.png';
 
+import phoneMedicoreports from '@public/images/homepage/features/record-and-structure-in-real-time.png';
+
+
 import handsPhone from '@public/images/medicoreports/App-recording.png';
 import Image from 'next/image';
 import FeaturesFileCard from './FeaturesFileCard';
@@ -29,7 +32,7 @@ const voicesBottom = [
 ]; 
 
 const NewFeatures = () => {
-  return (
+  return ( 
     <section className="max-[1920px]:px-5">
       <div className="bg-background-12 max-w-[1880px] rounded-3xl lg:rounded-4xl py-20 lg:py-30 xl:py-39 mx-auto">
         <div className="main-container">
@@ -52,7 +55,7 @@ const NewFeatures = () => {
                   </RevealAnimation>
                   <RevealAnimation delay={0.2}>
                     <figure className="absolute bottom-2 md:bottom-40 lg:bottom-20 xl:bottom-2 right-0">
-                      <Image src={handsPhone} alt="feature-1" className="w-full h-full object-cover" />
+                      <Image src={phoneMedicoreports} alt="feature-1" className="w-full h-full object-cover" />
                     </figure>
                   </RevealAnimation>
                   <RevealAnimation delay={0.2}>

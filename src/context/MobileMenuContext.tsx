@@ -3,7 +3,7 @@
 import { useMobileMenu } from '@/hooks/useMobileMenu';
 import { createContext, ReactNode, useContext } from 'react';
 
-interface MobileMenuContextType {
+interface MobileMenuContextType { 
   isOpen: boolean;
   openMenu: () => void; 
   closeMenu: () => void;
