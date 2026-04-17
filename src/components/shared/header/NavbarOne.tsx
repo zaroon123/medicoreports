@@ -23,7 +23,7 @@ interface NavbarOneProps {
   className?: string;
   megaMenuColor?: string; 
   btnClassName?: string;
-  navItemClass?: string;
+  navItemClass?: string; 
 } 
 
 const NavbarOne: FC<NavbarOneProps> = ({ className, megaMenuColor, btnClassName }) => {

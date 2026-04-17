@@ -1,5 +1,10 @@
 import featureCardImg01DarkImage from '@public/images/home-page-9/feature-card-img-01-dark.png';
 import featureCardImg01Image from '@public/images/medicoreports/step1.png';
+
+import reportsInMinutes from '@public/images/homepage/save-hours/reports-in-minutes.jpg';
+import builtForMedicalLegal from '@public/images/homepage/save-hours/built-for-medico-legal-standards.jpg';
+import verifiableReport from '@public/images/homepage/save-hours/verifiable-report-integrity.jpg';
+
 import featureCardImg02DarkImage from '@public/images/home-page-9/feature-card-img-02-dark.png';
 import featureCardImg02Image from '@public/images/medicoreports/step2.png';
 import featureCardImg03DarkImage from '@public/images/home-page-9/feature-card-img-03-dark.png';
@@ -14,24 +19,24 @@ import RevealAnimation from '../animation/RevealAnimation';
 const features = [
   {
     id: 1,
-    light: featureCardImg01Image,
-    dark: featureCardImg01DarkImage,
+    light: reportsInMinutes,
+    dark: reportsInMinutes,
     alt: 'Reports in minutes, not hours',
     title: 'Reports in minutes, not hours',
     desc: 'Capture once. Structured medico-legal reports generated instantly from your consultation.',
   },
   {
     id: 2,
-    light: featureCardImg02Image,
-    dark: featureCardImg02DarkImage,
+    light: builtForMedicalLegal,
+    dark: builtForMedicalLegal,
     alt: 'Built for medico-legal standards',
     title: 'Built for medico-legal standards',
     desc: 'Every report follows required structure, terminology, and compliance frameworks by default.',
   },
   {
     id: 3,
-    light: featureCardImg03Image,
-    dark: featureCardImg03DarkImage,
+    light: verifiableReport,
+    dark: verifiableReport,
     alt: 'Verifiable report integrity',
     title: 'Verifiable report integrity',
     desc: 'Confirm whether a report is original or altered with built-in verification and audit trace.', 
@@ -55,7 +60,7 @@ const features = [
 ];
  
 const Features = () => { 
-  return ( 
+  return (  
     <section
       className="py-16 md:py-20 lg:py-[90px] xl:py-[100px] bg-background-3 dark:bg-background-7"
       aria-label="Features">

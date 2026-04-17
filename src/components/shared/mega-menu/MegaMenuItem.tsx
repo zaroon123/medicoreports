@@ -12,7 +12,7 @@ interface MegaMenuItemProps {
   isActive?: boolean;
   onHover?: (id: string | null) => void;
 }
-
+ 
 const MegaMenuItem = ({ item, isActive, onHover }: MegaMenuItemProps) => {
   const hasSubmenu = item.submenu && item.submenu.length > 0;
   const hasDescription = item.description && item.description.length > 0;

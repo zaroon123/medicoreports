@@ -2,8 +2,8 @@
 
 import { useMobileMenuContext } from '@/context/MobileMenuContext';
 import { cn } from '@/utils/cn';
-import logoDark from '@public/images/shared/logo-dark.svg';
-import logo from '@public/images/shared/logo.svg';
+import logoDark from '@public/images/shared/Medqon-Logo.png';
+import logo from '@public/images/shared/Medqon-Logo.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
@@ -20,7 +20,7 @@ import SignUpMenu from './mobile-menu/SignUpMenu';
 import TeamsMenu from './mobile-menu/TeamsMenu';
 import TestimonialMenu from './mobile-menu/TestimonialMenu';
 
-const MobileMenu = () => {
+const MobileMenu = () => { 
   const { isOpen, closeMenu } = useMobileMenuContext();
   const sidebarRef = useRef<HTMLElement>(null);
 
@@ -48,7 +48,7 @@ const MobileMenu = () => {
         <div className="flex items-center justify-between">
           <Link href="/">
             <span className="sr-only">Home</span>
-            <figure className="max-w-[44px]">
+            <figure className="max-w-[135px]">
               <Image src={logo} alt="NextSaaS" className="block w-full dark:hidden" />
               <Image src={logoDark} alt="NextSaaS" className="hidden w-full dark:block" />
             </figure>
@@ -67,9 +67,9 @@ const MobileMenu = () => {
           <ul>
             <HomeMenu />
 
-            <AboutUsMenu />
+            {/* <AboutUsMenu /> */}
 
-            <BlogMenu />
+            {/* <BlogMenu />
 
             <ServicesMenu />
 
@@ -87,7 +87,7 @@ const MobileMenu = () => {
 
             <LoginMenu />
 
-            <SignUpMenu />
+            <SignUpMenu /> */}
           </ul>
         </div>
       </div>

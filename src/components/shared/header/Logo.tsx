@@ -14,8 +14,8 @@ const Logo = () => {
         </figure>
 
         {/* mobile logo */}
-        <figure className="block max-w-[44px] lg:hidden">
-          <Image src={logo} alt="NextSaaS" className="block w-full dark:hidden" />
+        <figure className="block max-w-[135px] lg:hidden">
+          <Image src={mainLogo} alt="NextSaaS" className="block w-full dark:hidden" />
           <Image src={logoDark} alt="NextSaaS" className="hidden w-full dark:block" />
         </figure>
       </Link>

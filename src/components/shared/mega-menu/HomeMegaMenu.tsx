@@ -6,7 +6,7 @@ import MegaMenuItem from './MegaMenuItem';
 interface HomeMegaMenuProps {
   className?: string; 
 }
-
+ 
 const HomeMegaMenu = ({ className }: HomeMegaMenuProps) => {
   return (
     <div>
