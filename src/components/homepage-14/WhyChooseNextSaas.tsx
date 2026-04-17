@@ -8,39 +8,39 @@ const data = [
   {
     id: 1,
     icon: 'ns-shape-13',
-    title: 'Simple process',
-    description: 'Apply in minutes from any device—no paperwork, no hassle.',
+    title: 'Consistent report quality',
+    description: 'Standardised structure ensures every report meets medico-legal expectations',
   },
   {
     id: 2,
     icon: 'ns-shape-41',
-    title: 'Personalized guidance',
-    description: 'Our specialists guide you every step of the way, tailored to your needs.',
+    title: 'Faster turnaround',
+    description: 'Reduce report creation time from hours to minutes',
   },
   {
     id: 3,
     icon: 'ns-shape-36',
-    title: 'Competitive interest rates',
-    description: 'Get access to fair rates with zero hidden fees or surprises.',
+    title: 'No rework required',
+    description: 'Built-in structure removes the need for repeated edits and corrections',
   },
   {
     id: 4,
     icon: 'ns-shape-35',
-    title: 'Fast pre-approvals',
-    description: 'Know where you stand quickly—get pre-approved in hours, not days.',
+    title: 'Compliance built in',
+    description: 'Reports are aligned with medico-legal standards by default',
   },
 
   {
     id: 5,
     icon: 'ns-shape-34',
-    title: 'Simple process',
-    description: 'Apply in minutes from any device—no paperwork, no hassle.',
+    title: 'Verifiable report integrity',
+    description: 'Confirm whether a report is original or has been altered',
   },
   {
     id: 6,
     icon: 'ns-shape-30',
-    title: 'Ongoing support',
-    description: 'We stay with you post-closing to ensure a smooth transition.',
+    title: 'Secure data handling',
+    description: 'All case data and reports are stored within controlled environments',
   },
 ];
 
@@ -52,20 +52,20 @@ const WhyChooseNextSaas = () => {
           <RevealAnimation delay={0.8} duration={0.9} offset={200} direction="up">
             <figure className="absolute top-[-407px] md:top-[-354px] rounded-t-4xl right-[-145px] md:right-[-149px] rotate-[240deg] md:rotate-[238deg] size-[650px] opacity-90 select-none pointer-events-none">
               <Image src={gradient} alt="Gradient background" className="size-full object-cover" />
-            </figure>
+            </figure>  
           </RevealAnimation>
           <div className="space-y-[70px]">
             {/* heading  */}
             <div className="space-y-[20px] text-center md:text-left">
               <RevealAnimation delay={0.2}>
-                <span className="badge badge-yellow">Why choose NextSaaS?</span>
+                <span className="badge badge-yellow">Why Medqon?</span>
               </RevealAnimation>
               <div className="space-y-3">
                 <RevealAnimation delay={0.3}>
-                  <h2>Stress-free mortgage solutions.</h2>
+                  <h2>Built for accuracy, speed, and trust</h2>
                 </RevealAnimation>
                 <RevealAnimation delay={0.4}>
-                  <p>Smart solutions and human support—everything you need for a stress-free mortgage experience.</p>
+                  <p>From structured documentation to verifiable reports, every part of the system is designed to support medico-legal professionals.</p>
                 </RevealAnimation>
               </div>
             </div>

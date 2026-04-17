@@ -12,20 +12,18 @@ const NewUseCases = () => {
           <div className="flex-1 lg:text-left text-center">
             <div className="space-y-3">
               <RevealAnimation delay={0.1}>
-                <span className="badge badge-green">Use cases</span>
+                <span className="badge badge-green">Meet Our Team</span>
               </RevealAnimation>
               <RevealAnimation delay={0.2}>
-                <h2 className="max-w-[518px]">How We Connect with Customers</h2>
-              </RevealAnimation>
+                <h2 className="max-w-[518px]">Diverse Expertise, Collaborative Culture, Driven by Excellence</h2>
+              </RevealAnimation> 
             </div> 
           </div>
           <div className="flex-1 lg:text-left text-center">
             <div>
               <RevealAnimation delay={0.3}>
                 <p className="max-w-[518px] lg:mx-0 mx-auto">
-                  Explore the ways our innovative solutions improve communication and boost efficiency in your
-                  organization. From streamlined workflows to enhanced collaboration tools, we provide everything you
-                  need to succeed.
+                  At Medqon Ltd., we understand that the strength of our software is matched by the excellence of our people. Together, we bring a unique set of experiences that enhance our company and the solutions we provide.
                 </p>
               </RevealAnimation>
             </div>
@@ -39,15 +37,8 @@ const NewUseCases = () => {
                   <span className={`ns-shape-14 text-[52px] text-secondary dark:text-accent`} />
                 </div>
                 <div className="space-y-1 lg:text-left text-center">
-                  <h3 className="text-heading-5">Creative Filters & Effects</h3>
-                  <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Add artistic flair to your images with AI-powered creative filters and effects — from cinematic tones to vintage aesthetics and modern stylizations.</p>
-                </div>
-                <div className="lg:text-left text-center">
-                  <LinkButton
-                    href={`/contact-us`}
-                    className="btn btn-md btn-white hover:btn-primary dark:btn-transparent">
-                    Read more
-                  </LinkButton>
+                  <h3 className="text-heading-5">Diverse Expertise</h3>
+                  <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Our team members come from various disciplines within the medical legal and technology sectors, ensuring a broad and deep understanding of both the challenges our clients face and the innovative solutions required to address them.</p>
                 </div>
               </div>
             </div>
@@ -59,15 +50,21 @@ const NewUseCases = () => {
                   <span className={`ns-shape-9 text-[52px] text-secondary dark:text-accent`} />
                 </div>
                 <div className="space-y-1 lg:text-left text-center">
-                  <h3 className="text-heading-5">Cryptocurrency Lending</h3>
-                  <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">A secure and efficient way for individuals and businesses to lend or borrow digital assets, earn interest, and access liquidity without traditional banks.</p>
+                  <h3 className="text-heading-5">Collaborative Culture</h3>
+                  <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">We thrive on teamwork and shared goals. Our collaborative approach extends across all departments, fostering a work environment that encourages open communication and mutual respect.</p>
+                </div> 
+              </div>
+            </div>
+          </RevealAnimation>
+          <RevealAnimation delay={0.4}>
+            <div className="col-span-12 lg:col-span-4">
+              <div className="space-y-6">
+                <div className="max-lg:text-center">
+                  <span className={`ns-shape-15 text-[52px] text-secondary dark:text-accent`} />
                 </div>
-                <div className="lg:text-left text-center">
-                  <LinkButton
-                    href={`/contact-us`}
-                    className="btn btn-md btn-white hover:btn-primary dark:btn-transparent">
-                    Read more
-                  </LinkButton>
+                <div className="space-y-1 lg:text-left text-center">
+                  <h3 className="text-heading-5">Customer-Centric Approach</h3>
+                  <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Every member of our team is dedicated to understanding and meeting the needs of our clients. We pride ourselves on being responsive and adaptable, ensuring that our clients' objectives are always at the forefront.</p>
                 </div>
               </div>
             </div>
@@ -79,15 +76,34 @@ const NewUseCases = () => {
                   <span className={`ns-shape-15 text-[52px] text-secondary dark:text-accent`} />
                 </div>
                 <div className="space-y-1 lg:text-left text-center">
-                  <h3 className="text-heading-5">Customer Support Automation</h3>
-                  <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Deliver exceptional customer experiences with AI-powered support automation that reduces response times, lowers costs, and improves satisfaction.</p>
+                  <h3 className="text-heading-5">Passion for Excellence</h3>
+                  <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Our commitment to excellence is unwavering. We strive to exceed expectations in everything we do, from software development to customer service.</p>
                 </div>
-                <div className="lg:text-left text-center">
-                  <LinkButton
-                    href={`/contact-us`} 
-                    className="btn btn-md btn-white hover:btn-primary dark:btn-transparent">
-                    Read more
-                  </LinkButton>
+              </div>
+            </div>
+          </RevealAnimation>
+          <RevealAnimation delay={0.4}>
+            <div className="col-span-12 lg:col-span-4">
+              <div className="space-y-6">
+                <div className="max-lg:text-center">
+                  <span className={`ns-shape-15 text-[52px] text-secondary dark:text-accent`} />
+                </div>
+                <div className="space-y-1 lg:text-left text-center">
+                  <h3 className="text-heading-5">Empowered Learning</h3>
+                  <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">We believe in continuous improvement and professional growth. Our team is encouraged to pursue ongoing education and training opportunities, keeping us at the cutting edge of technology and industry best practices.</p>
+                </div>
+              </div>
+            </div>
+          </RevealAnimation>
+          <RevealAnimation delay={0.4}>
+            <div className="col-span-12 lg:col-span-4">
+              <div className="space-y-6">
+                <div className="max-lg:text-center">
+                  <span className={`ns-shape-15 text-[52px] text-secondary dark:text-accent`} />
+                </div>
+                <div className="space-y-1 lg:text-left text-center">
+                  <h3 className="text-heading-5">Innovation and Creativity</h3>
+                  <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Innovation is at the heart of our mission. We foster a culture where creativity flourishes, leading to breakthrough ideas and pioneering solutions that set new standards in the medical legal field.</p>
                 </div>
               </div>
             </div>

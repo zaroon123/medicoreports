@@ -14,7 +14,7 @@ import RevealAnimation from '../animation/RevealAnimation';
 import Progress from '../homepage-04/Progress';
 import LinkButton from '../ui/button/LinkButton';
 
-const Hero = () => {
+const Hero = () => { 
   return (
     <section className="pt-[115px] pb-[97px] overflow-hidden">
       <div className="max-w-[1365px] mx-auto">
@@ -35,12 +35,11 @@ const Hero = () => {
                 {/* heading text  */}
                 <div className="space-y-4">
                   <RevealAnimation delay={0.2}>
-                    <h1>Boost your business with smart apps</h1>
+                    <h1>Medico-legal reports, completed in minutes</h1>
                   </RevealAnimation>
                   <RevealAnimation delay={0.3}>
                     <p>
-                      NextSaaS brings you a powerful, all-in-one smart application designed to streamline your
-                      operations, empower your team, and accelerate growth—no matter your industry.
+                      Record consultations, dictate findings, or enter details manually. DictAIte structures everything into compliant, verifiable medico-legal reports.
                     </p>
                   </RevealAnimation>
                 </div>

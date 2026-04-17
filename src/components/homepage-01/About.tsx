@@ -13,7 +13,7 @@ const About = () => {
           <TabProvider defaultValue={0}>
             <AboutTabList />
             <AboutTabContent />
-          </TabProvider>
+          </TabProvider> 
         </div>
       </section>
     </RevealAnimation>

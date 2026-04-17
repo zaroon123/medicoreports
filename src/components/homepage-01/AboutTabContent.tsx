@@ -128,7 +128,7 @@ const aboutTabsData = [
       },
     ],
   },
-];
+]; 
 
 const AboutTabContent = () => {
   return (

@@ -24,7 +24,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'AboutPage-01 - NextSaaS',
+  title: 'Medqon Vault - Medicoreports',
 };
 
 const AboutPage01 = () => {

@@ -10,7 +10,7 @@ import { Fragment } from 'react';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'FAQ - NextSaaS',
+  title: 'FAQ - Medicoreports',
 };
 
 const FAQ = () => {

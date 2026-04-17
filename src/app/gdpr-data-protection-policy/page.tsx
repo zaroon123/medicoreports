@@ -9,7 +9,7 @@ import { Fragment } from 'react';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'GDPR - NextSaaS',
+  title: 'GDPR - Medicoreports',
 };
 
 const GDPR = () => {

@@ -9,7 +9,7 @@ import { Fragment } from 'react';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Privacy - NextSaaS',
+  title: 'Privacy - Medicoreports',
 };
  
 const CookiePolicy = () => {

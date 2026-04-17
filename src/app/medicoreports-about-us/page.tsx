@@ -12,7 +12,7 @@ import { Fragment } from 'react';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Medicoreports - Home',
+  title: 'Medicoreports - About Us',
 };
  
 const Homepage18 = () => {

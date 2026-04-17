@@ -7,17 +7,16 @@ const Services = () => {
       <div className="main-container">
         <div className="text-center space-y-3 mb-[70px]">
           <RevealAnimation delay={0.2}>
-            <span className="badge badge-green">Our services</span>
+            <span className="badge badge-green">Empowering Precision and Innovation in Medical Legal Practice</span>
           </RevealAnimation>
           <RevealAnimation delay={0.3}>
-            <h2 className="xl:max-w-[878px] max-w-[600px] mx-auto">
-              Leading companies around the globe rely on nexSaas.
+            <h2 className="xl:max-w-[878px] max-w-[600px] mx-auto"> 
+              Seamless Integration, Enhanced Performance
             </h2>
           </RevealAnimation>
           <RevealAnimation delay={0.4}>
             <p className="xl:max-w-[700px] max-w-[500px] mx-auto">
-              Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. It&apos;s not Latin,
-              though it looks like it
+              Navigate the complexities of medico-legal work with our innovative web-based solutions. Medqon Ltd. is committed to transforming the medical legal sector by developing software that optimises efficiency and enhances the performance of medical legal agencies and medical legal experts.
             </p>
           </RevealAnimation>
         </div>

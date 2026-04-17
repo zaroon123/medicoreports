@@ -10,7 +10,7 @@ import youtube from '@public/images/icons/youtube.svg';
 import darkLogo from '@public/images/shared/Medqon-Logo-white.png';
 import Image from 'next/image';
 import Link from 'next/link';
-import ThemeToggle from '../ThemeToggle'; 
+import ThemeToggle from '../ThemeToggle';  
 import FooterDivider from './FooterDivider'; 
   
 const FooterFour = ({ className }: { className?: string }) => {
@@ -33,34 +33,14 @@ const FooterFour = ({ className }: { className?: string }) => {
                   Medqon Limited provides medico-legal report writing and case management solutions for medical experts and healthcare professionals.
                 </p>
                 <div className="flex items-center gap-3">
-                  <Link target="_blank" href="https://www.facebook.com">
+                  <Link target="_blank" href="https://www.facebook.com/medicoreports/">
                     <span className="sr-only">Facebook</span>
                     <Image className="size-6" src={facebook} alt="Facebook" />
                   </Link>
                   <div className="bg-stroke-1/20 h-6 w-px" />
-                  <Link target="_blank" href="https://www.instagram.com">
+                  <Link target="_blank" href="https://www.instagram.com/medicoreports/">
                     <span className="sr-only">Instagram</span>
                     <Image className="size-6" src={instagram} alt="Instagram" />
-                  </Link>
-                  <div className="bg-stroke-1/20 h-6 w-px" />
-                  <Link target="_blank" href="https://www.youtube.com">
-                    <span className="sr-only">Youtube</span>
-                    <Image className="size-6" src={youtube} alt="Youtube" />
-                  </Link>
-                  <div className="bg-stroke-1/20 h-6 w-px" />
-                  <Link target="_blank" href="https://www.linkedin.com">
-                    <span className="sr-only">LinkedIn</span>
-                    <Image className="size-6" src={linkedin} alt="LinkedIn" />
-                  </Link>
-                  <div className="bg-stroke-1/20 h-6 w-px" />
-                  <Link target="_blank" href="https://www.dribbble.com">
-                    <span className="sr-only">Dribbble</span>
-                    <Image className="size-6" src={dribbble} alt="Dribbble" />
-                  </Link>
-                  <div className="bg-stroke-1/20 h-6 w-px" />
-                  <Link target="_blank" href="https://www.behance.net">
-                    <span className="sr-only">Behance</span>
-                    <Image className="size-6" src={behance} alt="Behance" />
                   </Link>
                 </div>
               </div>

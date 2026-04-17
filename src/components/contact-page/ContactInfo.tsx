@@ -13,16 +13,16 @@ const contactInfoItems = [
     id: 1,
     icon: homeIcon,
     title: 'Our Address',
-    content: '2464 Royal Ln. Mesa, New Jersey 45463',
+    content: 'Medqon Limited, Alison Business Centre, 39-40 Alison Crescent, Sheffield, England, S2 1AS',
     gradient: gradient22,
     gradientClass: 'top-[-187px] left-[174px] -rotate-[78deg]',
   },
-  {
+  { 
     id: 2,
     icon: mailIcon,
     title: 'Email Us',
-    content: 'hello@nextsaaS.com',
-    link: 'mailto:hello@nextsaaS.com',
+    content: 'info@medqon.co.uk',
+    link: 'mailto:info@medqon.co.uk',
     gradient: gradient17,
     gradientClass: 'top-[-206px] left-[-36px] rotate-[62deg]',
   },
@@ -30,8 +30,8 @@ const contactInfoItems = [
     id: 3,
     icon: phoneIcon,
     title: 'Call Us',
-    content: '+391 (0)35 2568 4593',
-    link: 'tel:+391035256845933',
+    content: '(+44) 3300010805',
+    link: 'tel:+443300010805',
     gradient: gradient6,
     gradientClass: 'top-[-184px] left-[-185px]',
   },
@@ -45,12 +45,11 @@ const ContactInfo = () => {
           {/* heading  */}
           <div className="max-w-[680px] mx-auto text-center space-y-3">
             <RevealAnimation delay={0.2}>
-              <h2>Reach out to our support team for help.</h2>
+              <h2>We're here to assist you!</h2>
             </RevealAnimation>
             <RevealAnimation delay={0.3}>
               <p>
-                Whether you have a question, need technical assistance, or just want some guidance, our support team is
-                here to help. We&apos;re available around the clock to provide quick and friendly support.
+                Whether you have questions about our products or need technical support, our dedicated team is always ready to help.
               </p>
             </RevealAnimation>
           </div>
@@ -178,7 +177,7 @@ const ContactInfo = () => {
                     htmlFor="terms"
                     className="text-tagline-3 cursor-pointer text-secondary/60 dark:text-accent/60">
                     I agree with the
-                    <Link href="#" className="text-primary-500 underline text-tagline-3">
+                    <Link href="/terms-conditions" className="text-primary-500 underline text-tagline-3">
                       {' '}
                       terms and conditions
                     </Link>

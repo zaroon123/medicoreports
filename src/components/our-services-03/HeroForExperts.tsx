@@ -8,13 +8,12 @@ const Hero = () => {
         <div className="text-center space-y-3 mb-[70px]">
           <RevealAnimation delay={0.3}>
             <h2 className="xl:max-w-[878px] max-w-[600px] mx-auto">
-              Leading companies around the globe rely on nexSaas.
+              Everything you need to produce medico-legal reports
             </h2>
           </RevealAnimation>
           <RevealAnimation delay={0.4}>
             <p className="xl:max-w-[700px] max-w-[500px] mx-auto">
-              Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. It&apos;s not Latin,
-              though it looks like it
+              From consultation capture to final report delivery, Medqon brings the entire medico-legal workflow into one system.
             </p>
           </RevealAnimation>
         </div>

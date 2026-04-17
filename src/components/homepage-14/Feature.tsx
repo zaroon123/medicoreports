@@ -9,29 +9,29 @@ import RevealAnimation from '../animation/RevealAnimation';
 const features = [
   {
     id: 1,
-    title: 'Flexible loan terms',
-    description: 'Choose repayment terms that align with your budget and life goals.',
+    title: 'Capture consultations effortlessly',
+    description: 'Record examinations, dictate findings, or enter details manually - all in one place.',
     img: featureImg01,
     darkImg: featureImg01Dark,
-    alt: 'Flexible loan terms illustration',
+    alt: 'Capture consultations effortlessly',
   },
   {
     id: 2, 
-    title: 'Streamlined application process',
-    description: 'Apply quickly and easily with minimal paperwork required.',
+    title: 'Generate structured reports',
+    description: 'DictAIte automatically builds compliant medico-legal reports from your inputs.',
     img: featureImg02,
     darkImg: featureImg02Dark,
-    alt: 'Application process visualization',
+    alt: 'Generate structured reports',
   },
   {
     id: 3,
-    title: 'Trusted financial guidance',
-    description: 'Access expert advice to make confident borrowing decisions.',
+    title: 'Verify and deliver with confidence',
+    description: 'Ensure report integrity and share documents that can be independently verified.',
     img: featureImg03,
     darkImg: null,
-    alt: 'Trusted financial guidance example',
+    alt: 'Verify and deliver with confidence',
     extraClass: 'md:col-start-4',
-  }, 
+  },  
 ];
 
 const Feature = () => {

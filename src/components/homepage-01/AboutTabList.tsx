@@ -3,7 +3,7 @@ import TabList from '../ui/tab/TabList';
 
 const AboutTabList = () => {
   return (
-    <>
+    <> 
       {/* Desktop TabList */}
       <TabList variant="desktop">
         <Tab index={0} variant="desktop">

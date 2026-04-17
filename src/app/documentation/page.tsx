@@ -9,7 +9,7 @@ import { Fragment } from 'react';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Documentation - NextSaaS',
+  title: 'Documentation - Medicoreports',
 };
 
 const Documentation = () => {

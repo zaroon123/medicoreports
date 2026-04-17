@@ -7,7 +7,7 @@ import aboutDataIntegration3Image from '@public/images/home-page-6/about-data-in
 import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
-
+ 
 const Integration = () => {
   return (
     <section className="bg-background-2 dark:bg-background-5 pt-[100px] lg:pt-[100px] pb-[100px] overflow-hidden">
@@ -65,18 +65,17 @@ const Integration = () => {
             <div className="max-w-[592px] mx-auto lg:mx-0 lg:text-left text-center lg:max-w-full">
               <div className="space-y-5 mb-8">
                 <RevealAnimation delay={0.2}>
-                  <span className="badge badge-green mb-5">Data integrations</span>
+                  <span className="badge badge-green mb-5">OUR COMPANY</span>
                 </RevealAnimation>
                 <div className="space-y-3 mb-8">
                   <RevealAnimation delay={0.3}>
                     <h2 className="max-w-[592px] mx-auto lg:mx-0">
-                      A clear vision is essential for understanding wealth dynamics.
+                      Medqon Limited
                     </h2>
                   </RevealAnimation>
                   <RevealAnimation delay={0.4}>
                     <p>
-                      A clear vision is essential for understanding wealth dynamics because it provides direction,
-                      purpose, and clarity in navigating financial growth and sustainability.
+                      As pioneers in medical legal technology, Medqon Ltd. envisions becoming the leader in providing top-tier, innovative solutions. We aim to set new standards in the industry, focusing on delivering results that exceed expectations through technological excellence and creative problem-solving. Medqon Ltd. has established itself as a beacon of innovation and reliability in the medical legal software market. Our journey from a visionary startup to a key industry player is driven by our unwavering dedication to enhancing the effectiveness of medical legal practices worldwide.
                     </p>
                   </RevealAnimation>
                 </div>
@@ -151,8 +150,8 @@ const Integration = () => {
               </ul>
               <RevealAnimation delay={0.8}>
                 <div>
-                  <LinkButton href="/signup-01" className="btn hover:btn-primary btn-xl btn-secondary dark:btn-accent">
-                    Start Your Journey
+                  <LinkButton href="/contact-us" className="btn hover:btn-primary btn-xl btn-secondary dark:btn-accent">
+                    Get Started
                   </LinkButton>
                 </div>
               </RevealAnimation>

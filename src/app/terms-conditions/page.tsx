@@ -9,7 +9,7 @@ import { Fragment } from 'react';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Terms & Conditions - NextSaaS',
+  title: 'Terms & Conditions - Medicoreports',
 };
 
 const TermsConditions = () => {
