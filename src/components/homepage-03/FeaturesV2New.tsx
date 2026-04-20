@@ -22,9 +22,20 @@ import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 
+const eligibilityData = [
+  {
+    id: 1,
+    text: 'Access & Share Documents',
+  },
+  {
+    id: 2,
+    text: 'Collaborate & Track',
+  },
+];
+
 const FeaturesV2New = () => {
   return (
-    <section className="pt-44 pb-24 md:pt-16 md:pb-24 lg:pt-[88px] lg:pb-[140px] xl:pt-[150px] xl:pb-[150px] xl:mt-[300px]">
+    <section className="pt-44 pb-24 md:pt-16 md:pb-24 lg:pt-[88px] lg:pb-[140px] xl:pt-[50px] xl:pb-[150px] xl:mt-[300px]">
       <div className="main-container space-y-[220px] md:space-y-[300px] xl:space-y-[300px]">
 
         {/* Features 2 Section */}
@@ -33,23 +44,47 @@ const FeaturesV2New = () => {
             <div className="mb-8 space-y-3 px-4 text-center sm:px-0 md:text-left lg:mb-14">
               <RevealAnimation delay={0.3}>
                 <h3 className="md:text-heading-3 lg:text-heading-2">
-                  Cutting-edge chatbot solutions for <span className="text-primary-500">modern apps.</span>
+                  Web-Based Products
                 </h3>
               </RevealAnimation>
               <RevealAnimation delay={0.4}>
                 <p className="lg:max-w-[596px]">
-                  Customize it to align with your brand&apos;s personality. tailor the responses, and interactions to
-                  fit your business identity.
+                  Our CRM system and report writer software are web-based, which enables quick and easy access from anywhere at any time.
                 </p>
               </RevealAnimation>
             </div>
+            <ul className="space-y-4 mb-14" aria-label="Eligibility requirements">
+              {eligibilityData.map((item, idx) => (
+                <RevealAnimation key={item.id} delay={0.4 + idx * 0.1}>
+                  <li className="flex items-center gap-3">
+                    <span>
+                      <Image
+                        src="images/icons/checkmark-dark.svg"
+                        alt="Checkbox icon"
+                        width={18}
+                        height={18}
+                        className="size-[18px] dark:hidden"
+                      />
+                      <Image
+                        src="images/icons/checkmark-white.svg"
+                        alt="Checkbox icon"
+                        width={18}
+                        height={18}
+                        className="size-[18px] hidden dark:block"
+                      />
+                    </span>
+                    <p>{item.text}</p>
+                  </li>
+                </RevealAnimation>
+              ))}
+            </ul>
             <RevealAnimation delay={0.5}>
               <div className="flex justify-center md:justify-start">
                 <LinkButton
-                  href="/about-01"
+                  href="/contact-us"
                   className="btn btn-md btn-white dark:btn-transparent hover:btn-primary block w-[90%] md:inline-block md:w-auto">
                   Get started
-                </LinkButton> 
+                </LinkButton>
               </div>
             </RevealAnimation>
           </div>

@@ -299,7 +299,7 @@ const MedicoreportsForExperts = () => {
         <WhyChooseNextSaas />
         <ProcessOperation />
         <SpotlightStories />
-        <Integration />
+        {/* <Integration /> */}
         <Eligibility />
         <NewsLetter />
       </main>

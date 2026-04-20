@@ -7,24 +7,22 @@ const Features = () => {
       <div className="main-container">
         <div className="mb-10 text-center md:mb-[70px]">
           <RevealAnimation delay={0.1}>
-            <span className="badge badge-green-v2 mb-5"> Features </span>
+            <span className="badge badge-green-v2 mb-5"> Benefits & Features </span>
           </RevealAnimation>
           <RevealAnimation delay={0.2}>
             <h2 className="mb-3">
-              Enhance your sales and customer <br className="hidden md:block" />
-              support by
-              <span className="text-primary-500 inline-block">utilising chatbots.</span>
+              We Make Everything Accessible, Manageable & Shareable
             </h2>
           </RevealAnimation>
           <RevealAnimation delay={0.3}>
             <p className="mx-auto mb-8 lg:max-w-[696px]">
-              Unlock unparalleled benefits for your business with our services. Reach more customers, save time and
-              money.
+              Our software is designed to precisely and reliably meet diverse needs. All our products prioritise user-friendliness, data integrity, access controls, 
+              responsive designs, and intuitive features, ensuring quick adaptation and seamless integration into existing workflows.
             </p>
           </RevealAnimation>
         </div>
         {/* Feature Grid */}
-        <FeatureCard />
+        <FeatureCard /> 
       </div>
     </section>
   );

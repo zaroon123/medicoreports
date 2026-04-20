@@ -88,12 +88,12 @@ const FeaturesFileCard = () => {
           <figure
             ref={featureCard2Ref}
             className="max-w-[214px] w-full overflow-hidden relative z-10 rounded-b-[15px] ">
-            <Image src={featureSecure} alt="feature-1" className="w-full h-full object-cover" />
+            <Image src={featureEncrypted} alt="feature-1" className="w-full h-full object-cover" />
           </figure>
           <figure
             ref={featureCard3Ref}
             className="max-w-[214px] w-full overflow-hidden rounded-b-[15px] relative z-10 -rotate-[12deg] shadow-13 ">
-            <Image src={featureEncrypted} alt="feature-1" className="w-full h-full object-cover" />
+            <Image src={featureSecure} alt="feature-1" className="w-full h-full object-cover" />
           </figure>
         </div>
         <RevealAnimation delay={0.1} start="top 97%">

@@ -13,7 +13,7 @@ import NumberAnimation from '../animation/NumberAnimation';
 import RevealAnimation from '../animation/RevealAnimation';
 import Progress from '../homepage-04/Progress';
 import LinkButton from '../ui/button/LinkButton';
-
+ 
 const Hero = () => {
   return (
     <section className="pt-[115px] pb-[97px] overflow-hidden">
@@ -35,12 +35,11 @@ const Hero = () => {
                 {/* heading text  */}
                 <div className="space-y-4">
                   <RevealAnimation delay={0.2}>
-                    <h1>Boost your business with smart apps</h1>
+                    <h1>Empowering Medico Legal Experts, MROs and Admin Agencies</h1>
                   </RevealAnimation>
                   <RevealAnimation delay={0.3}>
                     <p>
-                      NextSaaS brings you a powerful, all-in-one smart application designed to streamline your
-                      operations, empower your team, and accelerate growth—no matter your industry.
+                      We provide the tools and software solutions to help you handle all the aspects of medico legal practice from appointment management to instruction flows.
                     </p>
                   </RevealAnimation>
                 </div>

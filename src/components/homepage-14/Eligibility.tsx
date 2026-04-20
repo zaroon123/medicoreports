@@ -6,21 +6,21 @@ import LinkButton from '../ui/button/LinkButton';
 const eligibilityData = [
   {
     id: 1,
-    text: 'Minimum credit score: 620',
+    text: 'Reduce report time from hours to minutes ',
   },
   {
     id: 2,
-    text: 'Proof of stable income or employment',
+    text: 'Structured, compliant report output ',
   },
   {
     id: 3,
-    text: 'Minimum 3% down payment',
+    text: 'Verifiable report authenticity ',
   },
   {
     id: 4,
-    text: 'Property meets FHA/VA/conventional guidelines.',
+    text: 'Works across different report types and jurisdictions ',
   },
-];
+];  
 
 const Eligibility = () => {
   return (
@@ -32,12 +32,12 @@ const Eligibility = () => {
             <div className="space-y-3">
               <RevealAnimation delay={0.1}>
                 <h2 className="md:max-w-[461px] w-full text-center md:text-start md:text-heading-4 lg:text-heading-3 xl:text-heading-2">
-                  Check your eligibility in seconds.
+                  Start generating medico-legal reports today
                 </h2>
               </RevealAnimation>
               <RevealAnimation delay={0.2}>
                 <p className="mb-8 text-center md:text-start">
-                  Track key indicators, spot trends early, and turn data into action.
+                  Built for professionals who need speed, structure, and confidence in every report.
                 </p>
               </RevealAnimation>
               {/* eligibility list  */}
@@ -70,11 +70,11 @@ const Eligibility = () => {
               <RevealAnimation delay={0.7}>
                 <div className="text-center md:text-start">
                   <LinkButton
-                    href="/features-01"
+                    href="/contact-us"
                     rel="noopener noreferrer"
                     className="btn btn-white btn-xl dark:btn-transparent hover:btn-primary w-[90%] md:w-auto"
                     aria-label="Check eligibility now">
-                    Check eligibility now
+                    Book a demo
                   </LinkButton>
                 </div>
               </RevealAnimation>

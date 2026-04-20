@@ -27,7 +27,9 @@ export const metadata: Metadata = {
   title: 'Medqon Vault - Medicoreports',
 };
 
-const AboutPage01 = () => {
+
+
+const MedqonVault = () => {
   return (
     <>
       <NavbarOne
@@ -40,10 +42,10 @@ const AboutPage01 = () => {
         <MeetOurTeam />
         <Features />
         <FeaturesV2New />
-        <About />
-        <Integration />
+        {/* <About /> */}
+        {/* <Integration /> */}
         <SpotlightStoriesForVault />
-        <Testimonial />
+        {/* <Testimonial /> */}
         <Faq />
         <CTA />
       </main>
@@ -51,5 +53,5 @@ const AboutPage01 = () => {
     </>
   );
 };
-AboutPage01.displayName = 'AboutPage01';
-export default AboutPage01;
+MedqonVault.displayName = 'MedqonVault';
+export default MedqonVault;

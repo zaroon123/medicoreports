@@ -9,7 +9,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import RevealAnimation from '../animation/RevealAnimation';
 
-const FeatureCard = () => {
+const FeatureCard = () => { 
   return (
     <div className="grid grid-cols-12 gap-x-4 gap-y-8 md:gap-x-6 lg:gap-x-[42px]">
       {/* Feature Card 1 */}
@@ -47,8 +47,8 @@ const FeatureCard = () => {
               </div>
             </div>
             {/* text content- */}
-            <h4 className="text-heading-6 md:text-heading-5 mb-2 font-normal">Automated sales solutions</h4>
-            <p>Automated sales solutions are technology-driven systems designed to streamline</p>
+            <h4 className="text-heading-6 md:text-heading-5 mb-2 font-normal">Easy Integration</h4>
+            <p>Our products support integration with 3rd party accounting systems.</p>
           </div>
         </article>
       </RevealAnimation>
@@ -60,8 +60,8 @@ const FeatureCard = () => {
             <Image src={gradient17} alt="gradient-img" className="size-full object-cover" />
           </figure>
           <div className="dark:bg-background-6 h-full w-full rounded-[20px] bg-white px-4 pt-4 pb-6 md:px-6 md:pt-8">
-            <h3 className="text-heading-6 md:text-heading-5 mb-2 font-normal">AI-driven customer support</h3>
-            <p>AI-driven customer support leverages artificial intelligence technologies to enhance</p>
+            <h3 className="text-heading-6 md:text-heading-5 mb-2 font-normal">Portable</h3>
+            <p>You can access our web-based systems from anywhere at any time.</p>
             <div className="bg-background-3 group-hover:bg-background-3/90 dark:bg-background-7 dark:group-hover:bg-background-7/50 relative z-10 mt-8 space-y-4 rounded-2xl p-4 transition-all duration-300 ease-out group-hover:scale-[102%]">
               <ul className="flex items-center justify-between">
                 <li className="space-y-1">
@@ -190,8 +190,8 @@ const FeatureCard = () => {
               </div>
             </div>
             {/* text content- */}
-            <h6 className="text-heading-6 md:text-heading-5 mb-2 font-normal">Easy setup and use</h6>
-            <p>Easy setup and use refer to the simplicity and convenience with which a product</p>
+            <h6 className="text-heading-6 md:text-heading-5 mb-2 font-normal">Intuitive</h6>
+            <p>Responsive system designed with usability in mind making it easy to navigate.</p>
           </div>
         </article>
       </RevealAnimation>
