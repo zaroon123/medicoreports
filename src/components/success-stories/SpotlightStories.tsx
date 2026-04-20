@@ -83,7 +83,7 @@ const PointsList = ({
 }) => (
   <ul className="mt-auto space-y-1.5">
     {points.map((pt, i) => (
-      <li key={i} className={`flex items-start gap-2 text-[11px] leading-snug ${textClass}`}>
+      <li key={i} className={`flex items-start gap-2 text-[13px] leading-snug ${textClass}`}>
         <Dot color={dotColor} />
         {pt}
       </li>
@@ -112,8 +112,8 @@ const BaseCard = ({
   <RevealAnimation delay={delay}>
     <article className="bg-background-3 dark:bg-background-5 mb-[14px] break-inside-avoid rounded-2xl border border-black/5 p-6 dark:border-white/5">
       <IconBox variant="base">{icon}</IconBox>
-      <h3 className="text-secondary dark:text-accent mb-2 text-[13px] font-semibold leading-snug">{title}</h3>
-      <p className="text-secondary/60 dark:text-accent/60 mb-4 text-xs leading-relaxed">{description}</p>
+      <h3 className="text-secondary dark:text-accent mb-2 text-[18px] font-semibold leading-snug">{title}</h3>
+      <p className="text-secondary/60 dark:text-accent/60 mb-4 text-[13px] leading-relaxed">{description}</p>
       <PointsList points={points} dotColor="purple" />
       {meta && (
         <div className="mt-4 flex items-center gap-2 border-t border-black/5 pt-4 dark:border-white/5">
@@ -149,8 +149,8 @@ const PurpleSoftCard = ({
       <span className="mb-3 inline-block rounded-full bg-[#ede0fc] px-3 py-1 text-[10px] font-medium uppercase tracking-wider text-[#6108c4]">
         {tag}
       </span>
-      <h3 className="mb-2 text-[13px] font-semibold leading-snug text-[#6108c4]">{title}</h3>
-      <p className="mb-4 text-xs leading-relaxed text-[#7a3db0]">{description}</p>
+      <h3 className="mb-2 text-[18px] font-semibold leading-snug text-[#6108c4]">{title}</h3>
+      <p className="mb-4 text-[13px] leading-relaxed text-[#7a3db0]">{description}</p>
       <PointsList points={points} dotColor="purple" textClass="text-[#7a3db0]" />
     </article>
   </RevealAnimation>
@@ -180,8 +180,8 @@ const NavySoftCard = ({
       <span className="mb-3 inline-block rounded-full bg-[#d4e2f5] px-3 py-1 text-[10px] font-medium uppercase tracking-wider text-[#032f73]">
         {tag}
       </span>
-      <h3 className="mb-2 text-[13px] font-semibold leading-snug text-[#032f73]">{title}</h3>
-      <p className="mb-4 text-xs leading-relaxed text-[#2a4f88]">{description}</p>
+      <h3 className="mb-2 text-[18px] font-semibold leading-snug text-[#032f73]">{title}</h3>
+      <p className="mb-4 text-[13px] leading-relaxed text-[#2a4f88]">{description}</p>
       <PointsList points={points} dotColor="navy" textClass="text-[#2a4f88]" />
     </article>
   </RevealAnimation>
@@ -217,8 +217,8 @@ const NavyDarkCard = ({
   <RevealAnimation delay={delay}>
     <article className="mb-[14px] break-inside-avoid rounded-2xl bg-[#032f73] p-6">
       <IconBox variant="navy">{icon}</IconBox>
-      <h3 className="mb-2 text-[13px] font-semibold leading-snug text-white">{title}</h3>
-      <p className="mb-4 text-xs leading-relaxed text-white/65">{description}</p>
+      <h3 className="mb-2 text-[18px] font-semibold leading-snug text-white">{title}</h3>
+      <p className="mb-4 text-[13px] leading-relaxed text-white/65">{description}</p>
       <PointsList points={points} dotColor="light" textClass="text-white/60" />
     </article>
   </RevealAnimation>
@@ -231,8 +231,8 @@ const CTACard = ({ delay }: { delay: number }) => (
       <span className="mb-4 inline-block rounded-full bg-white/10 px-3 py-1 text-[10px] font-medium uppercase tracking-wider text-white/70">
         Get started
       </span>
-      <h3 className="mb-2 text-[13px] font-semibold leading-snug text-white">See Medqon in action</h3>
-      <p className="mb-5 text-xs leading-relaxed text-white/65">
+      <h3 className="mb-2 text-[18px] font-semibold leading-snug text-white">See Medqon in action</h3>
+      <p className="mb-5 text-[13px] leading-relaxed text-white/65">
         A 20-minute walkthrough tailored to your agencys workflow — no commitment required.
       </p>
       <hr className="mb-4 border-white/10" />
@@ -261,7 +261,7 @@ const SpotlightStories = () => {
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div>
             <RevealAnimation delay={0.05}>
-              <p className="mb-3 text-xs font-medium uppercase tracking-widest text-[#6108c4]">
+              <p className="mb-3 text-[13px] font-medium uppercase tracking-widest text-[#6108c4]">
                 Platform capabilities
               </p>
             </RevealAnimation>
