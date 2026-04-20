@@ -1,7 +1,9 @@
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from './Button';
 
-/* ─── Icon components ─────────────────────────────────────── */
+/* ─────────────────────────────────────────────────────────────
+   Icons
+───────────────────────────────────────────────────────────── */
 const IconEmail = () => (
   <svg viewBox="0 0 24 24" className="h-[15px] w-[15px]" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
     <path d="M4 4h16v13a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
@@ -43,33 +45,35 @@ const IconShield = () => (
   </svg>
 );
 
-/* ─── Shared sub-components ───────────────────────────────── */
-const IconBox = ({
-  children,
-  variant = 'base',
-}: {
-  children: React.ReactNode;
-  variant?: 'base' | 'purple' | 'navy';
-}) => {
-  const styles = {
-    base: 'bg-white border border-black/10 text-[#6108c4] dark:bg-white/10 dark:border-white/10 dark:text-white/70',
-    purple: 'bg-white/15 text-white/85',
-    navy: 'bg-white/12 text-white/85',
+/* ─────────────────────────────────────────────────────────────
+   Sub-components
+───────────────────────────────────────────────────────────── */
+type IconVariant = 'neutral' | 'purple' | 'navy' | 'purple-soft' | 'navy-soft';
+
+const IconBox = ({ children, variant = 'neutral' }: { children: React.ReactNode; variant?: IconVariant }) => {
+  const styles: Record<IconVariant, string> = {
+    neutral:      'bg-background-3 dark:bg-background-5 border border-black/10 dark:border-white/10 text-[#6108c4]',
+    purple:       'bg-white/15 text-white/85',
+    navy:         'bg-white/12 text-white/85',
+    'purple-soft':'bg-[#ede0fc] text-[#6108c4]',
+    'navy-soft':  'bg-[#d4e2f5] text-[#032f73]',
   };
   return (
-    <div className={`mb-[14px] flex h-[34px] w-[34px] shrink-0 items-center justify-center rounded-lg ${styles[variant]}`}>
+    <div className={`mb-4 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${styles[variant]}`}>
       {children}
     </div>
   );
 };
 
-const Dot = ({ color = 'purple' }: { color?: 'purple' | 'navy' | 'light' }) => {
-  const bg = {
-    purple: 'bg-[#6108c4]',
-    navy: 'bg-[#032f73]',
-    light: 'bg-white/50',
-  }[color];
-  return <span className={`mt-1 block h-[5px] w-[5px] shrink-0 rounded-full ${bg}`} />;
+type DotColor = 'purple' | 'navy' | 'light' | 'navy-light';
+const Dot = ({ color = 'purple' }: { color?: DotColor }) => {
+  const bg: Record<DotColor, string> = {
+    purple:       'bg-[#6108c4]',
+    navy:         'bg-[#032f73]',
+    light:        'bg-white/50',
+    'navy-light': 'bg-[#2a5aab]',
+  };
+  return <span className={`mt-1 block h-[5px] w-[5px] shrink-0 rounded-full ${bg[color]}`} />;
 };
 
 const PointsList = ({
@@ -78,10 +82,10 @@ const PointsList = ({
   textClass = 'text-secondary/60 dark:text-accent/60',
 }: {
   points: string[];
-  dotColor?: 'purple' | 'navy' | 'light';
+  dotColor?: DotColor;
   textClass?: string;
 }) => (
-  <ul className="mt-auto space-y-1.5">
+  <ul className="mt-auto space-y-1.5 pt-1">
     {points.map((pt, i) => (
       <li key={i} className={`flex items-start gap-2 text-[13px] leading-snug ${textClass}`}>
         <Dot color={dotColor} />
@@ -91,16 +95,27 @@ const PointsList = ({
   </ul>
 );
 
-/* ─── Individual card types ───────────────────────────────── */
+const Tag = ({ label, variant }: { label: string; variant: 'purple' | 'navy' | 'purple-solid' | 'navy-solid' }) => {
+  const styles: Record<string, string> = {
+    purple:       'bg-white/18 text-white/85',
+    navy:         'bg-white/14 text-white/80',
+    'purple-solid':'bg-[#e0ccf8] text-[#5a00b8]',
+    'navy-solid': 'bg-[#c9daf0] text-[#01276a]',
+  };
+  return (
+    <span className={`mb-2.5 inline-block rounded-full px-3 py-1 text-[10px] font-medium uppercase tracking-wider ${styles[variant]}`}>
+      {label}
+    </span>
+  );
+};
+
+/* ─────────────────────────────────────────────────────────────
+   Card variants
+───────────────────────────────────────────────────────────── */
 
 /** Standard neutral card */
-const BaseCard = ({
-  icon,
-  title,
-  description,
-  points,
-  meta,
-  delay,
+const NeutralCard = ({
+  icon, title, description, points, meta, delay,
 }: {
   icon: React.ReactNode;
   title: string;
@@ -110,9 +125,9 @@ const BaseCard = ({
   delay: number;
 }) => (
   <RevealAnimation delay={delay}>
-    <article className="bg-background-3 dark:bg-background-5 mb-[14px] break-inside-avoid rounded-2xl border border-black/5 p-6 dark:border-white/5">
-      <IconBox variant="base">{icon}</IconBox>
-      <h3 className="text-secondary dark:text-accent mb-2 text-[18px] font-semibold leading-snug">{title}</h3>
+    <article className="bg-background-3 dark:bg-background-5 flex h-full flex-col rounded-2xl border border-black/5 p-6 dark:border-white/5">
+      <IconBox variant="neutral">{icon}</IconBox>
+      <h3 className="text-secondary dark:text-accent mb-2 text-[18px] font-medium leading-snug">{title}</h3>
       <p className="text-secondary/60 dark:text-accent/60 mb-4 text-[13px] leading-relaxed">{description}</p>
       <PointsList points={points} dotColor="purple" />
       {meta && (
@@ -127,122 +142,89 @@ const BaseCard = ({
 
 /** Purple-tinted soft card */
 const PurpleSoftCard = ({
-  icon,
-  tag,
-  title,
-  description,
-  points,
-  delay,
+  icon, tag, title, description, points, delay,
 }: {
-  icon: React.ReactNode;
-  tag: string;
-  title: string;
-  description: string;
-  points: string[];
-  delay: number;
+  icon: React.ReactNode; tag: string; title: string; description: string; points: string[]; delay: number;
 }) => (
   <RevealAnimation delay={delay}>
-    <article className="mb-[14px] break-inside-avoid rounded-2xl border border-[#d9b8f7] bg-[#f3ebfd] p-6">
-      <div className="mb-[14px] flex h-[34px] w-[34px] shrink-0 items-center justify-center rounded-lg border border-[#d9b8f7] bg-white text-[#6108c4]">
-        {icon}
-      </div>
-      <span className="mb-3 inline-block rounded-full bg-[#ede0fc] px-3 py-1 text-[10px] font-medium uppercase tracking-wider text-[#6108c4]">
-        {tag}
-      </span>
-      <h3 className="mb-2 text-[18px] font-semibold leading-snug text-[#6108c4]">{title}</h3>
-      <p className="mb-4 text-[13px] leading-relaxed text-[#7a3db0]">{description}</p>
-      <PointsList points={points} dotColor="purple" textClass="text-[#7a3db0]" />
+    <article className="flex h-full flex-col rounded-2xl border border-[#c9a8f0] bg-[#f0eafc] p-6">
+      <IconBox variant="purple-soft">{icon}</IconBox>
+      <Tag label={tag} variant="purple-solid" />
+      <h3 className="mb-2 text-[18px] font-medium leading-snug text-[#5a00b8]">{title}</h3>
+      <p className="mb-4 text-[13px] leading-relaxed text-[#7a38c8]">{description}</p>
+      <PointsList points={points} dotColor="purple" textClass="text-[#7a38c8]" />
     </article>
   </RevealAnimation>
 );
 
 /** Navy-tinted soft card */
 const NavySoftCard = ({
-  icon,
-  tag,
-  title,
-  description,
-  points,
-  delay,
+  icon, tag, title, description, points, delay,
 }: {
-  icon: React.ReactNode;
-  tag: string;
-  title: string;
-  description: string;
-  points: string[];
-  delay: number;
+  icon: React.ReactNode; tag: string; title: string; description: string; points: string[]; delay: number;
 }) => (
   <RevealAnimation delay={delay}>
-    <article className="mb-[14px] break-inside-avoid rounded-2xl border border-[#b3c6e8] bg-[#e8eef8] p-6">
-      <div className="mb-[14px] flex h-[34px] w-[34px] shrink-0 items-center justify-center rounded-lg border border-[#b3c6e8] bg-white text-[#032f73]">
-        {icon}
-      </div>
-      <span className="mb-3 inline-block rounded-full bg-[#d4e2f5] px-3 py-1 text-[10px] font-medium uppercase tracking-wider text-[#032f73]">
-        {tag}
-      </span>
-      <h3 className="mb-2 text-[18px] font-semibold leading-snug text-[#032f73]">{title}</h3>
-      <p className="mb-4 text-[13px] leading-relaxed text-[#2a4f88]">{description}</p>
-      <PointsList points={points} dotColor="navy" textClass="text-[#2a4f88]" />
+    <article className="flex h-full flex-col rounded-2xl border border-[#a8bfe0] bg-[#e6edf8] p-6">
+      <IconBox variant="navy-soft">{icon}</IconBox>
+      <Tag label={tag} variant="navy-solid" />
+      <h3 className="mb-2 text-[18px] font-medium leading-snug text-[#01276a]">{title}</h3>
+      <p className="mb-4 text-[13px] leading-relaxed text-[#1a4580]">{description}</p>
+      <PointsList points={points} dotColor="navy" textClass="text-[#1a4580]" />
     </article>
   </RevealAnimation>
 );
 
-/** Bold purple stat card */
+/** Solid purple stat card */
 const StatCard = ({ delay }: { delay: number }) => (
   <RevealAnimation delay={delay}>
-    <div className="mb-[14px] break-inside-avoid rounded-2xl bg-[#6108c4] p-6">
+    <div className="flex h-full flex-col justify-center rounded-2xl bg-[#6108c4] p-6">
       <p className="mb-2 text-[11px] font-medium uppercase tracking-wider text-white/50">Time saved</p>
-      <p className="mb-1 text-[52px] font-light leading-none text-white">68%</p>
-      <p className="text-[11px] leading-relaxed text-white/55">
-        average reduction in case communication time after onboarding
+      <p className="mb-2 text-[82px] font-light leading-none text-white">68%</p>
+      <p className="text-[12px] leading-relaxed text-white/55">
+        average reduction in communication time after onboarding
       </p>
     </div>
   </RevealAnimation>
 );
 
-/** Navy dark card (compliance) */
-const NavyDarkCard = ({
-  icon,
-  title,
-  description,
-  points,
-  delay,
+/** Solid navy card (compliance — spans 2 cols on desktop) */
+const ComplianceCard = ({
+  icon, title, description, points, delay,
 }: {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  points: string[];
-  delay: number;
+  icon: React.ReactNode; title: string; description: string; points: string[]; delay: number;
 }) => (
   <RevealAnimation delay={delay}>
-    <article className="mb-[14px] break-inside-avoid rounded-2xl bg-[#032f73] p-6">
-      <IconBox variant="navy">{icon}</IconBox>
-      <h3 className="mb-2 text-[18px] font-semibold leading-snug text-white">{title}</h3>
-      <p className="mb-4 text-[13px] leading-relaxed text-white/65">{description}</p>
-      <PointsList points={points} dotColor="light" textClass="text-white/60" />
+    <article className="col-span-1 flex flex-col rounded-2xl bg-[#032f73] p-6 sm:col-span-2 lg:col-span-2">
+      <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
+        <div className="flex-1">
+          <IconBox variant="navy">{icon}</IconBox>
+          <Tag label="Enterprise-ready" variant="navy" />
+          <h3 className="mb-2 text-[18px] font-medium leading-snug text-white">{title}</h3>
+          <p className="text-[13px] leading-relaxed text-white/65">{description}</p>
+        </div>
+        <PointsList points={points} dotColor="light" textClass="text-white/65 flex-1 sm:pt-14" />
+      </div>
     </article>
   </RevealAnimation>
 );
 
-/** Navy CTA card */
+/** Solid purple CTA card */
 const CTACard = ({ delay }: { delay: number }) => (
   <RevealAnimation delay={delay}>
-    <div className="mb-[14px] break-inside-avoid rounded-2xl bg-[#032f73] p-6">
-      <span className="mb-4 inline-block rounded-full bg-white/10 px-3 py-1 text-[10px] font-medium uppercase tracking-wider text-white/70">
-        Get started
-      </span>
-      <h3 className="mb-2 text-[18px] font-semibold leading-snug text-white">See Medqon in action</h3>
+    <div className="flex h-full flex-col rounded-2xl bg-[#6108c4] p-6">
+      <Tag label="Get started" variant="purple" />
+      <h3 className="mb-2 text-[18px] font-medium leading-snug text-white">See Medqon in action</h3>
       <p className="mb-5 text-[13px] leading-relaxed text-white/65">
-        A 20-minute walkthrough tailored to your agencys workflow — no commitment required.
+        A 20-minute walkthrough tailored to your agency — no commitment required.
       </p>
-      <hr className="mb-4 border-white/10" />
+      <hr className="mb-4 border-white/12" />
       <p className="mb-1.5 text-[10px] font-medium uppercase tracking-wider text-white/40">Ready to begin?</p>
-      <p className="mb-5 text-[11px] leading-relaxed text-white/60">
-        Join agencies already running their medical case pipelines on Medqon.
+      <p className="mb-5 text-[12px] leading-relaxed text-white/60">
+        Join agencies already running their case pipelines on Medqon.
       </p>
       <LinkButton
         href="/contact-us"
-        className="w-full"
+        className="mt-auto w-full"
         btnClass="btn-lg-v2 btn-v2-white group-hover/btn-v2:btn-primary-v2 w-full text-center"
       >
         Book a demo
@@ -251,13 +233,15 @@ const CTACard = ({ delay }: { delay: number }) => (
   </RevealAnimation>
 );
 
-/* ─── Main section ────────────────────────────────────────── */
+/* ─────────────────────────────────────────────────────────────
+   Main section
+───────────────────────────────────────────────────────────── */
 const SpotlightStories = () => {
   return (
     <section className="py-12 md:py-18 lg:pb-24 xl:py-28" aria-label="platform features section">
       <div className="main-container space-y-12">
 
-        {/* Header */}
+        {/* ── Header ── */}
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div>
             <RevealAnimation delay={0.05}>
@@ -276,74 +260,83 @@ const SpotlightStories = () => {
           </div>
         </div>
 
-        {/* Masonry grid — 1 col mobile / 2 col tablet / 3 col desktop */}
-        <div className="columns-1 gap-[14px] sm:columns-2 lg:columns-3">
+        {/* ── Grid ──
+              Mobile  : 1 col
+              Tablet  : 2 col  (sm:)
+              Desktop : 3 col  (lg:)
+        ── */}
+        <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-3">
 
-          {/* Col flow 1 */}
-          <BaseCard
+          {/* Row 1 */}
+          <NeutralCard
             icon={<IconEmail />}
             title="Automated communication"
             description="Send appointment details, updates, and reports automatically via integrated channels."
             points={['SMS notifications for appointments', 'Email integration (Office 365)', 'Automated updates and reminders']}
-            delay={0.1}
+            delay={0.10}
           />
 
-          <StatCard delay={0.15} />
-
-          <BaseCard
-            icon={<IconCard />}
-            title="Invoicing and financial tracking"
-            description="Manage invoices and financial workflows directly within the platform."
-            points={['Invoice generation', 'Payment tracking', 'Xero integration']}
-            delay={0.2}
-          />
-
-          <CTACard delay={0.25} />
-
-          {/* Col flow 2 */}
           <PurpleSoftCard
             icon={<IconDoc />}
             tag="Automated"
             title="Smart correspondence generation"
             description="Generate letters and communications directly from case data and instructions."
             points={['Instruction to appointment letters', 'Automated document generation', 'Consistent formatting and templates']}
-            delay={0.1}
+            delay={0.15}
           />
 
-          <BaseCard
-            icon={<IconList />}
-            title="Case management"
-            description="Track cases, appointments, and report progress in one structured system."
-            points={['Centralised case tracking', 'Appointment scheduling', 'Report status visibility']}
-            meta={{ number: '1', label: 'unified workspace for all case activity' }}
-            delay={0.2}
+          <StatCard delay={0.20} />
+
+          {/* Row 2 */}
+          <NeutralCard
+            icon={<IconLink />}
+            title="Integrations and APIs"
+            description="Connect Medqon with your existing systems and agency workflows seamlessly."
+            points={['API integrations for medical agencies', 'Email and system integrations', 'Flexible workflow connectivity']}
+            delay={0.40}
           />
 
-          {/* Col flow 3 */}
+          <NeutralCard
+            icon={<IconCard />}
+            title="Invoicing and financial tracking"
+            description="Manage invoices and financial workflows directly within the platform."
+            points={['Invoice generation', 'Payment tracking', 'Xero integration']}
+            delay={0.30}
+          />
+
           <NavySoftCard
             icon={<IconMobile />}
             tag="Multi-device"
             title="Access across all devices"
             description="Work seamlessly across desktop and mobile — fully synchronised in real time."
             points={['Web platform', 'iOS and Android apps', 'Fully synchronised data']}
-            delay={0.1}
+            delay={0.35}
           />
 
-          <BaseCard
-            icon={<IconLink />}
-            title="Integrations and APIs"
-            description="Connect Medqon with your existing systems and agency workflows."
-            points={['API integrations for medical agencies', 'Email and system integrations', 'Flexible workflow connectivity']}
-            delay={0.15}
-          />
+          {/* Row 3 */}
 
-          <NavyDarkCard
+          {/* CTA spans 2 cols on mobile, 1 col on sm+ so it fills row 4 */}
+          <CTACard delay={0.50} />
+
+           <NeutralCard
+            icon={<IconList />}
+            title="Case management"
+            description="Track cases, appointments, and report progress in one structured system."
+            points={['Centralised case tracking', 'Appointment scheduling', 'Report status visibility']}
+            delay={0.25}
+          />
+          
+
+          {/* Compliance spans 2 cols on sm+, 1 col on mobile */}
+          <NeutralCard
             icon={<IconShield />}
             title="Compliance and support"
-            description="Operate with confidence with built-in compliance and ongoing dedicated support."
+            description="Operate with confidence with built-in compliance features and ongoing dedicated support."
             points={['GDPR-aligned data handling', 'International compliance support', 'Dedicated support hub']}
-            delay={0.2}
+            delay={0.45}
           />
+
+          
 
         </div>
       </div>
@@ -353,6 +346,362 @@ const SpotlightStories = () => {
 
 SpotlightStories.displayName = 'SpotlightStories';
 export default SpotlightStories;
+
+// import RevealAnimation from '../animation/RevealAnimation';
+// import LinkButton from './Button';
+
+// /* ─── Icon components ─────────────────────────────────────── */
+// const IconEmail = () => (
+//   <svg viewBox="0 0 24 24" className="h-[15px] w-[15px]" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+//     <path d="M4 4h16v13a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+//     <path d="M4 4l8 9 8-9" />
+//   </svg>
+// );
+// const IconDoc = () => (
+//   <svg viewBox="0 0 24 24" className="h-[15px] w-[15px]" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+//     <rect x="4" y="3" width="16" height="18" rx="2" />
+//     <path d="M8 7h8M8 11h8M8 15h5" />
+//   </svg>
+// );
+// const IconList = () => (
+//   <svg viewBox="0 0 24 24" className="h-[15px] w-[15px]" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+//     <path d="M3 6h18M3 12h18M3 18h18" />
+//   </svg>
+// );
+// const IconCard = () => (
+//   <svg viewBox="0 0 24 24" className="h-[15px] w-[15px]" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+//     <rect x="3" y="6" width="18" height="13" rx="2" />
+//     <path d="M3 10h18M7 15h2M13 15h4" />
+//   </svg>
+// );
+// const IconMobile = () => (
+//   <svg viewBox="0 0 24 24" className="h-[15px] w-[15px]" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+//     <rect x="5" y="2" width="14" height="20" rx="2" />
+//     <path d="M9 7h6M9 11h6M9 15h3" />
+//   </svg>
+// );
+// const IconLink = () => (
+//   <svg viewBox="0 0 24 24" className="h-[15px] w-[15px]" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+//     <path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" />
+//     <path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" />
+//   </svg>
+// );
+// const IconShield = () => (
+//   <svg viewBox="0 0 24 24" className="h-[15px] w-[15px]" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+//     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+//   </svg>
+// );
+
+// /* ─── Shared sub-components ───────────────────────────────── */
+// const IconBox = ({
+//   children,
+//   variant = 'base',
+// }: {
+//   children: React.ReactNode;
+//   variant?: 'base' | 'purple' | 'navy';
+// }) => {
+//   const styles = {
+//     base: 'bg-white border border-black/10 text-[#6108c4] dark:bg-white/10 dark:border-white/10 dark:text-white/70',
+//     purple: 'bg-white/15 text-white/85',
+//     navy: 'bg-white/12 text-white/85',
+//   };
+//   return (
+//     <div className={`mb-[14px] flex h-[34px] w-[34px] shrink-0 items-center justify-center rounded-lg ${styles[variant]}`}>
+//       {children}
+//     </div>
+//   );
+// };
+
+// const Dot = ({ color = 'purple' }: { color?: 'purple' | 'navy' | 'light' }) => {
+//   const bg = {
+//     purple: 'bg-[#6108c4]',
+//     navy: 'bg-[#032f73]',
+//     light: 'bg-white/50',
+//   }[color];
+//   return <span className={`mt-1 block h-[5px] w-[5px] shrink-0 rounded-full ${bg}`} />;
+// };
+
+// const PointsList = ({
+//   points,
+//   dotColor = 'purple',
+//   textClass = 'text-secondary/60 dark:text-accent/60',
+// }: {
+//   points: string[];
+//   dotColor?: 'purple' | 'navy' | 'light';
+//   textClass?: string;
+// }) => (
+//   <ul className="mt-auto space-y-1.5">
+//     {points.map((pt, i) => (
+//       <li key={i} className={`flex items-start gap-2 text-[13px] leading-snug ${textClass}`}>
+//         <Dot color={dotColor} />
+//         {pt}
+//       </li>
+//     ))}
+//   </ul>
+// );
+
+// /* ─── Individual card types ───────────────────────────────── */
+
+// /** Standard neutral card */
+// const BaseCard = ({
+//   icon,
+//   title,
+//   description,
+//   points,
+//   meta,
+//   delay,
+// }: {
+//   icon: React.ReactNode;
+//   title: string;
+//   description: string;
+//   points: string[];
+//   meta?: { number: string; label: string };
+//   delay: number;
+// }) => (
+//   <RevealAnimation delay={delay}>
+//     <article className="bg-background-3 dark:bg-background-5 mb-[14px] break-inside-avoid rounded-2xl border border-black/5 p-6 dark:border-white/5">
+//       <IconBox variant="base">{icon}</IconBox>
+//       <h3 className="text-secondary dark:text-accent mb-2 text-[18px] font-semibold leading-snug">{title}</h3>
+//       <p className="text-secondary/60 dark:text-accent/60 mb-4 text-[13px] leading-relaxed">{description}</p>
+//       <PointsList points={points} dotColor="purple" />
+//       {meta && (
+//         <div className="mt-4 flex items-center gap-2 border-t border-black/5 pt-4 dark:border-white/5">
+//           <span className="text-2xl font-light text-[#6108c4]">{meta.number}</span>
+//           <span className="text-[11px] leading-snug text-secondary/40 dark:text-accent/40">{meta.label}</span>
+//         </div>
+//       )}
+//     </article>
+//   </RevealAnimation>
+// );
+
+// /** Purple-tinted soft card */
+// const PurpleSoftCard = ({
+//   icon,
+//   tag,
+//   title,
+//   description,
+//   points,
+//   delay,
+// }: {
+//   icon: React.ReactNode;
+//   tag: string;
+//   title: string;
+//   description: string;
+//   points: string[];
+//   delay: number;
+// }) => (
+//   <RevealAnimation delay={delay}>
+//     <article className="mb-[14px] break-inside-avoid rounded-2xl border border-[#d9b8f7] bg-[#f3ebfd] p-6">
+//       <div className="mb-[14px] flex h-[34px] w-[34px] shrink-0 items-center justify-center rounded-lg border border-[#d9b8f7] bg-white text-[#6108c4]">
+//         {icon}
+//       </div>
+//       <span className="mb-3 inline-block rounded-full bg-[#ede0fc] px-3 py-1 text-[10px] font-medium uppercase tracking-wider text-[#6108c4]">
+//         {tag}
+//       </span>
+//       <h3 className="mb-2 text-[18px] font-semibold leading-snug text-[#6108c4]">{title}</h3>
+//       <p className="mb-4 text-[13px] leading-relaxed text-[#7a3db0]">{description}</p>
+//       <PointsList points={points} dotColor="purple" textClass="text-[#7a3db0]" />
+//     </article>
+//   </RevealAnimation>
+// );
+
+// /** Navy-tinted soft card */
+// const NavySoftCard = ({
+//   icon,
+//   tag,
+//   title,
+//   description,
+//   points,
+//   delay,
+// }: {
+//   icon: React.ReactNode;
+//   tag: string;
+//   title: string;
+//   description: string;
+//   points: string[];
+//   delay: number;
+// }) => (
+//   <RevealAnimation delay={delay}>
+//     <article className="mb-[14px] break-inside-avoid rounded-2xl border border-[#b3c6e8] bg-[#e8eef8] p-6">
+//       <div className="mb-[14px] flex h-[34px] w-[34px] shrink-0 items-center justify-center rounded-lg border border-[#b3c6e8] bg-white text-[#032f73]">
+//         {icon}
+//       </div>
+//       <span className="mb-3 inline-block rounded-full bg-[#d4e2f5] px-3 py-1 text-[10px] font-medium uppercase tracking-wider text-[#032f73]">
+//         {tag}
+//       </span>
+//       <h3 className="mb-2 text-[18px] font-semibold leading-snug text-[#032f73]">{title}</h3>
+//       <p className="mb-4 text-[13px] leading-relaxed text-[#2a4f88]">{description}</p>
+//       <PointsList points={points} dotColor="navy" textClass="text-[#2a4f88]" />
+//     </article>
+//   </RevealAnimation>
+// );
+
+// /** Bold purple stat card */
+// const StatCard = ({ delay }: { delay: number }) => (
+//   <RevealAnimation delay={delay}>
+//     <div className="mb-[14px] break-inside-avoid rounded-2xl bg-[#6108c4] p-6">
+//       <p className="mb-2 text-[11px] font-medium uppercase tracking-wider text-white/50">Time saved</p>
+//       <p className="mb-1 text-[52px] font-light leading-none text-white">68%</p>
+//       <p className="text-[11px] leading-relaxed text-white/55">
+//         average reduction in case communication time after onboarding
+//       </p>
+//     </div>
+//   </RevealAnimation>
+// );
+
+// /** Navy dark card (compliance) */
+// const NavyDarkCard = ({
+//   icon,
+//   title,
+//   description,
+//   points,
+//   delay,
+// }: {
+//   icon: React.ReactNode;
+//   title: string;
+//   description: string;
+//   points: string[];
+//   delay: number;
+// }) => (
+//   <RevealAnimation delay={delay}>
+//     <article className="mb-[14px] break-inside-avoid rounded-2xl bg-[#032f73] p-6">
+//       <IconBox variant="navy">{icon}</IconBox>
+//       <h3 className="mb-2 text-[18px] font-semibold leading-snug text-white">{title}</h3>
+//       <p className="mb-4 text-[13px] leading-relaxed text-white/65">{description}</p>
+//       <PointsList points={points} dotColor="light" textClass="text-white/60" />
+//     </article>
+//   </RevealAnimation>
+// );
+
+// /** Navy CTA card */
+// const CTACard = ({ delay }: { delay: number }) => (
+//   <RevealAnimation delay={delay}>
+//     <div className="mb-[14px] break-inside-avoid rounded-2xl bg-[#032f73] p-6">
+//       <span className="mb-4 inline-block rounded-full bg-white/10 px-3 py-1 text-[10px] font-medium uppercase tracking-wider text-white/70">
+//         Get started
+//       </span>
+//       <h3 className="mb-2 text-[18px] font-semibold leading-snug text-white">See Medqon in action</h3>
+//       <p className="mb-5 text-[13px] leading-relaxed text-white/65">
+//         A 20-minute walkthrough tailored to your agencys workflow — no commitment required.
+//       </p>
+//       <hr className="mb-4 border-white/10" />
+//       <p className="mb-1.5 text-[10px] font-medium uppercase tracking-wider text-white/40">Ready to begin?</p>
+//       <p className="mb-5 text-[11px] leading-relaxed text-white/60">
+//         Join agencies already running their medical case pipelines on Medqon.
+//       </p>
+//       <LinkButton
+//         href="/contact-us"
+//         className="w-full"
+//         btnClass="btn-lg-v2 btn-v2-white group-hover/btn-v2:btn-primary-v2 w-full text-center"
+//       >
+//         Book a demo
+//       </LinkButton>
+//     </div>
+//   </RevealAnimation>
+// );
+
+// /* ─── Main section ────────────────────────────────────────── */
+// const SpotlightStories = () => {
+//   return (
+//     <section className="py-12 md:py-18 lg:pb-24 xl:py-28" aria-label="platform features section">
+//       <div className="main-container space-y-12">
+
+//         {/* Header */}
+//         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+//           <div>
+//             <RevealAnimation delay={0.05}>
+//               <p className="mb-3 text-[13px] font-medium uppercase tracking-widest text-[#6108c4]">
+//                 Platform capabilities
+//               </p>
+//             </RevealAnimation>
+//             <RevealAnimation delay={0.1}>
+//               <h2>Everything behind the report</h2>
+//             </RevealAnimation>
+//             <RevealAnimation delay={0.2}>
+//               <p className="text-secondary/60 dark:text-accent/60 mt-2 max-w-md text-sm leading-relaxed">
+//                 Medqon supports the full medico-legal workflow — from instruction to delivery, communication, and compliance.
+//               </p>
+//             </RevealAnimation>
+//           </div>
+//         </div>
+
+//         {/* Masonry grid — 1 col mobile / 2 col tablet / 3 col desktop */}
+//         <div className="columns-1 gap-[14px] sm:columns-2 lg:columns-3">
+
+//           {/* Col flow 1 */}
+//           <BaseCard
+//             icon={<IconEmail />}
+//             title="Automated communication"
+//             description="Send appointment details, updates, and reports automatically via integrated channels."
+//             points={['SMS notifications for appointments', 'Email integration (Office 365)', 'Automated updates and reminders']}
+//             delay={0.1}
+//           />
+
+//           <StatCard delay={0.15} />
+
+//           <BaseCard
+//             icon={<IconCard />}
+//             title="Invoicing and financial tracking"
+//             description="Manage invoices and financial workflows directly within the platform."
+//             points={['Invoice generation', 'Payment tracking', 'Xero integration']}
+//             delay={0.2}
+//           />
+
+//           <CTACard delay={0.25} />
+
+//           {/* Col flow 2 */}
+//           <PurpleSoftCard
+//             icon={<IconDoc />}
+//             tag="Automated"
+//             title="Smart correspondence generation"
+//             description="Generate letters and communications directly from case data and instructions."
+//             points={['Instruction to appointment letters', 'Automated document generation', 'Consistent formatting and templates']}
+//             delay={0.1}
+//           />
+
+//           <BaseCard
+//             icon={<IconList />}
+//             title="Case management"
+//             description="Track cases, appointments, and report progress in one structured system."
+//             points={['Centralised case tracking', 'Appointment scheduling', 'Report status visibility']}
+//             meta={{ number: '1', label: 'unified workspace for all case activity' }}
+//             delay={0.2}
+//           />
+
+//           {/* Col flow 3 */}
+//           <NavySoftCard
+//             icon={<IconMobile />}
+//             tag="Multi-device"
+//             title="Access across all devices"
+//             description="Work seamlessly across desktop and mobile — fully synchronised in real time."
+//             points={['Web platform', 'iOS and Android apps', 'Fully synchronised data']}
+//             delay={0.1}
+//           />
+
+//           <BaseCard
+//             icon={<IconLink />}
+//             title="Integrations and APIs"
+//             description="Connect Medqon with your existing systems and agency workflows."
+//             points={['API integrations for medical agencies', 'Email and system integrations', 'Flexible workflow connectivity']}
+//             delay={0.15}
+//           />
+
+//           <NavyDarkCard
+//             icon={<IconShield />}
+//             title="Compliance and support"
+//             description="Operate with confidence with built-in compliance and ongoing dedicated support."
+//             points={['GDPR-aligned data handling', 'International compliance support', 'Dedicated support hub']}
+//             delay={0.2}
+//           />
+
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// SpotlightStories.displayName = 'SpotlightStories';
+// export default SpotlightStories;
 
 // import RevealAnimation from '../animation/RevealAnimation';
 // import LinkButton from './Button';
