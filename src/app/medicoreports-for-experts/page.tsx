@@ -29,6 +29,9 @@ import aboutBlockchain from '@public/images/home-page-1/about-blockchain.png';
 import aboutDecentralization from '@public/images/home-page-1/about-decentralization-1.png';
 import aboutExchanges from '@public/images/home-page-1/about-exchanges.png';
 import aboutPrivacy from '@public/images/home-page-1/about-privacy.png';
+
+import medicoLegalReportTemplate from '@public/images/report-writer-for-experts/medico-legal-report-template.jpg'
+
 import Image from 'next/image';
 import LinkButton from '@/components/ui/button/LinkButton';
 import TabContent from '@/components/ui/tab/TabContent';
@@ -48,7 +51,7 @@ const aboutTabsData = [
     highlightedText: ' reports',
     description:
       'Generate full medico-legal reports covering history, examination, causation, and prognosis — structured and compliant by default.',
-    image: aboutDecentralization,
+    image: medicoLegalReportTemplate,
     imageAlt: 'Happy man using phone',
     buttonText: 'Contact Us',
     buttonHref: '/contact-us',
