@@ -17,7 +17,7 @@ import LinkButton from '../ui/button/LinkButton';
 
 const Hero = () => {  
   return (
-    <section className="pt-[115px] pb-[97px] overflow-hidden">
+    <section className="pt-[75px] pb-[97px] overflow-hidden">
       <div className="max-w-[1365px] mx-auto">
         <div className="relative">
           {/* hero bg  */}
@@ -32,7 +32,7 @@ const Hero = () => {
           <div className="main-container">
             <div className="flex items-start gap-12 xl:gap-0 flex-col lg:flex-row justify-between pt-4 lg:pt-[200px] pb-[110px]">
               {/* hero content  */}
-              <div className="lg:max-w-[490px] xl:max-w-[629px] w-full space-y-7 lg:space-y-14 text-center md:text-left">
+              <div className="lg:max-w-[490px] xl:max-w-[629px] w-full space-y-7 lg:space-y-14 text-center md:text-left pt-[75px]">
                 {/* heading text  */}
                 <div className="space-y-4">
                   <RevealAnimation delay={0.2}>
@@ -56,7 +56,7 @@ const Hero = () => {
               <div className="relative" aria-hidden="true">
                 {/* main img  */}
                 <RevealAnimation delay={0.6}>
-                  <figure className="p-2.5 dark:bg-background-9 rounded-xl max-w-[480px] md:max-w-[403px] lg:max-w-[475px] xl:max-w-[408px] 2xl:max-w-[708px] w-full relative left-[30px] md:left-[160px] lg:left-[-109px] xl:left-[-107px] 2xl:left-[-3px] top-[100px] lg:top-[3px]">
+                  <figure className="p-2.5 dark:bg-background-9 rounded-xl max-w-[480px] md:max-w-[403px] lg:max-w-[475px] xl:max-w-[408px] 2xl:max-w-[708px] w-full relative left-[30px] md:left-[160px] lg:left-[-109px] xl:left-[-107px] 2xl:left-[-3px] top-[30px] lg:top-[1px]">
                     <Image src={heroReportWriter} alt="Application dashboard interface" className="rounded-xl dark:hidden" />
                     <Image
                       src={heroReportWriter}
