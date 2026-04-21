@@ -30,7 +30,9 @@ import aboutDecentralization from '@public/images/home-page-1/about-decentraliza
 import aboutExchanges from '@public/images/home-page-1/about-exchanges.png';
 import aboutPrivacy from '@public/images/home-page-1/about-privacy.png';
 
-import medicoLegalReportTemplate from '@public/images/report-writer-for-experts/medico-legal-report-template.jpg'
+import medicoLegalReportTemplate from '@public/images/report-writer-for-experts/medico-legal-report-template.jpg';
+import orthoReportTemplate from '@public/images/report-writer-for-experts/orthopaedic-reports.jpg';
+import psycLegalReportTemplate from '@public/images/report-writer-for-experts/psychological-reports.jpg';
 
 import Image from 'next/image';
 import LinkButton from '@/components/ui/button/LinkButton';
@@ -81,7 +83,7 @@ const aboutTabsData = [
     highlightedText: ' reports.',
     description:
       'Capture musculoskeletal assessments and generate structured orthopaedic reports aligned with medico-legal standards.',
-    image: aboutBlockchain,
+    image: orthoReportTemplate,
     imageAlt: 'Happy man using phone',
     buttonText: 'Contact Us',
     buttonHref: '/contact-us',
@@ -111,7 +113,7 @@ const aboutTabsData = [
     highlightedText: ' reports.',
     description:
       "Generate structured psychological assessments with consistent formatting and terminology for medico-legal use.",
-    image: aboutPrivacy,
+    image: psycLegalReportTemplate,
     imageAlt: 'Happy man using phone',
     buttonText: 'Contact Us',
     buttonHref: '/contact-us',
