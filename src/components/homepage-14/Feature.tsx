@@ -3,6 +3,11 @@ import featureImg01 from '@public/images/home-page-14/feature-img-01.png';
 import featureImg02Dark from '@public/images/home-page-14/feature-img-02-dark.png';
 import featureImg02 from '@public/images/home-page-14/feature-img-02.png';
 import featureImg03 from '@public/images/home-page-14/feature-img-03.png';
+
+import captureImage from '@public/images/report-writer-for-experts/capture-consultations-effortlessly.gif';
+import generateStructuredImage from '@public/images/report-writer-for-experts/generate-structured-reports.png';
+import verifyDeliverImage from '@public/images/report-writer-for-experts/verify-and-deliver-with-confidence.png';
+
 import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
 
@@ -11,24 +16,24 @@ const features = [
     id: 1,
     title: 'Capture consultations effortlessly',
     description: 'Record examinations, dictate findings, or enter details manually - all in one place.',
-    img: featureImg01,
-    darkImg: featureImg01Dark,
+    img: captureImage,
+    darkImg: captureImage,
     alt: 'Capture consultations effortlessly',
   },
   {
     id: 2, 
     title: 'Generate structured reports',
     description: 'DictAIte automatically builds compliant medico-legal reports from your inputs.',
-    img: featureImg02,
-    darkImg: featureImg02Dark,
+    img: generateStructuredImage,
+    darkImg: generateStructuredImage,
     alt: 'Generate structured reports',
   },
-  {
+  { 
     id: 3,
     title: 'Verify and deliver with confidence',
     description: 'Ensure report integrity and share documents that can be independently verified.',
-    img: featureImg03,
-    darkImg: null,
+    img: verifyDeliverImage,
+    darkImg: verifyDeliverImage,
     alt: 'Verify and deliver with confidence',
     extraClass: 'md:col-start-4',
   },  
