@@ -8,7 +8,7 @@ import ProcessImage from '@public/images/home-page-4/process.png';
 import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
 
-const ProcessOperation = () => { 
+const ProcessOperation = () => {  
   return (
     <section className="py-[100px] bg-background-1 dark:bg-background-6 space-y-[70px]">
       <div className="main-container space-y-[70px]">

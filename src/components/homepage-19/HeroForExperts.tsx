@@ -15,7 +15,7 @@ import RevealAnimation from '../animation/RevealAnimation';
 import Progress from '../homepage-04/Progress';
 import LinkButton from '../ui/button/LinkButton';
 
-const Hero = () => {  
+const Hero = () => {   
   return (
     <section className="pt-[75px] pb-[97px] overflow-hidden">
       <div className="max-w-[1365px] mx-auto">
@@ -36,7 +36,10 @@ const Hero = () => {
                 {/* heading text  */}
                 <div className="space-y-4">
                   <RevealAnimation delay={0.2}>
-                    <h1>Medico-legal reports, completed in minutes</h1>
+                    <span className="badge badge-green mb-5">Medico-report Writer</span>
+                  </RevealAnimation>
+                  <RevealAnimation delay={0.2}>
+                    <h1 className="text-5xl sm:text-5xl lg:text-[3.8rem]">Medico-legal reports, completed in minutes</h1>
                   </RevealAnimation>
                   <RevealAnimation delay={0.3}>
                     <p>
@@ -49,7 +52,7 @@ const Hero = () => {
                   <LinkButton
                     href="/contact-us"
                     className="btn btn-lg btn-primary hover:btn-secondary dark:hover:btn-accent w-[90%] md:w-auto">
-                    <span>Book a strategy call</span>
+                    <span>Book a Demo</span>
                   </LinkButton>
                 </RevealAnimation>
               </div>

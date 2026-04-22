@@ -63,6 +63,9 @@ import Tab from '@/components/ui/tab/Tab';
 import TabList from '@/components/ui/tab/TabList';
 import { TabProvider } from '@/context/TabContext';
 
+import ProcessDarkImage from '@public/images/home-page-4/process-dark.png';
+import ProcessImage from '@public/images/home-page-4/process.png';
+
 import { IService } from '@/interface';
 import getMarkDownData from '@/utils/getMarkDownData';
 
@@ -721,7 +724,7 @@ const MedqonVault = () => {
                         ))}
                       </ul>
                     </div>
-                    
+
                   </div>
                 </div>
               </RevealAnimation>
@@ -760,7 +763,7 @@ const MedqonVault = () => {
                         ))}
                       </ul>
                     </div>
-                    
+
                   </div>
                 </div>
               </RevealAnimation>
@@ -799,11 +802,145 @@ const MedqonVault = () => {
                         ))}
                       </ul>
                     </div>
-                    
+
                   </div>
                 </div>
               </RevealAnimation>
 
+            </div>
+          </div>
+        </section>
+
+
+
+
+
+        <section className="py-[100px] bg-background-1 dark:bg-background-6 space-y-[70px]">
+          <div className="main-container space-y-[70px]">
+            <div className="space-y-5 max-w-[804px] mx-auto text-center">
+              <RevealAnimation delay={0.1}>
+                <span className="badge badge-cyan-v2">Compliance & security</span>
+              </RevealAnimation>
+              <div className="space-y-3 text-center">
+                <RevealAnimation delay={0.2}>
+                  <h2 className="max-w-[624px] mx-auto">Built for regulated medico-legal data environments</h2>
+                </RevealAnimation>
+                <RevealAnimation delay={0.3}>
+                  <p className="max-w-[802px] mx-auto">
+                    Medico Vault is designed to support organisations handling sensitive claimant data, with security, governance, and compliance controls aligned to UK GDPR and the Data Protection Act 2018. From data access to audit trails, every part of the system is structured to ensure information is handled securely, transparently, and in line with regulatory expectations.
+                  </p>
+                </RevealAnimation>
+              </div>
+            </div>
+            <div className="grid grid-cols-12 items-center xl:gap-[100px] lg:gap-20 md:gap-y-20 gap-y-14">
+              <div className="col-span-12 xl:col-span-5 lg:col-span-6">
+                <RevealAnimation delay={0.4}>
+                  <div>
+                    <figure className="max-w-[478px] max-h-[547px] lg:mx-0 mx-auto">
+                      <Image src={ProcessImage} alt="process" className="h-full w-full object-cover dark:hidden block" />
+                      <Image
+                        src={ProcessDarkImage}
+                        alt="process"
+                        className="h-full w-full object-cover hidden dark:block"
+                      />
+                    </figure>
+                  </div>
+                </RevealAnimation>
+              </div>
+              <div className="col-span-12 xl:col-span-7 lg:col-span-6">
+                <div className="space-y-5">
+                  <RevealAnimation delay={0.5}>
+                    <div className="sm:max-w-[596px] lg:mx-0 mx-auto sm:py-6 py-5 sm:px-[34px] px-7 bg-background-3 dark:bg-background-7 sm:rounded-[20px] rounded-2xl flex items-start sm:gap-[22px] gap-4">
+                      <div>
+                        <div className="size-10 rounded-full bg-ns-yellow text-tagline-1 font-semibold text-secondary flex items-center justify-center shrink-0">
+                          1
+                        </div>
+                      </div>
+                      <div className="space-y-1">
+                        <h3 className="text-lg font-medium leading-[27px] text-secondary dark:text-accent">
+                          UK GDPR and Data Protection Act aligned
+                        </h3>
+                        <p>
+                          Designed to support compliant handling of personal and sensitive data under UK regulations 
+                        </p>
+                      </div>
+                    </div>
+                  </RevealAnimation>
+                  <RevealAnimation delay={0.6}>
+                    <div className="sm:max-w-[596px] lg:mx-0 mx-auto sm:py-6 py-5 sm:px-[34px] px-7 bg-background-3 dark:bg-background-7 sm:rounded-[20px] rounded-2xl flex items-start sm:gap-[22px] gap-4">
+                      <div className="size-10 rounded-full bg-ns-green text-tagline-1 font-semibold text-secondary flex items-center justify-center shrink-0">
+                        2
+                      </div>
+                      <div className="space-y-1">
+                        <h3 className="text-lg font-medium leading-[27px] text-secondary dark:text-accent">
+                          Role-based access control
+                        </h3>
+                        <p>
+                          Restrict system access based on user roles across admin, experts, and referrers 
+                        </p>
+                      </div>
+                    </div>
+                  </RevealAnimation>
+                  <RevealAnimation delay={0.7}>
+                    <div className="sm:max-w-[596px] lg:mx-0 mx-auto sm:py-6 py-5 sm:px-[34px] px-7 bg-background-3 dark:bg-background-7 sm:rounded-[20px] rounded-2xl flex items-start sm:gap-[22px] gap-4">
+                      <div className="size-10 rounded-full bg-ns-red text-tagline-1 font-semibold text-secondary flex items-center justify-center shrink-0">
+                        3
+                      </div>
+                      <div className="space-y-1">
+                        <h3 className="text-lg font-medium leading-[27px] text-secondary dark:text-accent">Full audit logging</h3>
+                        <p>
+                          Track changes, actions, and access across cases, documents, and communications 
+                        </p>
+                      </div>
+                    </div>
+                  </RevealAnimation>
+                  <RevealAnimation delay={0.5}>
+                    <div className="sm:max-w-[596px] lg:mx-0 mx-auto sm:py-6 py-5 sm:px-[34px] px-7 bg-background-3 dark:bg-background-7 sm:rounded-[20px] rounded-2xl flex items-start sm:gap-[22px] gap-4">
+                      <div>
+                        <div className="size-10 rounded-full bg-ns-yellow text-tagline-1 font-semibold text-secondary flex items-center justify-center shrink-0">
+                          4
+                        </div>
+                      </div>
+                      <div className="space-y-1">
+                        <h3 className="text-lg font-medium leading-[27px] text-secondary dark:text-accent">
+                          Encryption at rest and in transit
+                        </h3>
+                        <p>
+                          Data protected using industry-standard encryption protocols 
+                        </p>
+                      </div>
+                    </div>
+                  </RevealAnimation>
+                  <RevealAnimation delay={0.6}>
+                    <div className="sm:max-w-[596px] lg:mx-0 mx-auto sm:py-6 py-5 sm:px-[34px] px-7 bg-background-3 dark:bg-background-7 sm:rounded-[20px] rounded-2xl flex items-start sm:gap-[22px] gap-4">
+                      <div className="size-10 rounded-full bg-ns-green text-tagline-1 font-semibold text-secondary flex items-center justify-center shrink-0">
+                        5
+                      </div>
+                      <div className="space-y-1">
+                        <h3 className="text-lg font-medium leading-[27px] text-secondary dark:text-accent">
+                          Secure UK-based hosting infrastructure
+                        </h3>
+                        <p>
+                          Hosted within controlled environments aligned to ISO-certified standards 
+                        </p>
+                      </div>
+                    </div>
+                  </RevealAnimation>
+                  <RevealAnimation delay={0.7}>
+                    <div className="sm:max-w-[596px] lg:mx-0 mx-auto sm:py-6 py-5 sm:px-[34px] px-7 bg-background-3 dark:bg-background-7 sm:rounded-[20px] rounded-2xl flex items-start sm:gap-[22px] gap-4">
+                      <div className="size-10 rounded-full bg-ns-red text-tagline-1 font-semibold text-secondary flex items-center justify-center shrink-0">
+                        6
+                      </div>
+                      <div className="space-y-1">
+                        <h3 className="text-lg font-medium leading-[27px] text-secondary dark:text-accent">Backup and disaster recovery measures</h3>
+                        <p>
+                          Ensures continuity and protection of critical case data 
+                        </p>
+                      </div>
+                    </div>
+                  </RevealAnimation>
+                </div>
+              </div>
             </div>
           </div>
         </section>
