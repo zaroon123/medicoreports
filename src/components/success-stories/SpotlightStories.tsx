@@ -55,7 +55,7 @@ const IconBox = ({ children, variant = 'neutral' }: { children: React.ReactNode;
     neutral:      'bg-background-3 dark:bg-background-5 border border-black/10 dark:border-white/10 text-[#6108c4]',
     purple:       'bg-white/15 text-white/85',
     navy:         'bg-white/12 text-white/85',
-    'purple-soft':'bg-[#ede0fc] text-[#6108c4]',
+    'purple-soft':'text-[#000000] border border-black/5',
     'navy-soft':  'bg-[#d4e2f5] text-[#032f73]',
   };
   return (
@@ -97,9 +97,9 @@ const PointsList = ({
 
 const Tag = ({ label, variant }: { label: string; variant: 'purple' | 'navy' | 'purple-solid' | 'navy-solid' }) => {
   const styles: Record<string, string> = {
-    purple:       'bg-white/18 text-white/85',
-    navy:         'bg-white/14 text-white/80',
-    'purple-solid':'bg-[#e0ccf8] text-[#5a00b8]',
+    purple:       'bg-white/18 text-black/85',
+    navy:         'bg-black/14 text-black/80',
+    'purple-solid':'bg-[#BBE278] text-[#000000]',
     'navy-solid': 'bg-[#c9daf0] text-[#01276a]',
   };
   return (
@@ -147,12 +147,12 @@ const PurpleSoftCard = ({
   icon: React.ReactNode; tag: string; title: string; description: string; points: string[]; delay: number;
 }) => (
   <RevealAnimation delay={delay}>
-    <article className="flex h-full flex-col rounded-2xl border border-[#c9a8f0] bg-[#f0eafc] p-6">
+    <article className="flex h-full flex-col rounded-2xl border border-[#BBE278] bg-[#F2FFDB] p-6">
       <IconBox variant="purple-soft">{icon}</IconBox>
       <Tag label={tag} variant="purple-solid" />
-      <h3 className="mb-2 text-[18px] font-medium leading-snug text-[#5a00b8]">{title}</h3>
-      <p className="mb-4 text-[13px] leading-relaxed text-[#7a38c8]">{description}</p>
-      <PointsList points={points} dotColor="purple" textClass="text-[#7a38c8]" />
+      <h3 className="mb-2 text-[18px] font-medium leading-snug text-[#000000]">{title}</h3>
+      <p className="mb-4 text-[13px] leading-relaxed text-[#1a1a1c]">{description}</p>
+      <PointsList points={points} dotColor="purple" textClass="text-[#1a1a1c]" />
     </article>
   </RevealAnimation>
 );
@@ -177,7 +177,7 @@ const NavySoftCard = ({
 /** Solid purple stat card */
 const StatCard = ({ delay }: { delay: number }) => (
   <RevealAnimation delay={delay}>
-    <div className="flex h-full flex-col justify-center rounded-2xl bg-[#6108c4] p-6">
+    <div className="flex h-full flex-col justify-center rounded-2xl bg-[#1B0273] p-6">
       <p className="mb-2 text-[11px] font-medium uppercase tracking-wider text-white/50">Time saved</p>
       <p className="mb-2 text-[82px] font-light leading-none text-white">68%</p>
       <p className="text-[12px] leading-relaxed text-white/55">
@@ -211,15 +211,15 @@ const ComplianceCard = ({
 /** Solid purple CTA card */
 const CTACard = ({ delay }: { delay: number }) => (
   <RevealAnimation delay={delay}>
-    <div className="flex h-full flex-col rounded-2xl bg-[#6108c4] p-6">
+    <div className="flex h-full flex-col rounded-2xl bg-[#BBE278] p-6">
       <Tag label="Get started" variant="purple" />
-      <h3 className="mb-2 text-[18px] font-medium leading-snug text-white">See Medqon in action</h3>
-      <p className="mb-5 text-[13px] leading-relaxed text-white/65">
+      <h3 className="mb-2 text-[18px] font-medium leading-snug text-black">See Medqon in action</h3>
+      <p className="mb-5 text-[13px] leading-relaxed text-black">
         A 20-minute walkthrough tailored to your agency — no commitment required.
       </p>
-      <hr className="mb-4 border-white/12" />
-      <p className="mb-1.5 text-[10px] font-medium uppercase tracking-wider text-white/40">Ready to begin?</p>
-      <p className="mb-5 text-[12px] leading-relaxed text-white/60">
+      <hr className="mb-4 border-black/12" />
+      <p className="mb-1.5 text-[10px] font-medium uppercase tracking-wider text-black">Ready to begin?</p>
+      <p className="mb-5 text-[12px] leading-relaxed text-black">
         Join agencies already running their case pipelines on Medqon.
       </p>
       <LinkButton
@@ -232,7 +232,7 @@ const CTACard = ({ delay }: { delay: number }) => (
     </div>
   </RevealAnimation>
 );
-
+ 
 /* ─────────────────────────────────────────────────────────────
    Main section
 ───────────────────────────────────────────────────────────── */
@@ -304,14 +304,16 @@ const SpotlightStories = () => {
             delay={0.30}
           />
 
-          <NavySoftCard
-            icon={<IconMobile />}
-            tag="Multi-device"
-            title="Access across all devices"
-            description="Work seamlessly across desktop and mobile — fully synchronised in real time."
-            points={['Web platform', 'iOS and Android apps', 'Fully synchronised data']}
-            delay={0.35}
+          {/* Compliance spans 2 cols on sm+, 1 col on mobile */}
+          <NeutralCard
+            icon={<IconShield />}
+            title="Compliance and support"
+            description="Operate with confidence with built-in compliance features and ongoing dedicated support."
+            points={['GDPR-aligned data handling', 'International compliance support', 'Dedicated support hub']}
+            delay={0.45}
           />
+
+          
 
           {/* Row 3 */}
 
@@ -327,13 +329,14 @@ const SpotlightStories = () => {
           />
           
 
-          {/* Compliance spans 2 cols on sm+, 1 col on mobile */}
-          <NeutralCard
-            icon={<IconShield />}
-            title="Compliance and support"
-            description="Operate with confidence with built-in compliance features and ongoing dedicated support."
-            points={['GDPR-aligned data handling', 'International compliance support', 'Dedicated support hub']}
-            delay={0.45}
+          
+          <PurpleSoftCard
+            icon={<IconMobile />}
+            tag="Multi-device"
+            title="Access across all devices"
+            description="Work seamlessly across desktop and mobile — fully synchronised in real time."
+            points={['Web platform', 'iOS and Android apps', 'Fully synchronised data']}
+            delay={0.35}
           />
 
           

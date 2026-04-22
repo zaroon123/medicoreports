@@ -33,6 +33,8 @@ import aboutPrivacy from '@public/images/home-page-1/about-privacy.png';
 import medicoLegalReportTemplate from '@public/images/report-writer-for-experts/medico-legal-report-template.jpg';
 import orthoReportTemplate from '@public/images/report-writer-for-experts/orthopaedic-reports.jpg';
 import psycLegalReportTemplate from '@public/images/report-writer-for-experts/psychological-reports.jpg';
+import physioLegalReportTemplate from '@public/images/report-writer-for-experts/physiotherapy-reports.jpg';
+import customLegalReportTemplate from '@public/images/report-writer-for-experts/custom-reports.jpg';
 
 import Image from 'next/image';
 import LinkButton from '@/components/ui/button/LinkButton';
@@ -143,7 +145,7 @@ const aboutTabsData = [
     highlightedText: ' reports.',
     description:
       'Create structured physiotherapy reports including assessments, treatment plans, and rehabilitation progress.',
-    image: aboutExchanges,
+    image: physioLegalReportTemplate,
     imageAlt: 'Happy man using phone',
     buttonText: 'Contact Us',
     buttonHref: '/contact-us',
@@ -173,7 +175,7 @@ const aboutTabsData = [
     highlightedText: ' templates',
     description:
       'Build and generate reports tailored to your workflow, requirements, and jurisdiction.',
-    image: aboutExchanges,
+    image: customLegalReportTemplate,
     imageAlt: 'Happy man using phone',
     buttonText: 'Contact Us',
     buttonHref: '/contact-us',
