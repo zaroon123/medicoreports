@@ -1,4 +1,5 @@
 import eligibilityImg from '@public/images/home-page-14/eligibility-img.png';
+import generatingMedicoLegal from '@public/images/report-writer-for-experts/generating-medical.png';
 import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
@@ -21,7 +22,7 @@ const eligibilityData = [
     text: 'Works across different report types and jurisdictions ',
   },
 ];  
-
+ 
 const Eligibility = () => {
   return (
     <section className="py-16 md:py-[90px] lg:py-[100px]" aria-label="Eligibility Check">
@@ -83,7 +84,7 @@ const Eligibility = () => {
             <RevealAnimation delay={0.6}>
               <figure className="md:w-[450px] lg:w-[400px] xl:w-[517px] w-full overflow-hidden rounded-3xl">
                 <Image
-                  src={eligibilityImg}
+                  src={generatingMedicoLegal}
                   alt="Mortgage eligibility illustration"
                   className="size-full object-cover"
                 />

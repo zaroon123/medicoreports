@@ -35,6 +35,7 @@ import orthoReportTemplate from '@public/images/report-writer-for-experts/orthop
 import psycLegalReportTemplate from '@public/images/report-writer-for-experts/psychological-reports.jpg';
 import physioLegalReportTemplate from '@public/images/report-writer-for-experts/physiotherapy-reports.jpg';
 import customLegalReportTemplate from '@public/images/report-writer-for-experts/custom-reports.jpg';
+import generatingMedicoLegal from '@public/images/report-writer-for-experts/generating-medical.png';
 
 import Image from 'next/image';
 import LinkButton from '@/components/ui/button/LinkButton';
