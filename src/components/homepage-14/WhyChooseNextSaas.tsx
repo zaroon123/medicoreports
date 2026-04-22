@@ -4,6 +4,8 @@ import holdMobile from '@public/images/home-page-22/hold-mobile.png';
 import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
 
+import whyMedqon from '@public/images/report-writer-for-experts/why-medqon.gif';
+
 const data = [
   {
     id: 1,
@@ -25,7 +27,7 @@ const data = [
   },
   {
     id: 4,
-    icon: 'ns-shape-35',
+    icon: 'ns-shape-35', 
     title: 'Compliance built in',
     description: 'Reports are aligned with medico-legal standards by default',
   },
@@ -86,9 +88,9 @@ const WhyChooseNextSaas = () => {
               </div>
               {/* feature img  */}
               <RevealAnimation delay={0.7} duration={0.7} offset={80}>
-                <figure className="w-full lg:w-[538.95px] lg:h-[640px] order-first lg:order-none lg:mt-[66px] xl:mt-0 lg:mr-6 xl:mr-0 flex-shrink-0">
+                <figure className="w-full lg:w-[638.95px] lg:h-[640px] order-first lg:order-none lg:mt-[66px] xl:mt-0 lg:mr-6 xl:mr-0 flex-shrink-0">
                   <Image
-                    src={holdMobile}
+                    src={whyMedqon}
                     alt="Investment platform interface showing key features"
                     className="size-full object-cover"
                   />
