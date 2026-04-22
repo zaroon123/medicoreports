@@ -19,7 +19,7 @@ const Integration = () => {
               <RevealAnimation delay={0.2}>
                 <figure className="max-w-[358px] rounded-[20px]">
                   <Image
-                    src={aboutDataIntegration1Image}
+                    src={aboutDataIntegration1Image} 
                     alt="about-data-integration"
                     className="size-full dark:hidden rounded-[20px] object-cover"
                   />

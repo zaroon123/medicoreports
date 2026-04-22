@@ -64,7 +64,7 @@ const NewUseCases = () => {
                 </div>
                 <div className="space-y-1 lg:text-left text-center">
                   <h3 className="text-heading-5">Customer-Centric Approach</h3>
-                  <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Every member of our team is dedicated to understanding and meeting the needs of our clients. We pride ourselves on being responsive and adaptable, ensuring that our clients' objectives are always at the forefront.</p>
+                  <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Every member of our team is dedicated to understanding and meeting the needs of our clients. We pride ourselves on being responsive and adaptable, ensuring that our clients objectives are always at the forefront.</p>
                 </div>
               </div>
             </div>

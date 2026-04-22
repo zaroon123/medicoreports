@@ -5,7 +5,7 @@ import heroBg from '@public/images/home-page-19/hero-bg.svg';
 import heroImg01Dark from '@public/images/home-page-19/hero-img-01-dark.png';
 import heroImg01 from '@public/images/home-page-19/hero-img-01.png';
 import heroImg06Dark from '@public/images/home-page-19/hero-img-06-dark.svg';
-import heroImg06 from '@public/images/home-page-19/hero-img-06.svg'; 
+import heroImg06 from '@public/images/home-page-19/hero-img-06.svg';
 import heroImg07Dark from '@public/images/home-page-19/hero-img-07-dark.png';
 import heroImg07 from '@public/images/home-page-19/hero-img-07.png';
 import Image from 'next/image';
@@ -13,7 +13,7 @@ import NumberAnimation from '../animation/NumberAnimation';
 import RevealAnimation from '../animation/RevealAnimation';
 import Progress from '../homepage-04/Progress';
 import LinkButton from '../ui/button/LinkButton';
- 
+
 const Hero = () => {
   return (
     <section className="pt-[115px] pb-[97px] overflow-hidden">
@@ -35,11 +35,16 @@ const Hero = () => {
                 {/* heading text  */}
                 <div className="space-y-4">
                   <RevealAnimation delay={0.2}>
-                    <h1>Empowering Medico Legal Experts, MROs and Admin Agencies</h1>
+                    <span className="badge badge-green mb-5">Medico-legal case management platform</span>
+                  </RevealAnimation>
+                  <RevealAnimation delay={0.2}>
+                    <h1 className="text-5xl sm:text-5xl lg:text-[3.8rem]">
+                      The operating system for medico-legal case management
+                    </h1>
                   </RevealAnimation>
                   <RevealAnimation delay={0.3}>
                     <p>
-                      We provide the tools and software solutions to help you handle all the aspects of medico legal practice from appointment management to instruction flows.
+                      Manage instructions, experts, appointments, documents, billing, and report workflows in one secure medico-legal platform.
                     </p>
                   </RevealAnimation>
                 </div>
@@ -48,7 +53,7 @@ const Hero = () => {
                   <LinkButton
                     href="/contact-us"
                     className="btn btn-lg btn-primary hover:btn-secondary dark:hover:btn-accent w-[90%] md:w-auto">
-                    <span>Book a strategy call</span>
+                    <span>Book a Demo</span>
                   </LinkButton>
                 </RevealAnimation>
               </div>

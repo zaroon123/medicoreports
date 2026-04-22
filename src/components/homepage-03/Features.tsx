@@ -7,22 +7,19 @@ const Features = () => {
       <div className="main-container">
         <div className="mb-10 text-center md:mb-[70px]">
           <RevealAnimation delay={0.1}>
-            <span className="badge badge-green-v2 mb-5"> Benefits & Features </span>
+            <span className="badge badge-green-v2 mb-5"> Deployment options </span>
           </RevealAnimation>
           <RevealAnimation delay={0.2}>
             <h2 className="mb-3">
-              We Make Everything Accessible, Manageable & Shareable
+              Choose the operating model that fits your organisation
             </h2>
           </RevealAnimation>
           <RevealAnimation delay={0.3}>
             <p className="mx-auto mb-8 lg:max-w-[696px]">
-              Our software is designed to precisely and reliably meet diverse needs. All our products prioritise user-friendliness, data integrity, access controls, 
-              responsive designs, and intuitive features, ensuring quick adaptation and seamless integration into existing workflows.
+              From MedCo-aligned MRO workflows to fully customised agency operations, Medqon Vault can be deployed as a focused compliance system, a tailored workflow platform, or a full medico-legal operating environment.
             </p>
-          </RevealAnimation>
+          </RevealAnimation> 
         </div>
-        {/* Feature Grid */}
-        <FeatureCard /> 
       </div>
     </section>
   );

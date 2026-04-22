@@ -33,7 +33,7 @@ const eligibilityData = [
   },
 ];
 
-const FeaturesV2New = () => {
+const FeaturesV2New = () => { 
   return (
     <section className="pt-44 pb-24 md:pt-16 md:pb-24 lg:pt-[88px] lg:pb-[140px] xl:pt-[50px] xl:pb-[150px] xl:mt-[300px]">
       <div className="main-container space-y-[220px] md:space-y-[300px] xl:space-y-[300px]">

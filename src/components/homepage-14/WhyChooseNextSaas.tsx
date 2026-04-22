@@ -47,7 +47,7 @@ const data = [
 ];
 
 const WhyChooseNextSaas = () => {
-  return (
+  return ( 
     <section className="py-20 md:py-[90px] lg:py-[100px]" aria-label="Why choose NextSaaS">
       <div className="main-container">
         <div className="pt-16 md:pt-[100px] max-lg:pb-10 px-5 sm:px-7 md:px-14 relative rounded-4xl bg-white overflow-hidden dark:bg-background-8">
