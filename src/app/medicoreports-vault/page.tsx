@@ -11,6 +11,7 @@ import MeetOurTeam from '@/components/homepage-19/MeetOurTeam';
 import Features from '@/components/homepage-03/Features';
 import FeaturesV2New from '@/components/homepage-03/FeaturesV2New';
 import SpotlightStoriesForVault from '@/components/success-stories/SpotlightStoriesForVault';
+import SpotlightStoriesVault from '@/components/success-stories/SpotlightStoriesVault';
 import About from '@/components/homepage-01/About';
 import Integration from '@/components/homepage-07/Integration';
 import Testimonial from '@/components/homepage-36/Testimonial';
@@ -1061,7 +1062,7 @@ const MedqonVault = () => {
 
         {/* <About /> */}
         {/* <Integration /> */}
-        <SpotlightStoriesForVault />
+        <SpotlightStoriesVault />
         {/* <Testimonial /> */}
         <Faq />
         <CTA />
