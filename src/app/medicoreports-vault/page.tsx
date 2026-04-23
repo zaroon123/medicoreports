@@ -458,7 +458,7 @@ const MedqonVault = () => {
                       <div className="flex w-full flex-col items-start justify-between gap-x-24 gap-y-14 lg:flex-row">
                         <div className="flex-1 sm:mx-auto sm:max-w-[500px] lg:max-w-full">
                           <span className="badge badge-green mb-3.5 xl:mb-5">{tab.badge}</span>
-                          <h2 className={`${index === 0 ? 'lg:text-heading-3 text-heading-4' : ''} mb-3`}>
+                          <h2 className={`${index === 0 ? 'lg:text-heading-4 text-heading-4' : ''} mb-3`}>
                             {tab.title}
                             {tab.titleBreak && <br className="hidden lg:block" />}
                             <span className={`text-primary-500 ${index === 1 ? 'inline-block' : ''}`}>{tab.highlightedText}</span>
