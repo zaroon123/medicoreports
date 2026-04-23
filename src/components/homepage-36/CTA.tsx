@@ -18,7 +18,7 @@ const CTA = () => {
                     App Store
                   </span>
                   <div className="relative overflow-hidden size-6">
-                    {/* one  */}
+                    {/* one  */} 
                     <span className="group-hover:translate-x-1 -translate-x-6 absolute inset-0 transition-transform duration-300 ease-in-out">
                       <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none">
                         <path d="M11 5H13V7H11V5Z" fill="white" />

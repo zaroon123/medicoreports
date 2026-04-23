@@ -57,6 +57,19 @@ import subFeaturesDark7 from '@public/images/home-page-3/sub-features-dark-7.png
 import subFeaturesDark8 from '@public/images/home-page-3/sub-features-dark-8.png';
 import subFeaturesDark9 from '@public/images/home-page-3/sub-features-dark-9.png';
 
+
+import section4Image from '@public/images/medqon-vault/section-4/app.png';
+import section4Feature1 from '@public/images/medqon-vault/section-4/1.jpg';
+import section4Feature2 from '@public/images/medqon-vault/section-4/2.jpg';
+import section4Feature3 from '@public/images/medqon-vault/section-4/3.jpg';
+import section4Feature4 from '@public/images/medqon-vault/section-4/4.jpg';
+import section4Feature5 from '@public/images/medqon-vault/section-4/5.jpg';
+import section4Feature6 from '@public/images/medqon-vault/section-4/6.jpg';
+
+import emailImage from '@public/images/medqon-vault/section-5/email-integration.png';
+import accountingImage from '@public/images/medqon-vault/section-5/accounting-integration.png';
+import smsImage from '@public/images/medqon-vault/section-5/sms.png';
+
 import LinkButton from '@/components/ui/button/LinkButton';
 import TabContent from '@/components/ui/tab/TabContent';
 import Tab from '@/components/ui/tab/Tab';
@@ -556,11 +569,99 @@ const MedqonVault = () => {
                 </ul>
                 <RevealAnimation delay={0.5}>
                   <div className="flex justify-center md:justify-start">
-                    <LinkButton
+                    <div className="flex md:flex-row flex-col gap-y-3 md:gap-y-0 items-center justify-center gap-x-4">
+                      <RevealAnimation delay={0.4} direction="left" offset={50}>
+                        <li className="group list-none w-[90%] sm:w-auto">
+                          <a
+                            href="#"
+                            className="inline-flex items-center justify-center rounded-full cursor-pointer gap-1.5 group-hover:bg-primary-500 group-hover:scale-101 text-center transition-all duration-500 ease-in-out font-medium text-nowrap lowercase shadow-1 bg-secondary border-stroke-7 text-accent px-6 py-2.5 text-tagline-1 md:px-8 md:py-3.5 w-full md:w-auto mx-auto md:mx-0">
+                            <span className="inline-block transition-transform duration-300 ease-in-out first-letter:uppercase">
+                              App Store
+                            </span>
+                            <div className="relative overflow-hidden size-6">
+                              {/* one  */}
+                              <span className="group-hover:translate-x-1 -translate-x-6 absolute inset-0 transition-transform duration-300 ease-in-out">
+                                <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none">
+                                  <path d="M11 5H13V7H11V5Z" fill="white" />
+                                  <path d="M5 5H7V7H5V5Z" fill="white" />
+                                  <path d="M14 8H16V10H14V8Z" fill="white" />
+                                  <path d="M8 8H10V10H8V8Z" fill="white" />
+                                  <path d="M17 11H19V13H17V11Z" fill="white" />
+                                  <path d="M11 11H13V13H11V11Z" fill="white" />
+                                  <path d="M14 14H16V16H14V14Z" fill="white" />
+                                  <path d="M8 14H10V16H8V14Z" fill="white" />
+                                  <path d="M11 17H13V19H11V17Z" fill="white" />
+                                  <path d="M5 17H7V19H5V17Z" fill="white" />
+                                </svg>
+                              </span>
+                              {/* two  */}
+                              <span className="group-hover:translate-x-6 absolute -translate-x-2 transition-transform duration-300 ease-in-out">
+                                <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none">
+                                  <path d="M11 5H13V7H11V5Z" fill="white" />
+                                  <path d="M5 5H7V7H5V5Z" fill="white" />
+                                  <path d="M14 8H16V10H14V8Z" fill="white" />
+                                  <path d="M8 8H10V10H8V8Z" fill="white" />
+                                  <path d="M17 11H19V13H17V11Z" fill="white" />
+                                  <path d="M11 11H13V13H11V11Z" fill="white" />
+                                  <path d="M14 14H16V16H14V14Z" fill="white" />
+                                  <path d="M8 14H10V16H8V14Z" fill="white" />
+                                  <path d="M11 17H13V19H11V17Z" fill="white" />
+                                  <path d="M5 17H7V19H5V17Z" fill="white" />
+                                </svg>
+                              </span>
+                            </div>
+                          </a>
+                        </li>
+                      </RevealAnimation>
+                      <RevealAnimation delay={0.5} direction="left" offset={50}>
+                        <li className="group list-none w-[90%] sm:w-auto">
+                          <a
+                            href="#"
+                            className="inline-flex items-center justify-center rounded-full cursor-pointer gap-1.5 group-hover:bg-secondary group-hover:scale-101 text-center transition-all duration-500 ease-in-out font-medium text-nowrap lowercase bg-background-4 border-stroke-7 text-secondary group-hover:text-accent px-6 py-2.5 text-tagline-1 md:px-8 md:py-3.5 w-full md:w-auto mx-auto md:mx-0">
+                            <span className="inline-block transition-transform duration-300 ease-in-out first-letter:uppercase">
+                              Google play
+                            </span>
+                            <div className="relative overflow-hidden size-6">
+                              {/* one  */}
+                              <span className="group-hover:translate-x-1 -translate-x-6 absolute inset-0 transition-transform duration-300 ease-in-out">
+                                <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none">
+                                  <path d="M11 5H13V7H11V5Z" fill="white" />
+                                  <path d="M5 5H7V7H5V5Z" fill="white" />
+                                  <path d="M14 8H16V10H14V8Z" fill="white" />
+                                  <path d="M8 8H10V10H8V8Z" fill="white" />
+                                  <path d="M17 11H19V13H17V11Z" fill="white" />
+                                  <path d="M11 11H13V13H11V11Z" fill="white" />
+                                  <path d="M14 14H16V16H14V14Z" fill="white" />
+                                  <path d="M8 14H10V16H8V14Z" fill="white" />
+                                  <path d="M11 17H13V19H11V17Z" fill="white" />
+                                  <path d="M5 17H7V19H5V17Z" fill="white" />
+                                </svg>
+                              </span>
+                              {/* two  */}
+                              <span className="group-hover:translate-x-6 absolute -translate-x-2 transition-transform duration-300 ease-in-out">
+                                <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none">
+                                  <path d="M11 5H13V7H11V5Z" fill="#1A1A1C" />
+                                  <path d="M5 5H7V7H5V5Z" fill="#1A1A1C" />
+                                  <path d="M14 8H16V10H14V8Z" fill="#1A1A1C" />
+                                  <path d="M8 8H10V10H8V8Z" fill="#1A1A1C" />
+                                  <path d="M17 11H19V13H17V11Z" fill="#1A1A1C" />
+                                  <path d="M11 11H13V13H11V11Z" fill="#1A1A1C" />
+                                  <path d="M14 14H16V16H14V14Z" fill="#1A1A1C" />
+                                  <path d="M8 14H10V16H8V14Z" fill="#1A1A1C" />
+                                  <path d="M11 17H13V19H11V17Z" fill="#1A1A1C" />
+                                  <path d="M5 17H7V19H5V17Z" fill="#1A1A1C" />
+                                </svg>
+                              </span>
+                            </div>
+                          </a>
+                        </li>
+                      </RevealAnimation>
+                    </div>
+                    {/* <LinkButton
                       href="/contact-us"
                       className="btn btn-md btn-white dark:btn-transparent hover:btn-primary block w-[90%] md:inline-block md:w-auto">
                       Get started
-                    </LinkButton>
+                    </LinkButton> */}
                   </div>
                 </RevealAnimation>
               </div>
@@ -569,19 +670,19 @@ const MedqonVault = () => {
               <div className="relative w-full lg:w-1/2">
                 <RevealAnimation delay={0.4}>
                   <figure className="h-auto max-w-full lg:max-w-[452px] lg:justify-self-end">
-                    <Image src={features2} alt="features Images" className="h-full w-full object-cover object-center" />
+                    <Image src={section4Image} alt="features Images" className="h-full w-full object-cover object-center" />
                   </figure>
                 </RevealAnimation>
                 <div className="absolute top-[55%] -left-3 z-20 flex flex-col items-center md:-left-5 lg:-left-2 xl:-left-3 2xl:-left-8">
                   <RevealAnimation delay={0.5} useSpring={true} duration={2}>
                     <figure className="max-w-[280px] overflow-hidden rounded-[20px] md:h-[74px] md:max-w-[320px] md:self-end">
                       <Image
-                        src={subFeatures4}
+                        src={section4Feature1}
                         alt="Sub features"
                         className="shadow-3 block h-auto w-full object-cover object-center dark:hidden"
                       />
                       <Image
-                        src={subFeaturesDark4}
+                        src={section4Feature1}
                         alt="Sub features"
                         className="shadow-3 hidden h-auto w-full object-cover object-center dark:block"
                       />
@@ -590,12 +691,12 @@ const MedqonVault = () => {
                   <RevealAnimation delay={0.6} useSpring={true} duration={2}>
                     <figure className="my-1 max-w-[280px] overflow-hidden rounded-2xl object-cover md:my-2 md:h-[74px] md:max-w-[320px]">
                       <Image
-                        src={subFeatures5}
+                        src={section4Feature2}
                         alt="Sub features"
                         className="shadow-3 block h-auto w-full object-cover object-center dark:hidden"
                       />
                       <Image
-                        src={subFeaturesDark5}
+                        src={section4Feature2}
                         alt="Sub features"
                         className="shadow-3 hidden h-auto w-full object-cover object-center dark:block"
                       />
@@ -604,12 +705,12 @@ const MedqonVault = () => {
                   <RevealAnimation delay={0.7} useSpring={true} duration={2}>
                     <figure className="shadow-7 relative z-40 max-h-[72px] max-w-[250px] overflow-hidden rounded-2xl md:max-w-[310px]">
                       <Image
-                        src={subFeatures6}
+                        src={section4Feature3}
                         alt="Sub features"
                         className="shadow-2 block h-auto w-full object-cover object-center dark:hidden"
                       />
                       <Image
-                        src={subFeaturesDark6}
+                        src={section4Feature3}
                         alt="Sub features"
                         className="shadow-2 hidden h-auto w-full object-cover object-center dark:block"
                       />
@@ -618,12 +719,12 @@ const MedqonVault = () => {
                   <RevealAnimation delay={0.8} useSpring={true} duration={2}>
                     <figure className="shadow-7 z-30 -mt-[37px] hidden max-h-[72px] max-w-[200px] overflow-hidden rounded-2xl md:block md:max-w-[280px]">
                       <Image
-                        src={subFeatures7}
+                        src={section4Feature4}
                         alt="Sub features"
                         className="shadow-2 block h-auto w-full object-cover object-center dark:hidden"
                       />
                       <Image
-                        src={subFeaturesDark7}
+                        src={section4Feature4}
                         alt="Sub features"
                         className="shadow-2 hidden h-auto w-full object-cover object-center dark:block"
                       />
@@ -632,12 +733,12 @@ const MedqonVault = () => {
                   <RevealAnimation delay={0.9} useSpring={true} duration={2}>
                     <figure className="shadow-7 z-20 -mt-[37px] hidden max-h-[72px] max-w-[180px] overflow-hidden rounded-2xl md:block md:max-w-[260px]">
                       <Image
-                        src={subFeatures8}
+                        src={section4Feature5}
                         alt="Sub features"
                         className="shadow-2 block h-auto w-full object-cover object-center dark:hidden"
                       />
                       <Image
-                        src={subFeaturesDark8}
+                        src={section4Feature5}
                         alt="Sub features"
                         className="shadow-2 hidden h-auto w-full object-cover object-center dark:block"
                       />
@@ -646,12 +747,12 @@ const MedqonVault = () => {
                   <RevealAnimation delay={1} useSpring={true} duration={2}>
                     <figure className="shadow-7 -mt-[37px] max-h-[72px] max-w-[240px] overflow-hidden rounded-2xl">
                       <Image
-                        src={subFeatures9}
+                        src={section4Feature6}
                         alt="Sub features"
                         className="shadow-2 block h-auto w-full object-cover object-center dark:hidden"
                       />
                       <Image
-                        src={subFeaturesDark9}
+                        src={section4Feature6}
                         alt="Sub features"
                         className="shadow-2 hidden h-auto w-full object-cover object-center dark:block"
                       />
@@ -693,7 +794,11 @@ const MedqonVault = () => {
                 <div className="col-span-12 lg:col-span-4">
                   <div className="space-y-6">
                     <div className="max-lg:text-center">
-                      <span className={`ns-shape-14 text-[52px] text-secondary dark:text-accent`} />
+                      <Image
+                        src={emailImage}
+                        alt='Email'
+                        className="text-[52px] text-secondary dark:text-accent"
+                      />
                     </div>
                     <div className="space-y-1 lg:text-left text-center">
                       <h3 className="text-heading-5">Email integration (Office 365 & Outlook)</h3>
@@ -732,7 +837,11 @@ const MedqonVault = () => {
                 <div className="col-span-12 lg:col-span-4">
                   <div className="space-y-6">
                     <div className="max-lg:text-center">
-                      <span className={`ns-shape-14 text-[52px] text-secondary dark:text-accent`} />
+                      <Image
+                        src={smsImage}
+                        alt='SMS'
+                        className="text-[52px] text-secondary dark:text-accent"
+                      />
                     </div>
                     <div className="space-y-1 lg:text-left text-center">
                       <h3 className="text-heading-5">SMS and real-time notifications</h3>
@@ -771,7 +880,11 @@ const MedqonVault = () => {
                 <div className="col-span-12 lg:col-span-4">
                   <div className="space-y-6">
                     <div className="max-lg:text-center">
-                      <span className={`ns-shape-14 text-[52px] text-secondary dark:text-accent`} />
+                      <Image
+                        src={accountingImage}
+                        alt='Accounting'
+                        className="text-[52px] text-secondary dark:text-accent"
+                      />
                     </div>
                     <div className="space-y-1 lg:text-left text-center">
                       <h3 className="text-heading-5">Accounting integration (Xero and external systems)</h3>
@@ -861,7 +974,7 @@ const MedqonVault = () => {
                           UK GDPR and Data Protection Act aligned
                         </h3>
                         <p>
-                          Designed to support compliant handling of personal and sensitive data under UK regulations 
+                          Designed to support compliant handling of personal and sensitive data under UK regulations
                         </p>
                       </div>
                     </div>
@@ -876,7 +989,7 @@ const MedqonVault = () => {
                           Role-based access control
                         </h3>
                         <p>
-                          Restrict system access based on user roles across admin, experts, and referrers 
+                          Restrict system access based on user roles across admin, experts, and referrers
                         </p>
                       </div>
                     </div>
@@ -889,7 +1002,7 @@ const MedqonVault = () => {
                       <div className="space-y-1">
                         <h3 className="text-lg font-medium leading-[27px] text-secondary dark:text-accent">Full audit logging</h3>
                         <p>
-                          Track changes, actions, and access across cases, documents, and communications 
+                          Track changes, actions, and access across cases, documents, and communications
                         </p>
                       </div>
                     </div>
@@ -906,7 +1019,7 @@ const MedqonVault = () => {
                           Encryption at rest and in transit
                         </h3>
                         <p>
-                          Data protected using industry-standard encryption protocols 
+                          Data protected using industry-standard encryption protocols
                         </p>
                       </div>
                     </div>
@@ -921,7 +1034,7 @@ const MedqonVault = () => {
                           Secure UK-based hosting infrastructure
                         </h3>
                         <p>
-                          Hosted within controlled environments aligned to ISO-certified standards 
+                          Hosted within controlled environments aligned to ISO-certified standards
                         </p>
                       </div>
                     </div>
@@ -934,7 +1047,7 @@ const MedqonVault = () => {
                       <div className="space-y-1">
                         <h3 className="text-lg font-medium leading-[27px] text-secondary dark:text-accent">Backup and disaster recovery measures</h3>
                         <p>
-                          Ensures continuity and protection of critical case data 
+                          Ensures continuity and protection of critical case data
                         </p>
                       </div>
                     </div>

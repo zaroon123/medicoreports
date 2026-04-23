@@ -19,7 +19,7 @@ const Hero = () => {
   return (
     <section className="pt-[75px] pb-[97px] overflow-hidden">
       <div className="max-w-[1365px] mx-auto">
-        <div className="relative">
+        <div className="relative"> 
           {/* hero bg  */}
           <figure className="absolute animate-pulse z-0 max-w-[1365px] -top-5 left-[50%] translate-x-[-50%] w-full h-full overflow-hidden">
             <Image src={heroBg} alt="Decorative background pattern" className="size-full object-cover dark:hidden" />
