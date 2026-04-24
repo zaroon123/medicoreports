@@ -59,6 +59,8 @@ import subFeaturesDark8 from '@public/images/home-page-3/sub-features-dark-8.png
 import subFeaturesDark9 from '@public/images/home-page-3/sub-features-dark-9.png';
 
 
+import whyMedqonVaultImage from '@public/images/medqon-vault/section-2/why-medqon-vault.png';
+
 import section4Image from '@public/images/medqon-vault/section-4/app.png';
 import section4Feature1 from '@public/images/medqon-vault/section-4/1.jpg';
 import section4Feature2 from '@public/images/medqon-vault/section-4/2.jpg';
@@ -395,9 +397,9 @@ const MedqonVault = () => {
                   </div>
                   {/* feature img  */}
                   <RevealAnimation delay={0.7} duration={0.7} offset={80}>
-                    <figure className="w-full lg:w-[638.95px] lg:h-[640px] order-first lg:order-none lg:mt-[66px] xl:mt-0 lg:mr-6 xl:mr-0 flex-shrink-0">
+                    <figure className="w-full lg:w-[538.95px] lg:h-[640px] order-first lg:order-none lg:mt-[66px] xl:mt-0 lg:mr-6 xl:mr-0 flex-shrink-0">
                       <Image
-                        src={whyMedqon}
+                        src={whyMedqonVaultImage}
                         alt="Investment platform interface showing key features"
                         className="size-full object-cover"
                       />
