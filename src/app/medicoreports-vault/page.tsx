@@ -67,6 +67,10 @@ import section4Feature4 from '@public/images/medqon-vault/section-4/4.jpg';
 import section4Feature5 from '@public/images/medqon-vault/section-4/5.jpg';
 import section4Feature6 from '@public/images/medqon-vault/section-4/6.jpg';
 
+import medicoVaultImage from '@public/images/medqon-vault/section-3/Medico-Vault.jpg';
+import medicoRegisteredImage from '@public/images/medqon-vault/section-3/MedCo-registered-MROs.jpg';
+import medicoVaultCustomImage from '@public/images/medqon-vault/section-3/custom-workflow.jpg';
+
 import emailImage from '@public/images/medqon-vault/section-5/email-integration.png';
 import accountingImage from '@public/images/medqon-vault/section-5/accounting-integration.png';
 import smsImage from '@public/images/medqon-vault/section-5/sms.png';
@@ -177,7 +181,7 @@ const aboutTabsData = [
     highlightedText: '  and finance',
     description:
       'Medico Vault is the full medico-legal case-management platform for agencies, expert organisations, and admin teams that need more than a basic CRM. It brings together case handling, scheduling, document management, communication, invoicing, portals, and workflow control into one secure environment.',
-    image: medicoLegalReportTemplate,
+    image: medicoVaultImage,
     imageAlt: 'Happy man using phone',
     buttonText: 'Explore Medico Vault',
     buttonHref: '/contact-us',
@@ -227,7 +231,7 @@ const aboutTabsData = [
     highlightedText: ' compliance requirements.',
     description:
       'Designed for Medical Reporting Organisations operating within the MedCo environment, this deployment focuses on maintaining the records, workflows, and operational outputs needed to support compliant MRO operations. It helps teams manage cases, experts, clinic locations, appointments, communications, and key compliance metrics in a structured, auditable system.',
-    image: orthoReportTemplate,
+    image: medicoRegisteredImage,
     imageAlt: 'Happy man using phone',
     buttonText: 'See MRO workflow',
     buttonHref: '/contact-us',
@@ -267,7 +271,7 @@ const aboutTabsData = [
     highlightedText: ' other way around.',
     description:
       "For organisations with established internal processes, Medico Vault can be configured and extended to match how your team actually works. From case states and task logic to document handling, notifications, portals, and reporting, the system can be adapted to support your operational model rather than forcing you into a rigid template.",
-    image: psycLegalReportTemplate,
+    image: medicoVaultCustomImage,
     imageAlt: 'Happy man using phone',
     buttonText: 'Discuss your workflow',
     buttonHref: '/contact-us',
