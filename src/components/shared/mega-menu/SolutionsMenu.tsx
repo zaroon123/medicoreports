@@ -53,7 +53,7 @@ const MenuIcon = ({ icon, label }: { icon?: string; label: string }) => {
 
 const SolutionsMenu = ({ 
   className, 
-  isParentHovered = false,
+  isParentHovered = false, 
   onMouseEnter,
   onMouseLeave  
 }: SolutionsMenuProps) => {
@@ -162,7 +162,7 @@ const SolutionsMenu = ({
     } else if (activeItem?.id === 'other-sectors') {
       return {
         title: activeItem.label,
-        subtitle: 'Solutions for Other Industries'
+        subtitle: 'Expanding the Compliance Layer'
       };
     } else if (activeItem?.id === 'integrations') {
       return {

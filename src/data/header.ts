@@ -169,7 +169,7 @@ export const resourceMenuItems: MegaMenuItem[] = [
         icon: '/trust-centre/trust-center.png'  // Replace with your PNG icon path
       }
     ]
-  },
+  }, 
 ];
 
 // Solutions Menu Data
@@ -198,9 +198,9 @@ export const solutionsMenuItems: MegaMenuItem[] = [
   },
   {
     id: 'other-sectors',
-    label: 'Other Sectors',
+    label: 'Beyond Medico-Legal',
     href: '#',
-    description: 'Solutions for other industries',
+    description: 'Expanding our compliance layer across industries',
     submenu: [
       {
         id: 'legal',
@@ -217,82 +217,82 @@ export const solutionsMenuItems: MegaMenuItem[] = [
         icon: '/other-sectors/insurance.png'
       },
       {
-        id: 'fintech',
-        label: 'Fintech',
-        href: '/sectors/fintech',
-        description: 'Financial technology solutions & compliance',
+        id: 'healthcare-admin',
+        label: 'Healthcare Admin',
+        href: '/sectors/healthcare',
+        description: 'Compliance & operational documentation',
         icon: '/other-sectors/fintech.png'
       },
       {
-        id: 'real-estate',
-        label: 'Real Estate',
-        href: '/sectors/real-estate',
-        description: 'Property management & documentation',
+        id: 'clinical-research',
+        label: 'Clinical Research',
+        href: '/sectors/clinical-research',
+        description: 'Study documentation & regulatory compliance',
         icon: '/other-sectors/real-estate.png'
       },
       {
-        id: 'construction',
-        label: 'Construction',
-        href: '/sectors/construction',
-        description: 'Project management & compliance tracking',
+        id: 'property-realestate',
+        label: 'Property & Real Estate',
+        href: '/sectors/real-estate',
+        description: 'Property  reports & transaction documentation',
         icon: '/other-sectors/construction.png'
       },
-      {
-        id: 'public-sector',
-        label: 'Public Sector',
-        href: '/sectors/public-sector',
-        description: 'Government & public service solutions',
-        icon: '/other-sectors/public-service.png'
-      },
-      {
-        id: 'governance',
-        label: 'Governance',
-        href: '/sectors/governance',
-        description: 'Risk & compliance management',
-        icon: '/other-sectors/governance.png'
-      },
-      {
-        id: 'hr',
-        label: 'HR',
-        href: '/sectors/hr',
-        description: 'Human resources management & automation',
-        icon: '/other-sectors/hr.png'
-      },
-      {
-        id: 'pharma',
-        label: 'Pharma',
-        href: '/sectors/pharma',
-        description: 'Pharmaceutical compliance & documentation',
-        icon: '/other-sectors/pharma.png'
-      },
-      {
-        id: 'ems',
-        label: 'EMS',
-        href: '/sectors/ems',
-        description: 'Emergency medical services solutions',
-        icon: '/other-sectors/EMS.png'
-      },
-      {
-        id: 'sales-intelligence',
-        label: 'Sales Intelligence',
-        href: '/sectors/sales-intelligence',
-        description: 'Sales data & analytics platform',
-        icon: '/other-sectors/Sales-Intel.png'
-      },
-      {
-        id: 'marketing-intelligence',
-        label: 'Marketing Intelligence',
-        href: '/sectors/marketing-intelligence',
-        description: 'Marketing insights & campaign management',
-        icon: '/other-sectors/marketing-Intel.png'
-      },
-      {
-        id: 'research',
-        label: 'Research',
-        href: '/sectors/research',
-        description: 'Research data management & analysis',
-        icon: '/other-sectors/research.png'
-      }
+      // {
+      //   id: 'public-sector',
+      //   label: 'Public Sector',
+      //   href: '/sectors/public-sector',
+      //   description: 'Government & public service solutions',
+      //   icon: '/other-sectors/public-service.png'
+      // },
+      // {
+      //   id: 'governance',
+      //   label: 'Governance',
+      //   href: '/sectors/governance',
+      //   description: 'Risk & compliance management',
+      //   icon: '/other-sectors/governance.png'
+      // },
+      // {
+      //   id: 'hr',
+      //   label: 'HR',
+      //   href: '/sectors/hr',
+      //   description: 'Human resources management & automation',
+      //   icon: '/other-sectors/hr.png'
+      // },
+      // {
+      //   id: 'pharma',
+      //   label: 'Pharma',
+      //   href: '/sectors/pharma',
+      //   description: 'Pharmaceutical compliance & documentation',
+      //   icon: '/other-sectors/pharma.png'
+      // },
+      // {
+      //   id: 'ems',
+      //   label: 'EMS',
+      //   href: '/sectors/ems',
+      //   description: 'Emergency medical services solutions',
+      //   icon: '/other-sectors/EMS.png'
+      // },
+      // {
+      //   id: 'sales-intelligence',
+      //   label: 'Sales Intelligence',
+      //   href: '/sectors/sales-intelligence',
+      //   description: 'Sales data & analytics platform',
+      //   icon: '/other-sectors/Sales-Intel.png'
+      // },
+      // {
+      //   id: 'marketing-intelligence',
+      //   label: 'Marketing Intelligence',
+      //   href: '/sectors/marketing-intelligence',
+      //   description: 'Marketing insights & campaign management',
+      //   icon: '/other-sectors/marketing-Intel.png'
+      // },
+      // {
+      //   id: 'research',
+      //   label: 'Research',
+      //   href: '/sectors/research',
+      //   description: 'Research data management & analysis',
+      //   icon: '/other-sectors/research.png'
+      // }
     ]
   },
   {
