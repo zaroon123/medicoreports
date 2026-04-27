@@ -86,6 +86,8 @@ import { TabProvider } from '@/context/TabContext';
 import ProcessDarkImage from '@public/images/home-page-4/process-dark.png';
 import ProcessImage from '@public/images/home-page-4/process.png';
 
+import IntegrationsSection from '@/components/medqon-vault/Integrations';
+
 import { IService } from '@/interface';
 import getMarkDownData from '@/utils/getMarkDownData';
 
@@ -773,7 +775,7 @@ const MedqonVault = () => {
         {/* <FeaturesV2New /> */}
 
 
-        <section className="pt-[100px] pb-[100px] xl:pb-[200px] bg-background-2 dark:bg-background-5">
+        {/* <section className="pt-[100px] pb-[100px] xl:pb-[200px] bg-background-2 dark:bg-background-5">
           <div className="main-container">
             <div className="flex lg:items-end items-center lg:flex-row flex-col lg:gap-0 gap-4 justify-between mb-[70px]">
               <div className="flex-1 lg:text-left text-center">
@@ -929,8 +931,10 @@ const MedqonVault = () => {
 
             </div>
           </div>
-        </section>
+        </section> */}
 
+
+        <IntegrationsSection />
 
 
 
