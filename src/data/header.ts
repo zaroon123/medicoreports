@@ -242,7 +242,7 @@ export const solutionsMenuItems: MegaMenuItem[] = [
         label: 'Financial',
         href: '/sectors/financial',
         description: 'Regulatory documentation & verification workflows',
-        icon: '/other-sectors/new/real-estate.png'
+        icon: '/other-sectors/fintech.png'
       },
       // {
       //   id: 'public-sector',
