@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "question": "Does Medqon replace our HR system?",
+    "answer": "No. It works alongside your existing HR platform, focusing on structured documentation and reporting."
+  },
+  {
+    "id": 2,
+    "question": "Can it integrate with our current HR tools?",
+    "answer": "Yes. Medqon integrates via API with HR systems, payroll platforms, and internal tools."
+  },
+  {
+    "id": 3,
+    "question": "What HR workflows does it support?",
+    "answer": "Onboarding, disciplinary processes, investigations, performance reviews, and employee lifecycle documentation."
+  },
+  {
+    "id": 4,
+    "question": "Can it be configured to our policies and templates?",
+    "answer": "Yes. It adapts to your internal documentation formats, workflows, and compliance requirements."
+  },
+  {
+    "id": 5,
+    "question": "How does it support compliance and disputes?",
+    "answer": "By generating structured, traceable, and verifiable documentation that can be used for internal review or legal processes."
+  }
+]

@@ -224,11 +224,11 @@ export const solutionsMenuItems: MegaMenuItem[] = [
         icon: '/other-sectors/new/healthcare.png'
       },
       {
-        id: 'clinical-research',
-        label: 'Clinical Research',
-        href: '/sectors/clinical-research',
-        description: 'Study documentation & regulatory compliance',
-        icon: '/other-sectors/new/clinical.png'
+        id: 'hr',
+        label: 'HR',
+        href: '/sectors/hr',
+        description: 'Employee lifecycle documentation & compliance',
+        icon: '/other-sectors/hr.png'
       },
       {
         id: 'property-realestate',
