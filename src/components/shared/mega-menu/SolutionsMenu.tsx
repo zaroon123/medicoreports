@@ -51,7 +51,7 @@ const MenuIcon = ({ icon, label }: { icon?: string; label: string }) => {
   );
 };
 
-const SolutionsMenu = ({ 
+const SolutionsMenu = ({  
   className, 
   isParentHovered = false, 
   onMouseEnter,
@@ -162,7 +162,8 @@ const SolutionsMenu = ({
     } else if (activeItem?.id === 'other-sectors') {
       return {
         title: activeItem.label,
-        subtitle: 'Expanding the Compliance Layer'
+        subtitle: 'Expanding the Compliance Layer',
+        description: 'Our technology is purpose-built for compliance-heavy documentation. Here are the industries we are extending into next.'
       };
     } else if (activeItem?.id === 'integrations') {
       return {
@@ -246,6 +247,9 @@ const SolutionsMenu = ({
                     <h4 className="text-base font-semibold text-secondary dark:text-accent mt-1">
                       {submenuHeader.subtitle}
                     </h4>
+                    <p className="text-sm text-secondary/60 dark:text-accent/60 mt-0.5">
+                      {submenuHeader.description}
+                    </p>
                   </div>
                   
                   {/* Submenu Items - Single or Two Columns based on item count */}
