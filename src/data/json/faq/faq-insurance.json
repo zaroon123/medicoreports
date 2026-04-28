@@ -4,7 +4,7 @@
     "question": "Does Medqon replace our claims management system?",
     "answer": "No. It integrates with your existing systems and focuses on documentation and structured outputs."
   },
-  {
+  { 
     "id": 2,
     "question": "Can Medqon integrate with our internal platforms?",
     "answer": "Yes. API-based integration allows seamless data exchange with claims and underwriting systems."

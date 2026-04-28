@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "question": "Does Medqon replace our property management system?",
+    "answer": "No. It works alongside your existing system, focusing on structured documentation and reporting."
+  },
+  {
+    "id": 2,
+    "question": "Can it integrate with our current tools?",
+    "answer": "Yes. Medqon integrates via API with property management, lettings, and CRM platforms."
+  },
+  {
+    "id": 3,
+    "question": "What property workflows does it support?",
+    "answer": "Inventory reports, tenancy documentation, sales records, inspections, and contractor specifications."
+  },
+  {
+    "id": 4,
+    "question": "Can it be configured to our templates?",
+    "answer": "Yes. All documents can be tailored to your formats, workflows, and requirements."
+  },
+  {
+    "id": 5,
+    "question": "How does it help with disputes?",
+    "answer": "By producing structured, timestamped, and verifiable documentation that can be used as evidence in disputes."
+  }
+]
