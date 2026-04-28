@@ -6,6 +6,7 @@ import heroImg03DarkImage from '@public/images/home-page-9/hero-img-03-dark.png'
 import heroImg03Image from '@public/images/home-page-9/hero-img-03.png';
 import heroImg04DarkImage from '@public/images/home-page-9/hero-img-04-dark.png';
 import heroImg04Image from '@public/images/home-page-9/hero-img-04.png';
+import checkMarkDarkImage from '@public/images/icons/checkmark-dark.svg';
 import Image from 'next/image';
 import RevealAnimation from '@/components/animation/RevealAnimation';
 import LinkButton from '@/components/ui/button/LinkButton';
@@ -531,14 +532,14 @@ const Insurance = () => {
                       <li className="flex items-center gap-3">
                         <span>
                           <Image
-                            src="images/icons/checkmark-dark.svg"
+                            src={checkMarkDarkImage}
                             alt="Checkbox icon"
                             width={18}
                             height={18}
                             className="size-[18px] dark:hidden"
                           />
                           <Image
-                            src="images/icons/checkmark-white.svg"
+                            src={checkMarkDarkImage}
                             alt="Checkbox icon"
                             width={18}
                             height={18}

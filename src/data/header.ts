@@ -24,7 +24,7 @@ export interface MegaMenuItem {
   description?: string; // Optional description for main menu items
   submenu?: MegaSubMenuItem[]; // Add submenu property
 }
-
+ 
 export interface MegaMenuColumn {
   id: string;
   items: MegaMenuItem[]; 
@@ -235,6 +235,13 @@ export const solutionsMenuItems: MegaMenuItem[] = [
         label: 'Property & Real Estate',
         href: '/sectors/real-estate',
         description: 'Property  reports & transaction documentation',
+        icon: '/other-sectors/new/real-estate.png'
+      },
+      {
+        id: 'financial',
+        label: 'Financial',
+        href: '/sectors/financial',
+        description: 'Regulatory documentation & verification workflows',
         icon: '/other-sectors/new/real-estate.png'
       },
       // {

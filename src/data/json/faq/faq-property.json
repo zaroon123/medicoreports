@@ -5,7 +5,7 @@
     "answer": "No. It works alongside your existing system, focusing on structured documentation and reporting."
   },
   {
-    "id": 2,
+    "id": 2, 
     "question": "Can it integrate with our current tools?",
     "answer": "Yes. Medqon integrates via API with property management, lettings, and CRM platforms."
   },

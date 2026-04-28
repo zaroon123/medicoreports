@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "question": "Does Medqon replace our onboarding or CRM system?",
+    "answer": "No. It integrates with your existing systems and focuses on documentation and structured outputs."
+  },
+  {
+    "id": 2,
+    "question": "How does it integrate with our platforms?",
+    "answer": "Through API integration, enabling seamless data flow between onboarding, KYC, and lending systems."
+  },
+  {
+    "id": 3,
+    "question": "What financial workflows does it support?",
+    "answer": "Client onboarding, KYC documentation, loan applications, advisory records, and compliance reporting."
+  },
+  {
+    "id": 4,
+    "question": "Can it be configured to our regulatory requirements?",
+    "answer": "Yes. It adapts to jurisdiction-specific compliance frameworks and internal processes."
+  },
+  {
+    "id": 5,
+    "question": "Does it support document signing?",
+    "answer": "Yes. Documentation can be prepared for client review and integrated with digital signing workflows."
+  }
+]

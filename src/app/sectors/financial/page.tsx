@@ -45,7 +45,7 @@ import checkMarkDarkImage from '@public/images/icons/checkmark-dark.svg';
 import { cn } from '@/utils/cn';
 import gradient from '@public/images/gradient/gradient-11.png';
 import Faq from '@/components/homepage-06/Faq';
-import faqData from '@/data/json/faq/faq-property.json';
+import faqData from '@/data/json/faq/faq-financial.json';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 
@@ -58,58 +58,58 @@ const data = [
   {
     id: 1,
     icon: 'ns-shape-13',
-    title: 'Property-Centred Communication',
-    description: 'All emails, notes, and updates linked to each property or tenancy.',
+    title: 'Client-Centred Communication',
+    description: 'All interactions linked to each client record.',
   },
   {
     id: 2,
     icon: 'ns-shape-41',
-    title: 'Inspection & Scheduling',
-    description: 'Manage viewings, inspections, and check-ins within one system.',
+    title: 'Onboarding & Workflow Tracking',
+    description: 'Track onboarding steps, document collection, and approvals.',
   },
   {
     id: 3,
     icon: 'ns-shape-36',
-    title: 'Task & Maintenance Tracking',
-    description: 'Track repairs, follow-ups, and contractor tasks across properties.',
+    title: 'Task & Compliance Tracking',
+    description: 'Monitor required actions, follow-ups, and regulatory checks.',
   },
   {
     id: 4,
     icon: 'ns-shape-35',
     title: 'Built-In Workflow Structure',
-    description: 'Standardise lettings, sales, and maintenance processes.',
+    description: 'Standardise onboarding, lending, and compliance processes.',
   },
 
   {
     id: 5,
     icon: 'ns-shape-34',
-    title: 'Full Portfolio Visibility',
-    description: 'Track property status, tenancy stages, and activity in real time.',
+    title: 'Full Visibility',
+    description: 'Track client status, approvals, and bottlenecks.',
   },
   {
     id: 6,
     icon: 'ns-shape-30',
     title: 'Secure Data Handling',
-    description: 'Controlled access and audit logs for all property records.',
+    description: 'Role-based access, audit logs, and secure infrastructure.',
   },
 ];
 
 const eligibilityData = [
   {
     id: 1,
-    text: 'Tamper-evident property records',
+    text: 'Tamper-evident documentation',
   },
   {
     id: 2,
-    text: 'Verifiable inventories and agreements',
+    text: 'Verifiable client records',
   },
   {
     id: 3,
-    text: 'Audit-ready documentation for disputes',
+    text: 'Audit-ready compliance outputs',
   },
 ];
 
-const RealEstate = () => {
+const Financial = () => {
   return (
     <Fragment>
       <NavbarOne
@@ -125,16 +125,16 @@ const RealEstate = () => {
               {/* hero text  */}
               <div className="lg:max-w-[570px] xl:max-w-[595px] md:w-full text-center lg:text-left">
                 <RevealAnimation delay={0.1}>
-                  <span className="badge badge-white mb-5">Property documentation platform</span>
+                  <span className="badge badge-white mb-5">Financial documentation platform</span>
                 </RevealAnimation>
 
                 <RevealAnimation delay={0.2}>
-                  <h1 className="text-5xl sm:text-5xl lg:text-[3.8rem]">Create property documentation without manual drafting</h1>
+                  <h1 className="text-5xl sm:text-5xl lg:text-[3.8rem]">Structure onboarding, lending, and compliance documentation as you work</h1>
                 </RevealAnimation>
 
                 <RevealAnimation delay={0.3}>
                   <p className="mb-10 md:mb-14 lg:max-w-[440px] xl:max-w-[570px]">
-                    Capture inspections, tenancy discussions, and transaction details, and convert them into structured, compliant property documentation with consistent formatting and full traceability.
+                    Capture client interactions across onboarding, KYC, and lending workflows, and convert them into structured, compliant documentation with consistent formatting, auditability, and readiness for review.
                   </p>
                 </RevealAnimation>
 
@@ -282,7 +282,7 @@ const RealEstate = () => {
                     <span className="badge badge-green">conversation → structured output</span>
                   </RevealAnimation>
                   <RevealAnimation delay={0.2}>
-                    <h2 className="max-w-[518px]">How Medqon is used across property workflows</h2>
+                    <h2 className="max-w-[518px]">How Medqon is used across financial workflows</h2>
                   </RevealAnimation>
                 </div>
               </div>
@@ -290,7 +290,7 @@ const RealEstate = () => {
                 <div>
                   <RevealAnimation delay={0.3}>
                     <p className="max-w-[518px] lg:mx-0 mx-auto">
-                      Medqon structures documentation across lettings, property management, sales, and development—reducing manual work while improving consistency and compliance.
+                      Medqon structures documentation across onboarding, lending, compliance, and advisory workflows—reducing manual effort while improving consistency and audit readiness.
                     </p>
                   </RevealAnimation>
                 </div>
@@ -304,8 +304,8 @@ const RealEstate = () => {
                       <span className={`ns-shape-14 text-[52px] text-secondary dark:text-accent`} />
                     </div>
                     <div className="space-y-1 lg:text-left text-center">
-                      <h3 className="text-heading-5">Inventory & Check-In / Check-Out Reports</h3>
-                      <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Capture property inspections and automatically generate structured inventory and condition reports.</p>
+                      <h3 className="text-heading-5">Client Onboarding & Account Opening</h3>
+                      <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Capture client interviews and automatically structure them into complete onboarding records, including profiles, declarations, and required documentation.</p>
                     </div>
                     <div className="lg:text-left text-center">
                       <LinkButton
@@ -324,8 +324,8 @@ const RealEstate = () => {
                       <span className={`ns-shape-9 text-[52px] text-secondary dark:text-accent`} />
                     </div>
                     <div className="space-y-1 lg:text-left text-center">
-                      <h3 className="text-heading-5">Tenancy Agreements & Lettings Documentation</h3>
-                      <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Generate tenancy agreements and supporting documentation from agent inputs and tenant discussions.</p>
+                      <h3 className="text-heading-5">KYC & Compliance Documentation</h3>
+                      <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Generate structured KYC summaries, verification records, and compliance documentation aligned with regulatory requirements.</p>
                     </div>
                     <div className="lg:text-left text-center">
                       <LinkButton
@@ -344,8 +344,8 @@ const RealEstate = () => {
                       <span className={`ns-shape-15 text-[52px] text-secondary dark:text-accent`} />
                     </div>
                     <div className="space-y-1 lg:text-left text-center">
-                      <h3 className="text-heading-5">Property Sales Documentation    </h3>
-                      <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Structure notes from buyer conversations, viewings, and negotiations into clear transaction summaries and records.</p>
+                      <h3 className="text-heading-5">Loan Applications & Credit Assessments </h3>
+                      <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Convert borrower discussions and financial inputs into structured loan applications, supporting documents, and assessment summaries.</p>
                     </div>
                     <div className="lg:text-left text-center">
                       <LinkButton
@@ -364,8 +364,8 @@ const RealEstate = () => {
                       <span className={`ns-shape-15 text-[52px] text-secondary dark:text-accent`} />
                     </div>
                     <div className="space-y-1 lg:text-left text-center">
-                      <h3 className="text-heading-5">Maintenance & Contractor Scopes</h3>
-                      <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Convert site discussions and requirements into structured work specifications for contractors and renovations.</p>
+                      <h3 className="text-heading-5">Financial Advisory & Client Reviews</h3>
+                      <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Structure client meetings, financial advice discussions, and periodic reviews into clear, documented records.</p>
                     </div>
                     <div className="lg:text-left text-center">
                       <LinkButton
@@ -384,8 +384,8 @@ const RealEstate = () => {
                       <span className={`ns-shape-15 text-[52px] text-secondary dark:text-accent`} />
                     </div>
                     <div className="space-y-1 lg:text-left text-center">
-                      <h3 className="text-heading-5">Compliance & Property Records</h3>
-                      <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Maintain consistent documentation for regulatory requirements, property history, and dispute resolution.</p>
+                      <h3 className="text-heading-5">Risk & Compliance Reporting</h3>
+                      <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Maintain structured documentation for internal audits, regulatory reviews, and compliance checks.</p>
                     </div>
                     <div className="lg:text-left text-center">
                       <LinkButton
@@ -460,12 +460,12 @@ const RealEstate = () => {
                     <div className="space-y-3 mb-8">
                       <RevealAnimation delay={0.3}>
                         <h2 className="max-w-[592px] mx-auto lg:mx-0">
-                          Property documentation, structured as you work
+                          Financial documentation, structured as you work
                         </h2>
                       </RevealAnimation>
                       <RevealAnimation delay={0.4}>
                         <p>
-                          Medqon captures conversations and notes across property workflows, extracts key details, and generates structured, compliant documentation with built-in consistency checks.
+                          Medqon captures client interactions, extracts key financial and compliance data, and generates structured documentation with built-in validation and auditability.
                         </p>
                       </RevealAnimation>
                     </div>
@@ -483,7 +483,7 @@ const RealEstate = () => {
                             Capture
                           </h3>
                           <p>
-                             Record inspections, tenant discussions, and property notes.
+                             Record onboarding conversations, interviews, and financial discussions.
                           </p>
                         </div>
                       </div>
@@ -498,7 +498,7 @@ const RealEstate = () => {
                             Structure
                           </h3>
                           <p>
-                             Automatically generate standardised documents such as inventories, agreements, and reports.
+                             Automatically generate standardised documents such as KYC summaries, loan applications, and onboarding records.
                           </p>
                         </div>
                       </div>
@@ -511,7 +511,7 @@ const RealEstate = () => {
                         <div className="space-y-1">
                           <h3 className="text-lg font-medium leading-[27px] text-secondary dark:text-accent">Validate</h3>
                           <p>
-                            Ensure completeness, consistency, and readiness for compliance or dispute use.
+                            Ensure completeness, consistency, and compliance before finalisation.
                           </p>
                         </div>
                       </div>
@@ -539,11 +539,11 @@ const RealEstate = () => {
                     <span className="badge badge-cyan mb-5">Document Integrity</span>
                   </RevealAnimation>
                   <RevealAnimation delay={0.3}>
-                    <h2>Know if a property record has been altered</h2>
+                    <h2>Know if financial records have been altered</h2>
                   </RevealAnimation>
                   <RevealAnimation delay={0.4}>
                     <p>
-                      Every document includes a verifiable digital fingerprint and audit trail. Any modification after creation is immediately detectable, supporting dispute resolution and accountability.
+                      Every document includes a verifiable digital fingerprint and audit trail. Any modification after creation is immediately detectable, supporting compliance, audit, and regulatory review.
                     </p>
                   </RevealAnimation>
                   <ul className="space-y-4 mb-14" aria-label="Eligibility requirements">
@@ -618,14 +618,14 @@ const RealEstate = () => {
                 {/* heading  */}
                 <div className="space-y-[20px] text-center md:text-left">
                   <RevealAnimation delay={0.2}>
-                    <span className="badge badge-yellow">Unified Property Workflow</span>
+                    <span className="badge badge-yellow">Unified Client Workflow</span>
                   </RevealAnimation>
                   <div className="space-y-3">
                     <RevealAnimation delay={0.3}>
-                      <h2>Everything connected to the property, from listing to lifecycle management</h2>
+                      <h2>Everything connected to the client, from onboarding to ongoing compliance</h2>
                     </RevealAnimation>
                     <RevealAnimation delay={0.4}>
-                      <p>Medqon connects communication, inspections, documentation, and task tracking into a single structured platform—ensuring nothing is missed across property workflows.</p>
+                      <p>Medqon connects communication, documentation, scheduling, and task tracking into a single structured system—ensuring nothing is missed across client lifecycles.</p>
                     </RevealAnimation>
                   </div>
                 </div>
@@ -683,12 +683,12 @@ const RealEstate = () => {
                     <span className="badge badge-cyan mb-5">Integration</span>
                   </RevealAnimation>
                   <RevealAnimation delay={0.3}>
-                    <h2>Works with your existing property systems</h2>
+                    <h2>Works with your existing financial systems</h2>
                   </RevealAnimation>
                   <RevealAnimation delay={0.4}>
                     <p>
-                      Medqon integrates via API with your existing property management, lettings, or CRM systems. It enhances documentation and reporting without requiring changes to your core platform.
-
+                      Medqon integrates via API with your existing CRM, onboarding, KYC, and lending platforms.
+ It enhances documentation and reporting without replacing your current infrastructure.
                     </p>
                   </RevealAnimation>
                 </div>
@@ -739,7 +739,7 @@ const RealEstate = () => {
               </RevealAnimation>
               <RevealAnimation delay={0.3}>
                 <p className="mx-auto lg:max-w-[620px]">
-                  Answers to common questions about how Medqon fits into your existing property management workflows and systems.
+                  Answers to common questions about how Medqon fits into your existing Fintech workflows and systems.
                 </p>
               </RevealAnimation>
             </div>
@@ -776,4 +776,4 @@ const RealEstate = () => {
   );
 };
 
-export default RealEstate;
+export default Financial;
