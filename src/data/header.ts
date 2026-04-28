@@ -217,10 +217,10 @@ export const solutionsMenuItems: MegaMenuItem[] = [
         icon: '/other-sectors/new/insurance.png'
       },
       {
-        id: 'healthcare-admin',
-        label: 'Healthcare Admin',
-        href: '/sectors/healthcare',
-        description: 'Compliance & operational documentation',
+        id: 'public-sector',
+        label: 'Public Sector',
+        href: '/sectors/public-sector',
+        description: 'Operational documentation & regulatory reporting',
         icon: '/other-sectors/new/healthcare.png'
       },
       {

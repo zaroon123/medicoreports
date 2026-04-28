@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "question": "Does Medqon replace our existing case management systems?",
+    "answer": "No. It works alongside your existing systems, focusing on structured documentation and reporting."
+  },
+  {
+    "id": 2,
+    "question": "Can it integrate with our internal platforms?",
+    "answer": "Yes. Medqon integrates via API, enabling seamless data flow between your systems and documentation outputs."
+  },
+  {
+    "id": 3,
+    "question": "What types of public sector workflows does it support?",
+    "answer": "Inspections, investigations, casework, assessments, and decision-making processes."
+  },
+  {
+    "id": 4,
+    "question": "Can it be configured to our reporting formats?",
+    "answer": "Yes. It adapts to your templates, workflows, and organisational requirements."
+  },
+  {
+    "id": 5,
+    "question": "How does it support audits and accountability?",
+    "answer": "By generating structured, traceable, and verifiable documentation that can be reviewed and validated at any time."
+  }
+]

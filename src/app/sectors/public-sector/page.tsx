@@ -45,71 +45,71 @@ import checkMarkDarkImage from '@public/images/icons/checkmark-dark.svg';
 import { cn } from '@/utils/cn';
 import gradient from '@public/images/gradient/gradient-11.png';
 import Faq from '@/components/homepage-06/Faq';
-import faqData from '@/data/json/faq/faq-financial.json';
+import faqData from '@/data/json/faq/faq-public-sector.json';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Medicoreports - Financial Sector',
+  title: 'Medicoreports - Public Sector',
 };
 
 const data = [
   {
     id: 1,
     icon: 'ns-shape-13',
-    title: 'Client-Centred Communication',
-    description: 'All interactions linked to each client record.',
+    title: 'Case-Centred Communication',
+    description: 'All notes, updates, and correspondence linked to each case or record.',
   },
   {
     id: 2,
     icon: 'ns-shape-41',
-    title: 'Onboarding & Workflow Tracking',
-    description: 'Track onboarding steps, document collection, and approvals.',
+    title: 'Inspection & Case Scheduling',
+    description: 'Manage visits, follow-ups, and reviews in one place.',
   },
   {
     id: 3,
     icon: 'ns-shape-36',
-    title: 'Task & Compliance Tracking',
-    description: 'Monitor required actions, follow-ups, and regulatory checks.',
+    title: 'Task & Process Tracking',
+    description: 'Track actions, responsibilities, and outcomes across workflows.',
   },
   {
     id: 4,
     icon: 'ns-shape-35',
     title: 'Built-In Workflow Structure',
-    description: 'Standardise onboarding, lending, and compliance processes.',
+    description: 'Standardise how cases move from intake to final decision.',
   },
 
   {
     id: 5,
     icon: 'ns-shape-34',
-    title: 'Full Visibility',
-    description: 'Track client status, approvals, and bottlenecks.',
+    title: 'Full Operational Visibility',
+    description: 'Monitor workload, case status, and bottlenecks in real time.',
   },
   {
     id: 6,
     icon: 'ns-shape-30',
     title: 'Secure Data Handling',
-    description: 'Role-based access, audit logs, and secure infrastructure.',
+    description: 'Role-based access, audit logs, and secure handling of sensitive information.',
   },
 ];
 
 const eligibilityData = [
   {
     id: 1,
-    text: 'Tamper-evident documentation',
+    text: 'Tamper-evident reports',
   },
   {
     id: 2,
-    text: 'Verifiable client records',
+    text: 'Verifiable records for audit',
   },
   {
     id: 3,
-    text: 'Audit-ready compliance outputs',
+    text: 'Full traceability across document lifecycle',
   },
 ];
 
-const Financial = () => {
+const PublicSector = () => {
   return (
     <Fragment>
       <NavbarOne
@@ -125,16 +125,16 @@ const Financial = () => {
               {/* hero text  */}
               <div className="lg:max-w-[570px] xl:max-w-[595px] md:w-full text-center lg:text-left">
                 <RevealAnimation delay={0.1}>
-                  <span className="badge badge-white mb-5">Financial documentation platform</span>
+                  <span className="badge badge-white mb-5">Public sector documentation platform</span>
                 </RevealAnimation>
 
                 <RevealAnimation delay={0.2}>
-                  <h1 className="text-5xl sm:text-5xl lg:text-[3.8rem]">Structure onboarding, lending, and compliance documentation as you work</h1>
+                  <h1 className="text-5xl sm:text-5xl lg:text-[3.8rem]">From fieldwork and interviews to structured, audit-ready reports</h1>
                 </RevealAnimation>
 
                 <RevealAnimation delay={0.3}>
                   <p className="mb-10 md:mb-14 lg:max-w-[440px] xl:max-w-[570px]">
-                    Capture client interactions across onboarding, KYC, and lending workflows, and convert them into structured, compliant documentation with consistent formatting, auditability, and readiness for review.
+                    Capture inspections, casework, and investigations, and convert them into structured, compliant documentation with consistent formatting, traceability, and readiness for audit and review.
                   </p>
                 </RevealAnimation>
 
@@ -282,7 +282,7 @@ const Financial = () => {
                     <span className="badge badge-green">conversation → structured output</span>
                   </RevealAnimation>
                   <RevealAnimation delay={0.2}>
-                    <h2 className="max-w-[518px]">How Medqon is used across financial workflows</h2>
+                    <h2 className="max-w-[518px]">How Medqon is used across public sector workflows</h2>
                   </RevealAnimation>
                 </div>
               </div>
@@ -290,7 +290,7 @@ const Financial = () => {
                 <div>
                   <RevealAnimation delay={0.3}>
                     <p className="max-w-[518px] lg:mx-0 mx-auto">
-                      Medqon structures documentation across onboarding, lending, compliance, and advisory workflows—reducing manual effort while improving consistency and audit readiness.
+                      Medqon structures documentation across inspections, investigations, and casework—reducing manual effort while improving consistency, accountability, and audit readiness.
                     </p>
                   </RevealAnimation>
                 </div>
@@ -304,8 +304,8 @@ const Financial = () => {
                       <span className={`ns-shape-14 text-[52px] text-secondary dark:text-accent`} />
                     </div>
                     <div className="space-y-1 lg:text-left text-center">
-                      <h3 className="text-heading-5">Client Onboarding & Account Opening</h3>
-                      <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Capture client interviews and automatically structure them into complete onboarding records, including profiles, declarations, and required documentation.</p>
+                      <h3 className="text-heading-5">Incident & Investigation Reports.</h3>
+                      <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Capture interviews and field notes, and generate structured reports with clear findings, timelines, and supporting evidence.</p>
                     </div>
                     <div className="lg:text-left text-center">
                       <LinkButton
@@ -324,8 +324,8 @@ const Financial = () => {
                       <span className={`ns-shape-9 text-[52px] text-secondary dark:text-accent`} />
                     </div>
                     <div className="space-y-1 lg:text-left text-center">
-                      <h3 className="text-heading-5">KYC & Compliance Documentation</h3>
-                      <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Generate structured KYC summaries, verification records, and compliance documentation aligned with regulatory requirements.</p>
+                      <h3 className="text-heading-5">Inspections & Compliance Reporting</h3>
+                      <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Convert inspection notes into standardised reports for housing, environmental health, and regulatory compliance.</p>
                     </div>
                     <div className="lg:text-left text-center">
                       <LinkButton
@@ -344,8 +344,8 @@ const Financial = () => {
                       <span className={`ns-shape-15 text-[52px] text-secondary dark:text-accent`} />
                     </div>
                     <div className="space-y-1 lg:text-left text-center">
-                      <h3 className="text-heading-5">Loan Applications & Credit Assessments </h3>
-                      <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Convert borrower discussions and financial inputs into structured loan applications, supporting documents, and assessment summaries.</p>
+                      <h3 className="text-heading-5">Caseworker & Social Services Documentation</h3>
+                      <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Structure case notes, assessments, and follow-ups into consistent, compliant records.</p>
                     </div>
                     <div className="lg:text-left text-center">
                       <LinkButton
@@ -364,8 +364,8 @@ const Financial = () => {
                       <span className={`ns-shape-15 text-[52px] text-secondary dark:text-accent`} />
                     </div>
                     <div className="space-y-1 lg:text-left text-center">
-                      <h3 className="text-heading-5">Financial Advisory & Client Reviews</h3>
-                      <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Structure client meetings, financial advice discussions, and periodic reviews into clear, documented records.</p>
+                      <h3 className="text-heading-5">Grant & Funding Assessments</h3>
+                      <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Generate structured summaries and evaluation reports for funding decisions and eligibility reviews.</p>
                     </div>
                     <div className="lg:text-left text-center">
                       <LinkButton
@@ -384,8 +384,8 @@ const Financial = () => {
                       <span className={`ns-shape-15 text-[52px] text-secondary dark:text-accent`} />
                     </div>
                     <div className="space-y-1 lg:text-left text-center">
-                      <h3 className="text-heading-5">Risk & Compliance Reporting</h3>
-                      <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Maintain structured documentation for internal audits, regulatory reviews, and compliance checks.</p>
+                      <h3 className="text-heading-5">Governance & Decision Records</h3>
+                      <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Produce clear, structured documentation for internal decisions, reviews, and accountability processes.</p>
                     </div>
                     <div className="lg:text-left text-center">
                       <LinkButton
@@ -460,12 +460,12 @@ const Financial = () => {
                     <div className="space-y-3 mb-8">
                       <RevealAnimation delay={0.3}>
                         <h2 className="max-w-[592px] mx-auto lg:mx-0">
-                          Financial documentation, structured as you work
+                          Public sector documentation, structured as you work
                         </h2>
                       </RevealAnimation>
                       <RevealAnimation delay={0.4}>
                         <p>
-                          Medqon captures client interactions, extracts key financial and compliance data, and generates structured documentation with built-in validation and auditability.
+                          Medqon captures interviews, field notes, and operational inputs, and converts them into structured, compliant documentation with built-in validation and consistency checks.
                         </p>
                       </RevealAnimation>
                     </div>
@@ -483,7 +483,7 @@ const Financial = () => {
                             Capture
                           </h3>
                           <p>
-                             Record onboarding conversations, interviews, and financial discussions.
+                             Record interviews, inspections, and case discussions.
                           </p>
                         </div>
                       </div>
@@ -498,7 +498,7 @@ const Financial = () => {
                             Structure
                           </h3>
                           <p>
-                             Automatically generate standardised documents such as KYC summaries, loan applications, and onboarding records.
+                             Automatically generate standardised reports aligned with required formats.
                           </p>
                         </div>
                       </div>
@@ -511,7 +511,7 @@ const Financial = () => {
                         <div className="space-y-1">
                           <h3 className="text-lg font-medium leading-[27px] text-secondary dark:text-accent">Validate</h3>
                           <p>
-                            Ensure completeness, consistency, and compliance before finalisation.
+                            Ensure completeness, consistency, and readiness for audit or review.
                           </p>
                         </div>
                       </div>
@@ -539,11 +539,11 @@ const Financial = () => {
                     <span className="badge badge-cyan mb-5">Document Integrity</span>
                   </RevealAnimation>
                   <RevealAnimation delay={0.3}>
-                    <h2>Know if financial records have been altered</h2>
+                    <h2>Know if a report has been altered</h2>
                   </RevealAnimation>
                   <RevealAnimation delay={0.4}>
                     <p>
-                      Every document includes a verifiable digital fingerprint and audit trail. Any modification after creation is immediately detectable, supporting compliance, audit, and regulatory review.
+                      Every document includes a verifiable digital fingerprint and audit trail. Any modification after creation is immediately detectable, supporting accountability, audit, and regulatory review.
                     </p>
                   </RevealAnimation>
                   <ul className="space-y-4 mb-14" aria-label="Eligibility requirements">
@@ -618,14 +618,14 @@ const Financial = () => {
                 {/* heading  */}
                 <div className="space-y-[20px] text-center md:text-left">
                   <RevealAnimation delay={0.2}>
-                    <span className="badge badge-yellow">Unified Client Workflow</span>
+                    <span className="badge badge-yellow">Unified Operational Workflow</span>
                   </RevealAnimation>
                   <div className="space-y-3">
                     <RevealAnimation delay={0.3}>
-                      <h2>Everything connected to the client, from onboarding to ongoing compliance</h2>
+                      <h2>Everything connected to the case, from input to decision</h2>
                     </RevealAnimation>
                     <RevealAnimation delay={0.4}>
-                      <p>Medqon connects communication, documentation, scheduling, and task tracking into a single structured system—ensuring nothing is missed across client lifecycles.</p>
+                      <p>Medqon connects communication, documentation, scheduling, and task tracking into a single structured system—ensuring consistency and accountability across operations.</p>
                     </RevealAnimation>
                   </div>
                 </div>
@@ -683,12 +683,16 @@ const Financial = () => {
                     <span className="badge badge-cyan mb-5">Integration</span>
                   </RevealAnimation>
                   <RevealAnimation delay={0.3}>
-                    <h2>Works with your existing financial systems</h2>
+                    <h2>Works with your existing systems</h2>
                   </RevealAnimation>
                   <RevealAnimation delay={0.4}>
                     <p>
-                      Medqon integrates via API with your existing CRM, onboarding, KYC, and lending platforms.
- It enhances documentation and reporting without replacing your current infrastructure.
+                      Medqon integrates via API with your existing case management, inspection, and internal systems.
+                    </p>
+                  </RevealAnimation>
+                  <RevealAnimation delay={0.4}>
+                    <p>
+                       It enhances documentation and reporting without replacing your current infrastructure.
                     </p>
                   </RevealAnimation>
                 </div>
@@ -739,7 +743,7 @@ const Financial = () => {
               </RevealAnimation>
               <RevealAnimation delay={0.3}>
                 <p className="mx-auto lg:max-w-[620px]">
-                  Answers to common questions about how Medqon fits into your existing Fintech workflows and systems.
+                  Answers to common questions about how Medqon fits into public sector operations, compliance requirements, and existing systems.
                 </p>
               </RevealAnimation>
             </div>
@@ -776,4 +780,4 @@ const Financial = () => {
   );
 };
 
-export default Financial;
+export default PublicSector;
