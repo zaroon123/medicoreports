@@ -50,7 +50,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Medicoreports - Legal Sector',
+  title: 'Medicoreports - Insurance Sector',
 };
 
 const data = [
