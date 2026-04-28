@@ -17,7 +17,7 @@ import LinkButton from '../ui/button/LinkButton';
 import heroMedqonVault from '@public/images/medqon-vault/section 1.png';
 
 const Hero = () => { 
-  return (
+  return ( 
     <section className="pt-[115px] pb-[97px] overflow-hidden">
       <div className="max-w-[1365px] mx-auto">
         <div className="relative">

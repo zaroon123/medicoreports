@@ -44,7 +44,7 @@ import whyMedqonVaultImage from '@public/images/medqon-vault/section-2/why-medqo
 import { cn } from '@/utils/cn';
 import gradient from '@public/images/gradient/gradient-11.png';
 import Faq from '@/components/homepage-06/Faq';
-import faqData from '@/data/json/faq/faq.json';
+import faqData from '@/data/json/faq/faq-insurance.json';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 
@@ -58,42 +58,57 @@ const data = [
     id: 1,
     icon: 'ns-shape-13',
     title: 'Case-Centred Communication',
-    description: 'All emails, correspondence, and updates are automatically linked to the relevant case, eliminating fragmented communication.',
+    description: 'All emails, notes, and updates linked to each claim.',
   },
   {
     id: 2,
     icon: 'ns-shape-41',
-    title: 'Integrated Scheduling & Appointments',
-    description: 'Manage appointments, availability, and reminders within the same system, keeping cases moving without manual coordination.',
+    title: 'Integrated Scheduling',
+    description: 'Manage inspections, assessments, and follow-ups in one place.',
   },
   {
     id: 3,
     icon: 'ns-shape-36',
     title: 'Task & Workflow Tracking',
-    description: 'Assign tasks, monitor progress, and ensure every step from instruction to completion is tracked and accountable.',
+    description: 'Track claim progression from intake through to resolution.',
   },
   {
     id: 4,
     icon: 'ns-shape-35',
     title: 'Built-In Workflow Structure',
-    description: 'Standardise how cases progress, from intake through to report delivery, ensuring consistency across teams.',
+    description: 'Standardise claims handling and underwriting processes.',
   },
 
   {
     id: 5,
     icon: 'ns-shape-34',
-    title: 'Full Case Visibility',
-    description: 'Track case status, workload, and bottlenecks in real time, with complete oversight across all users.',
+    title: 'Full Operational Visibility',
+    description: 'Monitor workload, claim status, and bottlenecks in real time.',
   },
   {
     id: 6,
     icon: 'ns-shape-30',
-    title: 'Secure, Controlled Access',
-    description: 'Role-based permissions, audit logs, and secure handling of sensitive case data across the entire system.',
+    title: 'Secure Data Handling',
+    description: 'Role-based access and audit logs for sensitive insurance data.',
   },
 ];
 
-const Legal = () => {
+const eligibilityData = [
+  {
+    id: 1,
+    text: 'Tamper-evident documentation',
+  },
+  {
+    id: 2,
+    text: 'Verifiable claim records',
+  },
+  {
+    id: 3,
+    text: 'Audit-ready outputs for compliance and disputes',
+  },
+];
+
+const Insurance = () => {
   return (
     <Fragment>
       <NavbarOne
@@ -109,16 +124,16 @@ const Legal = () => {
               {/* hero text  */}
               <div className="lg:max-w-[570px] xl:max-w-[595px] md:w-full text-center lg:text-left">
                 <RevealAnimation delay={0.1}>
-                  <span className="badge badge-white mb-5">Compliance-driven legal documentation engine</span>
+                  <span className="badge badge-white mb-5">Insurance documentation platform</span>
                 </RevealAnimation>
 
                 <RevealAnimation delay={0.2}>
-                  <h1  className="text-5xl sm:text-5xl lg:text-[3.8rem]">Turn legal work into structured, defensible documents in minutes</h1>
+                  <h1 className="text-5xl sm:text-5xl lg:text-[3.8rem]">From conversations to structured claims documentation in minutes</h1>
                 </RevealAnimation>
 
                 <RevealAnimation delay={0.3}>
                   <p className="mb-10 md:mb-14 lg:max-w-[440px] xl:max-w-[570px]">
-                    Capture conversations, extract key facts, and generate jurisdiction-ready legal documents with built-in compliance, audit trails, and formatting.
+                    Capture adjuster notes, claimant statements, and underwriting inputs, and convert them into structured, audit-ready documentation with consistent formatting and built-in validation.
                   </p>
                 </RevealAnimation>
 
@@ -266,7 +281,7 @@ const Legal = () => {
                     <span className="badge badge-green">conversation → structured output</span>
                   </RevealAnimation>
                   <RevealAnimation delay={0.2}>
-                    <h2 className="max-w-[518px]">Where Structured Documentation Matters Most</h2>
+                    <h2 className="max-w-[518px]">How Medqon is used in insurance workflows.</h2>
                   </RevealAnimation>
                 </div>
               </div>
@@ -274,7 +289,7 @@ const Legal = () => {
                 <div>
                   <RevealAnimation delay={0.3}>
                     <p className="max-w-[518px] lg:mx-0 mx-auto">
-                      See how Medqon converts real-world legal workflows into structured, compliant documentation - reducing drafting time, improving consistency, and strengthening evidentiary quality.
+                      See how Medqon structures claims, underwriting, and risk documentation—reducing manual effort while improving consistency and auditability.
                     </p>
                   </RevealAnimation>
                 </div>
@@ -288,8 +303,8 @@ const Legal = () => {
                       <span className={`ns-shape-14 text-[52px] text-secondary dark:text-accent`} />
                     </div>
                     <div className="space-y-1 lg:text-left text-center">
-                      <h3 className="text-heading-5">Client Interviews & Case Intake</h3>
-                      <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Capture client conversations and automatically structure them into clear, formatted case summaries, reducing manual note-taking and missed details.</p>
+                      <h3 className="text-heading-5">Claims Intake & First Notice of Loss (FNOL)</h3>
+                      <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Capture initial claim conversations and automatically structure them into clear, complete case records.</p>
                     </div>
                     <div className="lg:text-left text-center">
                       <LinkButton
@@ -308,8 +323,8 @@ const Legal = () => {
                       <span className={`ns-shape-9 text-[52px] text-secondary dark:text-accent`} />
                     </div>
                     <div className="space-y-1 lg:text-left text-center">
-                      <h3 className="text-heading-5">Witness Statements & Legal Narratives</h3>
-                      <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Convert spoken or written input into structured, formal statements aligned with legal standards, ensuring clarity, consistency, and admissibility.</p>
+                      <h3 className="text-heading-5">Claims Assessment & Adjuster Reports</h3>
+                      <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Convert field notes, interviews, and observations into structured, standardised reports.</p>
                     </div>
                     <div className="lg:text-left text-center">
                       <LinkButton
@@ -328,8 +343,8 @@ const Legal = () => {
                       <span className={`ns-shape-15 text-[52px] text-secondary dark:text-accent`} />
                     </div>
                     <div className="space-y-1 lg:text-left text-center">
-                      <h3 className="text-heading-5">Case Reports & Legal Documentation</h3>
-                      <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Generate complete, structured legal documents with consistent formatting, logical flow, and built-in compliance checks.</p>
+                      <h3 className="text-heading-5">Underwriting Documentation </h3>
+                      <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Generate consistent risk profiles and supporting documentation from broker inputs and client data.</p>
                     </div>
                     <div className="lg:text-left text-center">
                       <LinkButton
@@ -348,8 +363,8 @@ const Legal = () => {
                       <span className={`ns-shape-15 text-[52px] text-secondary dark:text-accent`} />
                     </div>
                     <div className="space-y-1 lg:text-left text-center">
-                      <h3 className="text-heading-5">Compliance & Audit-Ready Records</h3>
-                      <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Automatically produce documentation with embedded structure, traceability, and consistency checks to support regulatory and internal audits.</p>
+                      <h3 className="text-heading-5">Fraud & Risk Analysis Documentation</h3>
+                      <p className="max-w-[337px] lg:mx-0 mx-auto line-clamp-3">Structure supporting evidence and summaries for fraud review and internal risk evaluation.</p>
                     </div>
                     <div className="lg:text-left text-center">
                       <LinkButton
@@ -424,88 +439,68 @@ const Legal = () => {
                     <div className="space-y-3 mb-8">
                       <RevealAnimation delay={0.3}>
                         <h2 className="max-w-[592px] mx-auto lg:mx-0">
-                          Capture. Structure. Validate. Deliver.
+                          Insurance documentation, structured as you work
                         </h2>
                       </RevealAnimation>
                       <RevealAnimation delay={0.4}>
                         <p>
-                          Medqon captures conversations, extracts key legal facts, and structures them into compliant, audit-ready documents with consistent formatting and built-in validation.
+                          Medqon captures inputs across claims and underwriting workflows, extracts key data points, and structures them into compliant, audit-ready documentation with built-in consistency checks.
                         </p>
                       </RevealAnimation>
                     </div>
                   </div>
-                  <ul className="max-sm:flex-col flex sm:items-start items-center gap-6 mb-14">
+                  <div className="space-y-5">
                     <RevealAnimation delay={0.5}>
-                      <li className="flex items-center gap-2">
-                        <svg
-                          width={18}
-                          height={18}
-                          viewBox="0 0 18 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="shrink-0">
-                          <path
-                            d="M15.1875 5.0625L7.3125 12.9371L3.375 9"
-                            className="stroke-secondary dark:stroke-accent"
-                            strokeWidth={2}
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                        <span className="text-secondary font-medium text-tagline-1 dark:text-accent/60">
-                          Capture conversations in real time
-                        </span>
-                      </li>
+                      <div className="sm:max-w-[596px] lg:mx-0 mx-auto sm:py-6 py-5 sm:px-[34px] px-7 bg-background-3 dark:bg-background-7 sm:rounded-[20px] rounded-2xl flex items-start sm:gap-[22px] gap-4">
+                        <div>
+                          <div className="size-10 rounded-full bg-ns-yellow text-tagline-1 font-semibold text-secondary flex items-center justify-center shrink-0">
+                            1
+                          </div>
+                        </div>
+                        <div className="space-y-1">
+                          <h3 className="text-lg font-medium leading-[27px] text-secondary dark:text-accent">
+                            Capture
+                          </h3>
+                          <p>
+                             Record claim interviews, adjuster notes, and underwriting inputs in real time.
+                          </p>
+                        </div>
+                      </div>
                     </RevealAnimation>
                     <RevealAnimation delay={0.6}>
-                      <li className="flex items-center gap-2">
-                        <svg
-                          width={18}
-                          height={18}
-                          viewBox="0 0 18 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="shrink-0">
-                          <path
-                            d="M15.1875 5.0625L7.3125 12.9371L3.375 9"
-                            className="stroke-secondary dark:stroke-accent"
-                            strokeWidth={2}
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                        <span className="text-secondary font-medium text-tagline-1 dark:text-accent/60">
-                          Structure documents automatically
-                        </span>
-                      </li>
+                      <div className="sm:max-w-[596px] lg:mx-0 mx-auto sm:py-6 py-5 sm:px-[34px] px-7 bg-background-3 dark:bg-background-7 sm:rounded-[20px] rounded-2xl flex items-start sm:gap-[22px] gap-4">
+                        <div className="size-10 rounded-full bg-ns-green text-tagline-1 font-semibold text-secondary flex items-center justify-center shrink-0">
+                          2
+                        </div>
+                        <div className="space-y-1">
+                          <h3 className="text-lg font-medium leading-[27px] text-secondary dark:text-accent">
+                            Structure
+                          </h3>
+                          <p>
+                             Automatically generate standardised documentation aligned with internal and regulatory formats.
+                          </p>
+                        </div>
+                      </div>
                     </RevealAnimation>
                     <RevealAnimation delay={0.7}>
-                      <li className="flex items-center gap-2">
-                        <svg
-                          width={18}
-                          height={18}
-                          viewBox="0 0 18 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="shrink-0">
-                          <path
-                            d="M15.1875 5.0625L7.3125 12.9371L3.375 9"
-                            className="stroke-secondary dark:stroke-accent"
-                            strokeWidth={2}
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                        <span className="text-secondary font-medium text-tagline-1 dark:text-accent/60">
-                          Ensure consistency and compliance
-                        </span>
-                      </li>
+                      <div className="sm:max-w-[596px] lg:mx-0 mx-auto sm:py-6 py-5 sm:px-[34px] px-7 bg-background-3 dark:bg-background-7 sm:rounded-[20px] rounded-2xl flex items-start sm:gap-[22px] gap-4">
+                        <div className="size-10 rounded-full bg-ns-red text-tagline-1 font-semibold text-secondary flex items-center justify-center shrink-0">
+                          3
+                        </div>
+                        <div className="space-y-1">
+                          <h3 className="text-lg font-medium leading-[27px] text-secondary dark:text-accent">Validate</h3>
+                          <p>
+                            Detect missing information, inconsistencies, and gaps before finalising outputs.
+                          </p>
+                        </div>
+                      </div>
                     </RevealAnimation>
-                  </ul>
+                  </div>
+
                   <RevealAnimation delay={0.8}>
-                    <div>
+                    <div className='mt-5'>
                       <LinkButton href="/signup-01" className="btn hover:btn-primary btn-xl btn-secondary dark:btn-accent">
-                        Start Your Journey
+                        See how it works
                       </LinkButton>
                     </div>
                   </RevealAnimation>
@@ -520,16 +515,41 @@ const Legal = () => {
               <div className="col-span-12 lg:col-span-6">
                 <div className="space-y-3">
                   <RevealAnimation delay={0.2}>
-                    <span className="badge badge-cyan mb-5">Verified & Audit-Ready</span>
+                    <span className="badge badge-cyan mb-5">Document Integrity</span>
                   </RevealAnimation>
                   <RevealAnimation delay={0.3}>
-                    <h2>Every document can be verified for integrity and authenticity</h2>
+                    <h2>Know if a claim document has been altered instantly</h2>
                   </RevealAnimation>
                   <RevealAnimation delay={0.4}>
                     <p>
-                      Medqon embeds a unique digital fingerprint into every document, allowing you to verify its integrity at any time. Any modification after generation is immediately detectable, ensuring trust, traceability, and evidentiary reliability.
+                      Every document includes a unique digital fingerprint and audit trail. Any modification after generation is immediately detectable, ensuring trust and evidentiary reliability.
                     </p>
                   </RevealAnimation>
+                  <ul className="space-y-4 mb-14" aria-label="Eligibility requirements">
+                  {eligibilityData.map((item, idx) => (
+                    <RevealAnimation key={item.id} delay={0.4 + idx * 0.1}>
+                      <li className="flex items-center gap-3">
+                        <span>
+                          <Image
+                            src="images/icons/checkmark-dark.svg"
+                            alt="Checkbox icon"
+                            width={18}
+                            height={18}
+                            className="size-[18px] dark:hidden"
+                          />
+                          <Image
+                            src="images/icons/checkmark-white.svg"
+                            alt="Checkbox icon"
+                            width={18}
+                            height={18}
+                            className="size-[18px] hidden dark:block"
+                          />
+                        </span>
+                        <p>{item.text}</p>
+                      </li>
+                    </RevealAnimation>
+                  ))}
+                </ul>
                 </div>
               </div>
               <div className="col-span-12 lg:col-span-6">
@@ -577,14 +597,14 @@ const Legal = () => {
                 {/* heading  */}
                 <div className="space-y-[20px] text-center md:text-left">
                   <RevealAnimation delay={0.2}>
-                    <span className="badge badge-yellow">All Case Activity, One System</span>
+                    <span className="badge badge-yellow">Unified Case Platform</span>
                   </RevealAnimation>
                   <div className="space-y-3">
                     <RevealAnimation delay={0.3}>
-                      <h2>One system to manage cases, communication, and documentation</h2>
+                      <h2>Everything connected to the claim, from intake to settlement</h2>
                     </RevealAnimation>
                     <RevealAnimation delay={0.4}>
-                      <p>Medqon Vault brings case management, email communication, scheduling, tasks, and documentation into a single structured platform—ensuring nothing is missed, delayed, or disconnected.</p>
+                      <p>Medqon connects case management, communication, scheduling, and documentation into a single structured platform—ensuring nothing is missed or delayed.</p>
                     </RevealAnimation>
                   </div>
                 </div>
@@ -633,6 +653,62 @@ const Legal = () => {
           </div>
         </section>
 
+        <section className="pt-14 md:pt-16 lg:pt-[88px] xl:pt-[50px] pb-14 md:pb-16 lg:pb-[88px] xl:pb-[100px] overflow-hidden">
+          <div className="main-container">
+            <div className="grid grid-cols-12 lg:gap-x-0 xl:gap-x-28 gap-y-12 items-center">
+              <div className="col-span-12 lg:col-span-6">
+                <div className="space-y-3">
+                  <RevealAnimation delay={0.2}>
+                    <span className="badge badge-cyan mb-5">Integration</span>
+                  </RevealAnimation>
+                  <RevealAnimation delay={0.3}>
+                    <h2>Works with your existing systems</h2>
+                  </RevealAnimation>
+                  <RevealAnimation delay={0.4}>
+                    <p>
+                      Medqon integrates via API with your existing claims management, policy administration, and internal systems.
+                    </p>
+                  </RevealAnimation>
+                  <RevealAnimation delay={0.4}>
+                    <p>
+                       You retain your current infrastructure—Medqon enhances documentation and reporting within it.
+                    </p>
+                  </RevealAnimation>
+                </div>
+              </div>
+              <div className="col-span-12 lg:col-span-6">
+                <div>
+                  <figure className="relative w-full md:w-[500px]">
+                    <RevealAnimation delay={0.4}>
+                      <div className="w-full">
+                        <Image src={feature1Img} alt="features" className="w-full" />
+                      </div>
+                    </RevealAnimation>
+                    <RevealAnimation delay={0.5} direction="right" offset={100}>
+                      <div className="p-6 absolute top-3/4 -translate-y-3/4 left-[35%] sm:left-[63%] md:left-[60%] lg:left-[1%] xl:left-[50%] 2xl:left-[60%] w-[220px] md:w-[288px] h-[100px] rounded-xl overflow-hidden shadow-2 bg-white dark:bg-background-7">
+                        <figcaption className="flex justify-between gap-2">
+                          <span className="text-tagline-1 font-normal dark:text-accent"> Today&apos;s Revenue </span>
+                          <p className="text-lg font-medium leading-[1.5] text-secondary dark:text-accent flex items-center gap-1">
+                            $
+                            <NumberAnimation
+                              number={53224}
+                              speed={1000}
+                              interval={180}
+                              rooms={5}
+                              heightSpaceRatio={2.5}
+                              className="text-lg font-medium leading-[1.5] text-secondary dark:text-accent"></NumberAnimation>
+                          </p>
+                        </figcaption>
+                        <Progress />
+                      </div>
+                    </RevealAnimation>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
 
         <section className="pt-14 pb-14 md:pt-16 md:pb-16 lg:pt-[88px] lg:pb-[88px] xl:pt-[50px] xl:pb-[100px]">
           <div className="main-container">
@@ -646,7 +722,7 @@ const Legal = () => {
               </RevealAnimation>
               <RevealAnimation delay={0.3}>
                 <p className="mx-auto lg:max-w-[620px]">
-                  Answers to common questions about how Medqon fits into your existing legal workflows and systems.
+                  Answers to common questions about how Medqon fits into your existing claims management workflows and systems.
                 </p>
               </RevealAnimation>
             </div>
@@ -683,4 +759,4 @@ const Legal = () => {
   );
 };
 
-export default Legal;
+export default Insurance;

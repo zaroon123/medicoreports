@@ -27,7 +27,7 @@ export interface MegaMenuItem {
 
 export interface MegaMenuColumn {
   id: string;
-  items: MegaMenuItem[];
+  items: MegaMenuItem[]; 
 }
 
 export const navigationItems: NavigationItem[] = [
@@ -207,35 +207,35 @@ export const solutionsMenuItems: MegaMenuItem[] = [
         label: 'Legal',
         href: '/sectors/legal',
         description: 'Legal document automation & case management',
-        icon: '/other-sectors/legal.png'
+        icon: '/other-sectors/new/legal.png'
       },
       {
         id: 'insurance',
         label: 'Insurance',
         href: '/sectors/insurance',
         description: 'Claims processing & risk assessment',
-        icon: '/other-sectors/insurance.png'
+        icon: '/other-sectors/new/insurance.png'
       },
       {
         id: 'healthcare-admin',
         label: 'Healthcare Admin',
         href: '/sectors/healthcare',
         description: 'Compliance & operational documentation',
-        icon: '/other-sectors/fintech.png'
+        icon: '/other-sectors/new/healthcare.png'
       },
       {
         id: 'clinical-research',
         label: 'Clinical Research',
         href: '/sectors/clinical-research',
         description: 'Study documentation & regulatory compliance',
-        icon: '/other-sectors/real-estate.png'
+        icon: '/other-sectors/new/clinical.png'
       },
       {
         id: 'property-realestate',
         label: 'Property & Real Estate',
         href: '/sectors/real-estate',
         description: 'Property  reports & transaction documentation',
-        icon: '/other-sectors/construction.png'
+        icon: '/other-sectors/new/real-estate.png'
       },
       // {
       //   id: 'public-sector',
