@@ -317,6 +317,7 @@ const PublicSector = () => {
                   </div>
                 </div>
               </RevealAnimation>
+
               <RevealAnimation delay={0.6}>
                 <div className="col-span-12 lg:col-span-4">
                   <div className="space-y-6">
@@ -337,6 +338,7 @@ const PublicSector = () => {
                   </div>
                 </div>
               </RevealAnimation>
+
               <RevealAnimation delay={0.4}>
                 <div className="col-span-12 lg:col-span-4">
                   <div className="space-y-6">
@@ -357,8 +359,10 @@ const PublicSector = () => {
                   </div>
                 </div>
               </RevealAnimation>
+
+              {/* Grant & Funding Assessments - Centered on second row */}
               <RevealAnimation delay={0.4}>
-                <div className="col-span-12 lg:col-span-4">
+                <div className="col-span-12 lg:col-span-4 lg:col-start-3">
                   <div className="space-y-6">
                     <div className="max-lg:text-center">
                       <span className={`ns-shape-15 text-[52px] text-secondary dark:text-accent`} />
@@ -377,6 +381,8 @@ const PublicSector = () => {
                   </div>
                 </div>
               </RevealAnimation>
+
+              {/* Governance & Decision Records - Centered on second row */}
               <RevealAnimation delay={0.4}>
                 <div className="col-span-12 lg:col-span-4">
                   <div className="space-y-6">
@@ -483,7 +489,7 @@ const PublicSector = () => {
                             Capture
                           </h3>
                           <p>
-                             Record interviews, inspections, and case discussions.
+                            Record interviews, inspections, and case discussions.
                           </p>
                         </div>
                       </div>
@@ -498,7 +504,7 @@ const PublicSector = () => {
                             Structure
                           </h3>
                           <p>
-                             Automatically generate standardised reports aligned with required formats.
+                            Automatically generate standardised reports aligned with required formats.
                           </p>
                         </div>
                       </div>
@@ -547,30 +553,30 @@ const PublicSector = () => {
                     </p>
                   </RevealAnimation>
                   <ul className="space-y-4 mb-14" aria-label="Eligibility requirements">
-                  {eligibilityData.map((item, idx) => (
-                    <RevealAnimation key={item.id} delay={0.4 + idx * 0.1}>
-                      <li className="flex items-center gap-3">
-                        <span>
-                          <Image
-                            src={checkMarkDarkImage}
-                            alt="Checkbox icon"
-                            width={18}
-                            height={18}
-                            className="size-[18px] dark:hidden"
-                          />
-                          <Image
-                            src={checkMarkDarkImage}
-                            alt="Checkbox icon"
-                            width={18}
-                            height={18}
-                            className="size-[18px] hidden dark:block"
-                          />
-                        </span>
-                        <p>{item.text}</p>
-                      </li>
-                    </RevealAnimation>
-                  ))}
-                </ul>
+                    {eligibilityData.map((item, idx) => (
+                      <RevealAnimation key={item.id} delay={0.4 + idx * 0.1}>
+                        <li className="flex items-center gap-3">
+                          <span>
+                            <Image
+                              src={checkMarkDarkImage}
+                              alt="Checkbox icon"
+                              width={18}
+                              height={18}
+                              className="size-[18px] dark:hidden"
+                            />
+                            <Image
+                              src={checkMarkDarkImage}
+                              alt="Checkbox icon"
+                              width={18}
+                              height={18}
+                              className="size-[18px] hidden dark:block"
+                            />
+                          </span>
+                          <p>{item.text}</p>
+                        </li>
+                      </RevealAnimation>
+                    ))}
+                  </ul>
                 </div>
               </div>
               <div className="col-span-12 lg:col-span-6">
@@ -692,7 +698,7 @@ const PublicSector = () => {
                   </RevealAnimation>
                   <RevealAnimation delay={0.4}>
                     <p>
-                       It enhances documentation and reporting without replacing your current infrastructure.
+                      It enhances documentation and reporting without replacing your current infrastructure.
                     </p>
                   </RevealAnimation>
                 </div>

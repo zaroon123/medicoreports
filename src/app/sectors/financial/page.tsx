@@ -358,7 +358,7 @@ const Financial = () => {
                 </div>
               </RevealAnimation>
               <RevealAnimation delay={0.4}>
-                <div className="col-span-12 lg:col-span-4">
+                <div className="col-span-12 lg:col-span-4 lg:col-start-3">
                   <div className="space-y-6">
                     <div className="max-lg:text-center">
                       <span className={`ns-shape-15 text-[52px] text-secondary dark:text-accent`} />
