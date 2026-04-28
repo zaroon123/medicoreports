@@ -48,6 +48,11 @@ import Faq from '@/components/homepage-06/Faq';
 import faqData from '@/data/json/faq/faq-insurance.json';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
+import section1Image from '@public/images/other-sectors/insurance/section-1.png';
+import section3Image from '@public/images/other-sectors/insurance/section-3.png';
+import section4Image from '@public/images/other-sectors/insurance/section-4.png';
+import section5Image from '@public/images/other-sectors/legal/section-5.png';
+
 
 export const metadata: Metadata = {
   ...defaultMetadata,
@@ -166,105 +171,13 @@ const Insurance = () => {
               {/* hero image  */}
               <div className="relative" aria-hidden="true">
                 <RevealAnimation delay={0.3} useSpring={true} duration={2}>
-                  <figure className="absolute z-[1] left-0 top-0 rounded-[20px] overflow-hidden w-[408px] hidden lg:block">
+                  <figure className="absolute z-[1] left-0 top-0 rounded-[20px] overflow-hidden w-[550px] hidden lg:block">
                     <Image
-                      src={heroImg01Image}
+                      src={section1Image}
                       alt="Hero img 1"
                       className="size-full object-cover dark:hidden"
-                      width={408}
-                      height={408}
-                      priority
-                    />
-                    <Image
-                      src={heroImg01DarkImage}
-                      alt="Hero img 1"
-                      className="size-full object-cover dark:inline-block hidden"
-                      width={408}
-                      height={408}
-                      priority
-                    />
-                  </figure>
-                </RevealAnimation>
-
-                <RevealAnimation delay={0.4} useSpring={true} duration={2}>
-                  <figure className="absolute z-[2] top-[275px] left-0 w-[408px] overflow-hidden rounded-[20px] hidden lg:block">
-                    <Image
-                      src={heroImg02Image}
-                      alt="Hero img 2"
-                      className="size-full object-cover dark:hidden"
-                      width={408}
-                      height={408}
-                      priority
-                    />
-                    <Image
-                      src={heroImg02DarkImage}
-                      alt="Hero img 2"
-                      className="size-full object-cover dark:inline-block hidden"
-                      width={408}
-                      height={408}
-                      priority
-                    />
-                  </figure>
-                </RevealAnimation>
-
-                <RevealAnimation delay={0.5} useSpring={true} duration={2}>
-                  <figure className="relative z-[3] left-[358px] rotate-[-20deg] top-[43px] overflow-hidden w-[273px] hidden lp:block">
-                    <Image
-                      src={heroImg03Image}
-                      alt="Hero img 3"
-                      className="size-full object-cover dark:hidden"
-                      width={273}
-                      height={273}
-                      priority
-                    />
-                    <Image
-                      src={heroImg03DarkImage}
-                      alt="Hero img 3"
-                      className="size-full object-cover dark:inline-block hidden"
-                      width={273}
-                      height={273}
-                      priority
-                    />
-                  </figure>
-                </RevealAnimation>
-
-                <RevealAnimation delay={0.6} useSpring={true} duration={2}>
-                  <figure className="relative z-[4] top-[-115px] left-[401px] rotate-[5deg] overflow-hidden w-[273px] shadow-4 hidden lp:block">
-                    <Image
-                      src={heroImg04Image}
-                      alt="Hero img 4"
-                      className="size-full object-cover dark:hidden"
-                      width={273}
-                      height={273}
-                      priority
-                    />
-                    <Image
-                      src={heroImg04DarkImage}
-                      alt="Hero img 4"
-                      className="size-full object-cover dark:inline-block hidden"
-                      width={273}
-                      height={273}
-                      priority
-                    />
-                  </figure>
-                </RevealAnimation>
-
-                <RevealAnimation delay={0.7} useSpring={true} duration={2}>
-                  <figure className="relative z-[3] top-[-310px] left-[450px] rotate-[5deg] overflow-hidden w-[273px] shadow-4 hidden lp:block">
-                    <Image
-                      src={heroImg04Image}
-                      alt="Hero img 5"
-                      className="size-full object-cover dark:hidden"
-                      width={273}
-                      height={273}
-                      priority
-                    />
-                    <Image
-                      src={heroImg04DarkImage}
-                      alt="Hero img 5"
-                      className="size-full object-cover dark:inline-block hidden"
-                      width={273}
-                      height={273}
+                      width={550}
+                      height={550}
                       priority
                     />
                   </figure>
@@ -387,44 +300,16 @@ const Insurance = () => {
                 {/*Integration Images*/}
                 <div className="relative z-10 inline-block max-lg:left-1/2 max-lg:-translate-x-1/2">
                   <RevealAnimation delay={0.2}>
-                    <figure className="max-w-[358px] rounded-[20px]">
+                    <figure className="max-w-[608px] rounded-[20px]">
                       <Image
-                        src={aboutDataIntegration1Image}
+                        src={section3Image}
                         alt="about-data-integration"
                         className="size-full dark:hidden rounded-[20px] object-cover"
                       />
                       <Image
-                        src={aboutDataIntegration1DarkImage}
+                        src={section3Image}
                         alt="about-data-integration"
                         className="size-full hidden dark:inline-block rounded-[20px] object-cover"
-                      />
-                    </figure>
-                  </RevealAnimation>
-                  <RevealAnimation delay={0.3} direction="right">
-                    <figure className="absolute max-sm:w-[200px] md:w-[250px] lg:w-[260px] xl:w-auto -top-12 -right-14 sm:-top-[90px] sm:-right-[200px] md:-right-[150px] lg:-right-[150px] xl:-right-[200px] rounded-2xl overflow-hidden">
-                      <Image
-                        src={aboutDataIntegration2Image}
-                        alt="about-data-integration"
-                        className="size-full object-cover block dark:hidden"
-                      />
-                      <Image
-                        src={aboutDataIntegration2DarkImage}
-                        alt="about-data"
-                        className="size-full object-cover hidden dark:block"
-                      />
-                    </figure>
-                  </RevealAnimation>
-                  <RevealAnimation delay={0.4} direction="right">
-                    <figure className="absolute max-sm:w-[130px] bottom-12 -right-14 sm:bottom-[85px] sm:-right-[200px] md:-right-[150px] lg:-right-[150px] xl:-right-[200px] -z-10 rounded-2xl overflow-hidden">
-                      <Image
-                        src={aboutDataIntegration3Image}
-                        alt="about-data-integration"
-                        className="size-full object-cover block dark:hidden"
-                      />
-                      <Image
-                        src={aboutDataIntegration3DarkImage}
-                        alt="about-data-integration"
-                        className="size-full object-cover hidden dark:inline-block"
                       />
                     </figure>
                   </RevealAnimation>
@@ -558,25 +443,7 @@ const Insurance = () => {
                   <figure className="relative w-full md:w-[500px]">
                     <RevealAnimation delay={0.4}>
                       <div className="w-full">
-                        <Image src={feature1Img} alt="features" className="w-full" />
-                      </div>
-                    </RevealAnimation>
-                    <RevealAnimation delay={0.5} direction="right" offset={100}>
-                      <div className="p-6 absolute top-3/4 -translate-y-3/4 left-[35%] sm:left-[63%] md:left-[60%] lg:left-[1%] xl:left-[50%] 2xl:left-[60%] w-[220px] md:w-[288px] h-[100px] rounded-xl overflow-hidden shadow-2 bg-white dark:bg-background-7">
-                        <figcaption className="flex justify-between gap-2">
-                          <span className="text-tagline-1 font-normal dark:text-accent"> Today&apos;s Revenue </span>
-                          <p className="text-lg font-medium leading-[1.5] text-secondary dark:text-accent flex items-center gap-1">
-                            $
-                            <NumberAnimation
-                              number={53224}
-                              speed={1000}
-                              interval={180}
-                              rooms={5}
-                              heightSpaceRatio={2.5}
-                              className="text-lg font-medium leading-[1.5] text-secondary dark:text-accent"></NumberAnimation>
-                          </p>
-                        </figcaption>
-                        <Progress />
+                        <Image src={section4Image} alt="features" className="w-full" />
                       </div>
                     </RevealAnimation>
                   </figure>
@@ -628,7 +495,7 @@ const Insurance = () => {
                   <RevealAnimation delay={0.7} duration={0.7} offset={80}>
                     <figure className="w-full lg:w-[538.95px] lg:h-[640px] order-first lg:order-none lg:mt-[66px] xl:mt-0 lg:mr-6 xl:mr-0 flex-shrink-0">
                       <Image
-                        src={whyMedqonVaultImage}
+                        src={section5Image}
                         alt="Investment platform interface showing key features"
                         className="size-full object-cover"
                       />
